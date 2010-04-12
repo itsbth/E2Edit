@@ -20,10 +20,10 @@ namespace E2Edit
             textEditor.TextArea.TextView.LineTransformers.Add(new E2Colorizer());
             Title = fname;
             AddChild(textEditor);
-            using (Stream s = new FileStream("funcs.txt", FileMode.Open))
-            {
-                IEnumerable<E2FunctionData> data = E2FunctionData.LoadData(s);
-            }
+            //using (Stream s = new FileStream("funcs.txt", FileMode.Open))
+            //{
+            //    IEnumerable<E2FunctionData> data = E2FunctionData.LoadData(s);
+            //}
         }
     }
 }

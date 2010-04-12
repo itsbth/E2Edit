@@ -1,0 +1,5 @@
+E2Edit
+
+E2Edit depends on AvalonEdit, AvalonDock and Ookii.Dialogs.
+Checkout SharpDevelop from svn://svnmirror.sharpdevelop.net/sharpdevelop/trunk/SharpDevelop, compile and copy AvalonDock.dll and ICSharpCode.AvalonEdit.dll to Libs.
+Download Ookii.Dialogs from http://www.ookii.org/software/dialogs/ and copy Ookii.Dialogs.Wpf.dll to Libs.
