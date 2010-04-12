@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Windows;
+using System.Windows.Input;
 using System.Xml;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;
@@ -16,10 +17,13 @@ namespace E2Edit
 
         public MainWindow()
         {
-            InitializeComponent();
             IHighlightingDefinition definition = HighlightingLoader.Load(XmlReader.Create("Expression2.xshd"),
-                                                             HighlightingManager.Instance);
+                                                 HighlightingManager.Instance);
             HighlightingManager.Instance.RegisterHighlighting("Expression2", new[] { ".txt" }, definition);
+
+            InitializeComponent();
+
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Close, (s, e) => Close()));
 
             if (File.Exists("SteamPath.txt"))
             {
@@ -48,7 +52,13 @@ namespace E2Edit
 
         private void FileListMouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            _docPane.Items.Add(new E2EditorDocument((string)_fileList.SelectedItem));
+            _editor.Open(E2Path + _fileList.SelectedItem);
+            Title = _fileList.SelectedItem + " - E2Edit";
+        }
+
+        private void Grid_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

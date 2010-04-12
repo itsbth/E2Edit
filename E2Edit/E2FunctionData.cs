@@ -30,12 +30,10 @@ namespace E2Edit
             string line;
             while ((line = streamReader.ReadLine()) != null)
             {
-                Match match = Regex.Match(line, @"(?<Name>[a-z][A-Za-z]*)\(((?<This>[a-z]):)?(?<Arguments>[a-z]+)?\)",
+                Match match = Regex.Match(line, @"^(?<Name>[a-z][A-Za-z]*)\(((?<This>[a-z]):)?(?<Arguments>[a-z]+)?\)$",
                                           RegexOptions.Compiled);
                 if (match.Success)
                 {
-                    Debug.WriteLine("{0}:{1}({2})", match.Groups["This"], match.Groups["Name"],
-                                    match.Groups["Arguments"]);
                     retVal.Add(new E2FunctionData
                                    {
                                        Name = match.Groups["Name"].Value,
