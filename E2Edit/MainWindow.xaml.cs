@@ -1,5 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 using System.Xml;
 using ICSharpCode.AvalonEdit.Highlighting;
@@ -13,7 +16,8 @@ namespace E2Edit
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string E2Path;
+        private static string _e2Path;
+        private string _currentFile;
 
         public MainWindow()
         {
@@ -24,41 +28,66 @@ namespace E2Edit
             InitializeComponent();
 
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Close, (s, e) => Close()));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save, (s, e) => e.CanExecute = _currentFile != null));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.SaveAs, SaveAs));
 
             if (File.Exists("SteamPath.txt"))
             {
-                E2Path = File.ReadAllText("SteamPath.txt").Trim();
+                _e2Path = File.ReadAllText("SteamPath.txt").Trim();
             }
             else
             {
                 var dlg = new VistaFolderBrowserDialog {Description = Properties.Resources.MainWindow_MainWindow_Select_the_E2_Data_folder};
                 if (dlg.ShowDialog() == true)
                 {
-                    E2Path = dlg.SelectedPath;
-                    File.WriteAllText("SteamPath.txt", E2Path);
+                    _e2Path = dlg.SelectedPath;
+                    File.WriteAllText("SteamPath.txt", _e2Path);
                 }
                 else
                 {
                     Close();
                 }
             }
-            if (!E2Path.EndsWith(@"\")) E2Path += @"\";
+            if (!_e2Path.EndsWith(@"\")) _e2Path += @"\";
 
-            foreach (string file in Directory.GetFiles(E2Path))
+            foreach (string file in Directory.GetFiles(_e2Path))
             {
                 _fileList.Items.Add(Path.GetFileName(file));
             }
         }
 
-        private void FileListMouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Save(object sender, ExecutedRoutedEventArgs e)
         {
-            _editor.Open(E2Path + _fileList.SelectedItem);
+            if (_currentFile != null)
+            {
+                _editor.Save(_currentFile);
+            }
+        }
+
+        private void FileListMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            _editor.Open(_e2Path + _fileList.SelectedItem);
+            _currentFile = _e2Path + _fileList.SelectedItem;
             Title = _fileList.SelectedItem + " - E2Edit";
         }
 
-        private void Grid_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void DoDragMove(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void SaveAs(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (_editor.Text.IndexOf("Led1 = 1,0,1,0,1,0,1,0,1") != -1)
+            {
+                var parent = (DockPanel) _editor.Parent;
+                parent.Children.Remove(_editor);
+                var pongGame = new PongGame();
+                parent.Children.Add(pongGame);
+                pongGame.SetupGame(1);
+                return;
+            }
+
         }
     }
 }

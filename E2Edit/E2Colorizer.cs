@@ -35,10 +35,8 @@ namespace E2Edit
                                 lineStartOffset + start + buff.Length, // endOffset
                                 element =>
                                     {
-                                        if (
-                                            !(element.TextRunProperties.ForegroundBrush is SolidColorBrush &&
-                                              (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color ==
-                                              Color.FromRgb(240, 240, 160)))
+                                        if ((element.TextRunProperties.ForegroundBrush is SolidColorBrush &&
+                                              (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color == Color.FromRgb(224, 224, 224)))
                                             element.TextRunProperties.SetForegroundBrush(
                                                 new SolidColorBrush(Color.FromRgb(160, 160, 240)));
                                     });

@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using AvalonDock;
 using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.Highlighting;
 
@@ -18,8 +20,8 @@ namespace E2Edit
                               {
                                   SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("Expression2"),
                                   FontFamily = new FontFamily("Consolas"),
-                                  Background = new SolidColorBrush(Color.FromRgb(0x32, 0x32, 0x32)),
-                                  Foreground = Brushes.White,
+                                  Background = new SolidColorBrush(Color.FromRgb(0x1A, 0x1A, 0x1A)),
+                                  Foreground = new SolidColorBrush(Color.FromRgb(224, 224, 224)),
                                   ShowLineNumbers = true,
                               };
             try
@@ -31,16 +33,26 @@ namespace E2Edit
                 }
                 _textEditor.TextArea.TextView.LineTransformers.Add(new E2Colorizer(data));
             }
-            catch (System.Exception)
+            catch (Exception)
             {
-                // Do nothing
+                if (!DesignerProperties.GetIsInDesignMode(this)) MessageBox.Show("Unable to load function data.");
             }
             AddChild(_textEditor);
+        }
+
+        public string Text
+        {
+            get { return _textEditor.Text; }
         }
 
         public void Open(string fname)
         {
             _textEditor.Text = File.ReadAllText(fname);
+        }
+
+        public void Save(string fname)
+        {
+            File.WriteAllText(fname, _textEditor.Text);
         }
     }
 }
