@@ -1,0 +1,3142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FunctionList>
+
+  <Function Name="mod">
+    <Arguments>n n</Arguments>
+    <Description><![CDATA[Modulo, returns the Remainder after Argument 1 has been divided by Argument 2. Note "mod(-1, 3) = -1"]]></Description>
+  </Function>
+
+  <Function Name="sqrt">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the Square Root of the Argument]]></Description>
+  </Function>
+
+  <Function Name="cbrt">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the Cube Root of the Argument]]></Description>
+  </Function>
+
+  <Function Name="root">
+    <Arguments>n n</Arguments>
+    <Description><![CDATA[Returns the Nth Root of the first Argument]]></Description>
+  </Function>
+
+  <Function Name="e">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns Euler's Constant]]></Description>
+  </Function>
+
+  <Function Name="exp">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns e to the power of the Argument (same as e()^N but shorter and faster this way)]]></Description>
+  </Function>
+
+  <Function Name="ln">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[ Returns the logarithm to base e of the Argument]]></Description>
+  </Function>
+
+  <Function Name="log2">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the logarithm to base 2 of the Argument]]></Description>
+  </Function>
+
+  <Function Name="log10">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[ Returns the logarithm to base 10 of the Argument]]></Description>
+  </Function>
+
+  <Function Name="log">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[ Returns the logarithm to base Argument 2 of Argument 1]]></Description>
+  </Function>
+
+  <Function Name="abs">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the Magnitude of the Argument]]></Description>
+  </Function>
+
+  <Function Name="ceil">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Rounds the Argument up to the nearest Integer]]></Description>
+  </Function>
+
+  <Function Name="ceil">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Rounds Argument 1 up to Argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="floor">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Rounds the Argument down to the nearest Integer]]></Description>
+  </Function>
+
+  <Function Name="floor">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Rounds Argument 1 down to Argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="round">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Rounds the Argument to the nearest Integer]]></Description>
+  </Function>
+
+  <Function Name="round">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[ Rounds Argument 1 to Argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="int">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the Integer part of the Argument (same as floor)]]></Description>
+  </Function>
+
+  <Function Name="frac">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the Fractional part of the Argument (same as floor)]]></Description>
+  </Function>
+
+  <Function Name="clamp">
+    <Arguments>nnn</Arguments>
+    <Description><![CDATA[If Arg1 = Arg3 (max) returns Arg3; otherwise returns Arg1.]]></Description>
+  </Function>
+
+  <Function Name="inrange">
+    <Arguments>nn2n3</Arguments>
+    <Description><![CDATA[Returns 1 if N is in the interval [N2; N3], 0 otherwise. This means it is equivalent to ((N2 <= N) & (N <= N3))]]></Description>
+  </Function>
+
+  <Function Name="sign">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the sign of argument (-1,0,1) [sign(N) = N / abs(N) ]]]></Description>
+  </Function>
+
+  <Function Name="min">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Returns the lowest value Argument]]></Description>
+  </Function>
+
+  <Function Name="min">
+    <Arguments>nnn</Arguments>
+    <Description><![CDATA[Returns the lowest value Argument]]></Description>
+  </Function>
+
+  <Function Name="min">
+    <Arguments>nnnn</Arguments>
+    <Description><![CDATA[Returns the lowest value Argument]]></Description>
+  </Function>
+
+  <Function Name="max">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Returns the highest value Argument]]></Description>
+  </Function>
+
+  <Function Name="max">
+    <Arguments>nnn</Arguments>
+    <Description><![CDATA[Returns the highest value Argument]]></Description>
+  </Function>
+
+  <Function Name="max">
+    <Arguments>nnnn</Arguments>
+    <Description><![CDATA[Returns the highest value Argument]]></Description>
+  </Function>
+
+  <Function Name="random">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns a random floating-point number between 0 and 1 [0 <= x < 1 ]]]></Description>
+  </Function>
+
+  <Function Name="random">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns a random floating-point number between 0 and the specified value [0 <= x < a ]]]></Description>
+  </Function>
+
+  <Function Name="random">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Returns a random floating-point number between the specified interval [a <= x < b ]]]></Description>
+  </Function>
+
+  <Function Name="randint">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns a random integer from 1 to the specified value [1 <= x <= a ]]]></Description>
+  </Function>
+
+  <Function Name="randint">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Returns a random integer in the specified interval [a <= x <= b ]]]></Description>
+  </Function>
+
+  <Function Name="pi">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the constant PI]]></Description>
+  </Function>
+
+  <Function Name="toRad">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Converts Degree angles to Radian angles]]></Description>
+  </Function>
+
+  <Function Name="toDeg">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Converts Radian angles to Degree angles]]></Description>
+  </Function>
+
+  <Function Name="sin">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the sine of N degrees ]]></Description>
+  </Function>
+
+  <Function Name="cos">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the cosine of N degrees ]]></Description>
+  </Function>
+
+  <Function Name="tan">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the tangent of N degrees ]]></Description>
+  </Function>
+
+  <Function Name="cot">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the cotangent of N degrees ]]></Description>
+  </Function>
+
+  <Function Name="sec">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the secant of N degrees ]]></Description>
+  </Function>
+
+  <Function Name="csc">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the cosecant of N degrees ]]></Description>
+  </Function>
+
+  <Function Name="asin">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the inverse sine of the argument, in degrees]]></Description>
+  </Function>
+
+  <Function Name="acos">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the inverse cosine of the argument, in degrees]]></Description>
+  </Function>
+
+  <Function Name="atan">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the inverse tangent of the argument, in degrees]]></Description>
+  </Function>
+
+  <Function Name="sinh">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the hyperbolic sine of N]]></Description>
+  </Function>
+
+  <Function Name="cosh">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the hyperbolic cosine of N]]></Description>
+  </Function>
+
+  <Function Name="tanh">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the hyperbolic tangent of N]]></Description>
+  </Function>
+
+  <Function Name="coth">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the hyperbolic cotangent of N]]></Description>
+  </Function>
+
+  <Function Name="sech">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the hyperbolic secant of N ]]></Description>
+  </Function>
+
+  <Function Name="csch">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the hyperbolic cosecant of N ]]></Description>
+  </Function>
+
+  <Function Name="sinr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the sine of N radians ]]></Description>
+  </Function>
+
+  <Function Name="cosr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the cosine of N radians ]]></Description>
+  </Function>
+
+  <Function Name="tanr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the tangent of N radians ]]></Description>
+  </Function>
+
+  <Function Name="cotr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the cotangent of N radians]]></Description>
+  </Function>
+
+  <Function Name="secr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the secant of N radians ]]></Description>
+  </Function>
+
+  <Function Name="cscr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the cosecant of N radians]]></Description>
+  </Function>
+
+  <Function Name="asinr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the inverse sine of the argument, in radians]]></Description>
+  </Function>
+
+  <Function Name="acosr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the inverse cosine of the argument, in radians]]></Description>
+  </Function>
+
+  <Function Name="atanr">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the inverse tangent of the argument, in radians]]></Description>
+  </Function>
+
+  <Function Name="atanr">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Returns the inverse tangent of the arguments (arg1 / arg2), in radians. This function accounts for positive/negative arguments, and arguments at or close to 0]]></Description>
+  </Function>
+
+  <Function Name="index">
+    <Arguments>s:n</Arguments>
+    <Description><![CDATA[Returns Nth letter of the string, formatted as a string.]]></Description>
+  </Function>
+
+  <Function Name="length">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[Returns the length of the string.]]></Description>
+  </Function>
+
+  <Function Name="upper">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[All characters are made uppercase]]></Description>
+  </Function>
+
+  <Function Name="lower">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[All characters are made lowercase]]></Description>
+  </Function>
+
+  <Function Name="sub">
+    <Arguments>s:n</Arguments>
+    <Description><![CDATA[Returns a substring, starting at the number argument and ending at the end of the string]]></Description>
+  </Function>
+
+  <Function Name="sub">
+    <Arguments>s:nn</Arguments>
+    <Description><![CDATA[Returns a substring, starting at the first number argument and ending at the second]]></Description>
+  </Function>
+
+  <Function Name="left">
+    <Arguments>s:n</Arguments>
+    <Description><![CDATA[Returns N amount of characters starting from the leftmost character]]></Description>
+  </Function>
+
+  <Function Name="right">
+    <Arguments>s:n</Arguments>
+    <Description><![CDATA[Returns N amount of characters starting from the rightmost character]]></Description>
+  </Function>
+
+  <Function Name="find">
+    <Arguments>s:s</Arguments>
+    <Description><![CDATA[Returns the 1st occurrence of the string S, returns 0 if not found]]></Description>
+  </Function>
+
+  <Function Name="find">
+    <Arguments>s:s n</Arguments>
+    <Description><![CDATA[Returns the 1st occurrence of the string S starting at N and going to the end of the string, returns 0 if not found]]></Description>
+  </Function>
+
+  <Function Name="findRE">
+    <Arguments>s:s</Arguments>
+    <Description><![CDATA[Returns the 1st occurrence of the string S using REGEX functions, returns 0 if not found]]></Description>
+  </Function>
+
+  <Function Name="findRE">
+    <Arguments>s:s n</Arguments>
+    <Description><![CDATA[Returns the 1st occurrence of the string S starting at N and going to the end of the string using REGEX functions, returns 0 if not found]]></Description>
+  </Function>
+
+  <Function Name="explode">
+    <Arguments>s:s</Arguments>
+    <Description><![CDATA[Splits the string into an array, along the boundaries formed by the string S. See also String.Explode]]></Description>
+  </Function>
+
+  <Function Name="repeat">
+    <Arguments>s:n</Arguments>
+    <Description><![CDATA[Repeats the input string N times]]></Description>
+  </Function>
+
+  <Function Name="trim">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[Trims away spaces at the beginning and end of a string]]></Description>
+  </Function>
+
+  <Function Name="trimLeft">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[Trims away opening spaces on the string]]></Description>
+  </Function>
+
+  <Function Name="trimRight">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[Trims away spaces at the end of a string]]></Description>
+  </Function>
+
+  <Function Name="replace">
+    <Arguments>s:ss</Arguments>
+    <Description><![CDATA[Finds and replaces every occurrence of the first argument with the second argument]]></Description>
+  </Function>
+
+  <Function Name="replaceRE">
+    <Arguments>s:ss</Arguments>
+    <Description><![CDATA[Finds and replaces every occurrence of the first argument using REGEX with the second argument]]></Description>
+  </Function>
+
+  <Function Name="reverse">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[Returns a reversed version of S]]></Description>
+  </Function>
+
+  <Function Name="toNumber">
+    <Arguments>s:</Arguments>
+    <Description><![CDATA[Parses a number from a string.]]></Description>
+  </Function>
+
+  <Function Name="toNumber">
+    <Arguments>s:n</Arguments>
+    <Description><![CDATA[Parses a number from a string. The argument given is the base. I.e. toNumber(16) will parse hex.]]></Description>
+  </Function>
+
+  <Function Name="toString">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Formats a number as a string. (Numbers may be concatenated into a string without using this function)]]></Description>
+  </Function>
+
+  <Function Name="toString">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Formats a number as a string, using argument 2 as the base. i.e. using 16 for base would convert the number to hex.]]></Description>
+  </Function>
+
+  <Function Name="toChar">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns a one-character string from its [http://en.wikipedia.org/wiki/ASCII ASCII code], where 32 ≤ argument 1 ≤ 255. An empty string is returned for numbers outside that range.]]></Description>
+  </Function>
+
+  <Function Name="toByte">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns the ASCII code of the 1st character in the string]]></Description>
+  </Function>
+
+  <Function Name="toByte">
+    <Arguments>sn</Arguments>
+    <Description><![CDATA[Returns the ASCII code of the Nth character in the string]]></Description>
+  </Function>
+
+  <Function Name="format">
+    <Arguments>s...</Arguments>
+    <Description><![CDATA[Formats a values exactly like Lua's [http://www.lua.org/manual/5.1/manual.html#pdf-string.format string.format]. Any number and type of parameter can be passed through the "...". Prints errors to the chat area.]]></Description>
+  </Function>
+
+  <Function Name="match">
+    <Arguments>s:s2</Arguments>
+    <Description><![CDATA[runs string.match(S, S2) and returns the sub-captures as an array.]]></Description>
+  </Function>
+
+  <Function Name="match">
+    <Arguments>s:s2n</Arguments>
+    <Description><![CDATA[runs string.match(S, S2, N) and returns the sub-captures as an array.]]></Description>
+  </Function>
+
+  <Function Name="matchFirst">
+    <Arguments>s:s2</Arguments>
+    <Description><![CDATA[runs string.match(S, S2) and returns the first match or an empty string if the match failed.]]></Description>
+  </Function>
+
+  <Function Name="matchFirst">
+    <Arguments>s:s2n</Arguments>
+    <Description><![CDATA[runs string.match(S, S2, N) and returns the first match or an empty string if the match failed.]]></Description>
+  </Function>
+
+  <Function Name="entity">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Gets the entity associated with the id]]></Description>
+  </Function>
+
+  <Function Name="owner">
+    <Arguments></Arguments>
+    <Description><![CDATA[Gets the owner of the expression ( same as entity():owner() )]]></Description>
+  </Function>
+
+  <Function Name="id">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the numeric id of an entity]]></Description>
+  </Function>
+
+  <Function Name="noentity">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns an invalid entity]]></Description>
+  </Function>
+
+  <Function Name="type">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the class of an entity]]></Description>
+  </Function>
+
+  <Function Name="model">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the model of an entity]]></Description>
+  </Function>
+
+  <Function Name="owner">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the owner of an entity]]></Description>
+  </Function>
+
+  <Function Name="name">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the name of a player ]]></Description>
+  </Function>
+
+  <Function Name="steamID">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the steam ID of the player]]></Description>
+  </Function>
+
+  <Function Name="isSteamFriend">
+    <Arguments>e:e</Arguments>
+    <Description><![CDATA[Returns if the given Entity is a steam friend of the first Entity]]></Description>
+  </Function>
+
+  <Function Name="steamFriends">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns a Array with E's steam friends on the server E is playing on]]></Description>
+  </Function>
+
+  <Function Name="pos">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the position of the entity]]></Description>
+  </Function>
+
+  <Function Name="eye">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets a players view direction else entity forward direction]]></Description>
+  </Function>
+
+  <Function Name="eyeAngles">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets a players view direction]]></Description>
+  </Function>
+
+  <Function Name="eyeTrace">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Equivalent to rangerOffset(16384, E:shootPos(), E:eye()), but faster (causing less lag)]]></Description>
+  </Function>
+
+  <Function Name="shootPos">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns a players shoot position]]></Description>
+  </Function>
+
+  <Function Name="aimEntity">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the entity that the entity is aiming at]]></Description>
+  </Function>
+
+  <Function Name="aimBone">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the bone the player is currently aiming at]]></Description>
+  </Function>
+
+  <Function Name="aimPos">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the point that the entity is looking at]]></Description>
+  </Function>
+
+  <Function Name="aimNormal">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns a normalized directional vector perpendicular to the surface pointed at]]></Description>
+  </Function>
+
+  <Function Name="frags">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the number of kills the player has made]]></Description>
+  </Function>
+
+  <Function Name="deaths">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the number of times the player died]]></Description>
+  </Function>
+
+  <Function Name="team">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the team number a player is on]]></Description>
+  </Function>
+
+  <Function Name="teamName">
+    <Arguments>n:</Arguments>
+    <Description><![CDATA[Returns the name of the team associated with the team number]]></Description>
+  </Function>
+
+  <Function Name="teamColor">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the color of the team associated with the team number]]></Description>
+  </Function>
+
+  <Function Name="forward">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the forward direction of the entity 2)]]></Description>
+  </Function>
+
+  <Function Name="right">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the right direction of the entity]]></Description>
+  </Function>
+
+  <Function Name="up">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the up direction of the entity]]></Description>
+  </Function>
+
+  <Function Name="vel">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the velocity of the entity]]></Description>
+  </Function>
+
+  <Function Name="velL">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the local velocity of the entity]]></Description>
+  </Function>
+
+  <Function Name="boxCenter">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the center of the entity's bounding box, as a local position vector]]></Description>
+  </Function>
+
+  <Function Name="boxMax">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the maximum local XYZ of the entity's bounding box (the "highest" corner), as a local position vector]]></Description>
+  </Function>
+
+  <Function Name="boxMin">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the minimum local XYZ of the entity's bounding box (the "lowest" corner), as a local position vector]]></Description>
+  </Function>
+
+  <Function Name="boxSize">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the dimensions of the entity's bounding box as a vector (length, width, height)]]></Description>
+  </Function>
+
+  <Function Name="toWorld">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Transforms from a vector local to E to a world vector.]]></Description>
+  </Function>
+
+  <Function Name="toLocal">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Transforms from a world vector to a vector local to E.]]></Description>
+  </Function>
+
+  <Function Name="toWorld">
+    <Arguments>e:a</Arguments>
+    <Description><![CDATA[Transforms from an angle local to E to a world angle.]]></Description>
+  </Function>
+
+  <Function Name="toLocal">
+    <Arguments>e:a</Arguments>
+    <Description><![CDATA[Transforms from a world angle to an angle local to E.]]></Description>
+  </Function>
+
+  <Function Name="toWorldAxis">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Transforms an axis local to E to a global axis.]]></Description>
+  </Function>
+
+  <Function Name="toLocalAxis">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Transforms a world axis to an axis local to E.]]></Description>
+  </Function>
+
+  <Function Name="angVel">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the angular velocity of the entity]]></Description>
+  </Function>
+
+  <Function Name="angVelVector">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns rotation axis, velocity and direction given as the vector's direction, magnitude and sense]]></Description>
+  </Function>
+
+  <Function Name="angles">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the pitch, yaw and roll of the entity]]></Description>
+  </Function>
+
+  <Function Name="radius">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the size of the object (not precisely, but useful)]]></Description>
+  </Function>
+
+  <Function Name="height">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the height of a player or npc]]></Description>
+  </Function>
+
+  <Function Name="bearing">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Gets the bearing from the entity to the vector]]></Description>
+  </Function>
+
+  <Function Name="elevation">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Gets the elevation from the entity to the vector]]></Description>
+  </Function>
+
+  <Function Name="heading">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Gets the elevation and bearing from the entity to the vector]]></Description>
+  </Function>
+
+  <Function Name="health">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the health of the entity]]></Description>
+  </Function>
+
+  <Function Name="armor">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the armor of the player]]></Description>
+  </Function>
+
+  <Function Name="volume">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the volume of the entity]]></Description>
+  </Function>
+
+  <Function Name="mass">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the mass of the entity]]></Description>
+  </Function>
+
+  <Function Name="timeConnected">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns a players time connected to a server]]></Description>
+  </Function>
+
+  <Function Name="massCenter">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the Center of Mass of the entity]]></Description>
+  </Function>
+
+  <Function Name="massCenterL">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the center of mass as a local vector]]></Description>
+  </Function>
+
+  <Function Name="setMass">
+    <Arguments>e:n</Arguments>
+    <Description><![CDATA[Sets the mass of the entity (between 0.001 and 50,000)]]></Description>
+  </Function>
+
+  <Function Name="inertia">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets the principal components of the entity's inertia tensor in the form ( Ixx, Iyy, Izz )]]></Description>
+  </Function>
+
+  <Function Name="applyForce">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Applies force to the entity according to the given vector's direction and magnitude]]></Description>
+  </Function>
+
+  <Function Name="applyOffsetForce">
+    <Arguments>e:vv</Arguments>
+    <Description><![CDATA[Applies force to the entity according to the first vector from the location of the second]]></Description>
+  </Function>
+
+  <Function Name="applyAngForce">
+    <Arguments>e:a</Arguments>
+    <Description><![CDATA[Applies torque to the entity according to the given angle]]></Description>
+  </Function>
+
+  <Function Name="applyTorque">
+    <Arguments>e:v</Arguments>
+    <Description><![CDATA[Applies torque according to the given vector, representing the torque axis, magnitude and direction]]></Description>
+  </Function>
+
+  <Function Name="isPlayer">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity a player?]]></Description>
+  </Function>
+
+  <Function Name="isOnFire">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity on fire?]]></Description>
+  </Function>
+
+  <Function Name="isWeapon">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity a weapon?]]></Description>
+  </Function>
+
+  <Function Name="isNPC">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity a NPC?]]></Description>
+  </Function>
+
+  <Function Name="isFrozen">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity frozen?]]></Description>
+  </Function>
+
+  <Function Name="isVehicle">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity a vehicle?]]></Description>
+  </Function>
+
+  <Function Name="inVehicle">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player in a vehicle?]]></Description>
+  </Function>
+
+  <Function Name="isWorld">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity the world?]]></Description>
+  </Function>
+
+  <Function Name="isOnGround">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player/NPC resting on something?]]></Description>
+  </Function>
+
+  <Function Name="isUnderWater">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity under water?]]></Description>
+  </Function>
+
+  <Function Name="isPlayerHolding">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the entity being held by a player?]]></Description>
+  </Function>
+
+  <Function Name="isAdmin">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player an admin?]]></Description>
+  </Function>
+
+  <Function Name="isSuperAdmin">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player a super admin?]]></Description>
+  </Function>
+
+  <Function Name="isAlive">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player or NPC alive?]]></Description>
+  </Function>
+
+  <Function Name="isCrouch">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player crouching?]]></Description>
+  </Function>
+
+  <Function Name="inNoclip">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player in noclip mode?]]></Description>
+  </Function>
+
+  <Function Name="friends">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns an array of players on the prop protection friends list. ]]></Description>
+  </Function>
+
+  <Function Name="trusts">
+    <Arguments>e:e2</Arguments>
+    <Description><![CDATA[Is E2 on the prop protection friends list of E?]]></Description>
+  </Function>
+
+  <Function Name="keyAttack1">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player pressing their primary fire key?]]></Description>
+  </Function>
+
+  <Function Name="keyAttack2">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player pressing their secondary fire key?]]></Description>
+  </Function>
+
+  <Function Name="keyUse">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Is the player pressing their use key?]]></Description>
+  </Function>
+
+  <Function Name="driver">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the driver of the vehicle if there is one, nil otherwise]]></Description>
+  </Function>
+
+  <Function Name="passenger">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the passenger of the vehicle if there is one, in single seat pods this will return the driver.]]></Description>
+  </Function>
+
+  <Function Name="vehicle">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the entity of the vehicle that the specified player is in]]></Description>
+  </Function>
+
+  <Function Name="ejectPod">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Ejects player in vehicle]]></Description>
+  </Function>
+
+  <Function Name="killPod">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Kills player in vehicle]]></Description>
+  </Function>
+
+  <Function Name="weapon">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the weapon that player E is currently holding]]></Description>
+  </Function>
+
+  <Function Name="clip1">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the amount of ammo in the primary clip of weapon E, -1 if there is no primary clip]]></Description>
+  </Function>
+
+  <Function Name="clip2">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the amount of ammo in the secondary clip of weapon E, -1 if there is no secondary clip 1)]]></Description>
+  </Function>
+
+  <Function Name="primaryAmmoType">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the type of primary ammo of weapon E as a number in a string]]></Description>
+  </Function>
+
+  <Function Name="secondaryAmmoType">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the type of secondary ammo of weapon E as number in a string]]></Description>
+  </Function>
+
+  <Function Name="ammoCount">
+    <Arguments>e:s</Arguments>
+    <Description><![CDATA[Returns the amount of stored ammo of type S on player E, excluding current clip]]></Description>
+  </Function>
+
+  <Function Name="tool">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[returns the name of the tool the player E is currently holding]]></Description>
+  </Function>
+
+  <Function Name="lookupAttachment">
+    <Arguments>e:string attachmentname</Arguments>
+    <Description><![CDATA[Returns Es attachment ID associated with attachmentName]]></Description>
+  </Function>
+
+  <Function Name="attachmentPos">
+    <Arguments>e:attachmentid</Arguments>
+    <Description><![CDATA[Returns Es attachment position associated with attachmentID]]></Description>
+  </Function>
+
+  <Function Name="attachmentAng">
+    <Arguments>e:attachmentid</Arguments>
+    <Description><![CDATA[Returns Es attachment angle associated with attachmentID]]></Description>
+  </Function>
+
+  <Function Name="attachmentPos">
+    <Arguments>e:string attachmentname</Arguments>
+    <Description><![CDATA[Same as E:attachmentPos(E:lookupAttachment(attachmentName))]]></Description>
+  </Function>
+
+  <Function Name="attachmentAng">
+    <Arguments>e:string attachmentname</Arguments>
+    <Description><![CDATA[Same as E:attachmentAng(E:lookupAttachment(attachmentName))]]></Description>
+  </Function>
+
+  <Function Name="vec2">
+    <Arguments>nn</Arguments>
+    <Description><![CDATA[Makes a 2D vector]]></Description>
+  </Function>
+
+  <Function Name="vec2">
+    <Arguments></Arguments>
+    <Description><![CDATA[Same as vec2(0,0)]]></Description>
+  </Function>
+
+  <Function Name="vec2">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Converts a 3D vector into a 2D vector (the z component is dropped)]]></Description>
+  </Function>
+
+  <Function Name="vec2">
+    <Arguments>v4</Arguments>
+    <Description><![CDATA[Converts a 4D vector into a 2D vector (the z and w components are dropped)]]></Description>
+  </Function>
+
+  <Function Name="shift">
+    <Arguments>v2</Arguments>
+    <Description><![CDATA[Swaps the vector's x,y components ]]></Description>
+  </Function>
+
+  <Function Name="toAngle">
+    <Arguments>v2:</Arguments>
+    <Description><![CDATA[Returns the 2D angle of the vector (given in degrees, -180 to 180)]]></Description>
+  </Function>
+
+  <Function Name="dehomogenized">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Converts a 2D homogeneous vector (x,y,w) into a 2D cartesian vector]]></Description>
+  </Function>
+
+  <Function Name="vec">
+    <Arguments>nnn</Arguments>
+    <Description><![CDATA[Makes a 3D vector]]></Description>
+  </Function>
+
+  <Function Name="vec">
+    <Arguments></Arguments>
+    <Description><![CDATA[Same as vec(0,0,0)]]></Description>
+  </Function>
+
+  <Function Name="vec">
+    <Arguments>v2</Arguments>
+    <Description><![CDATA[Converts a 2D vector into a 3D vector (the z component is set to 0)]]></Description>
+  </Function>
+
+  <Function Name="vec">
+    <Arguments>v2n</Arguments>
+    <Description><![CDATA[Converts a 2D vector into a 3D vector (the z component is set to the second argument)]]></Description>
+  </Function>
+
+  <Function Name="vec">
+    <Arguments>v4</Arguments>
+    <Description><![CDATA[Converts a 4D vector into a 3D vector (the w component is dropped)]]></Description>
+  </Function>
+
+  <Function Name="vec">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Changes an angle variable into a vector variable]]></Description>
+  </Function>
+
+  <Function Name="randvec">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns a uniformly distributed, random, normalized direction vector.]]></Description>
+  </Function>
+
+  <Function Name="randvec">
+    <Arguments>n1n2</Arguments>
+    <Description><![CDATA[Returns a random vector with its components between N1 and N2]]></Description>
+  </Function>
+
+  <Function Name="randvec">
+    <Arguments>v1v2</Arguments>
+    <Description><![CDATA[Returns a random vector between V1 and V2]]></Description>
+  </Function>
+
+  <Function Name="shiftL">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Shifts the vector's components left:  shiftL( x,y,z ) = ( y,z,x )]]></Description>
+  </Function>
+
+  <Function Name="shiftR">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Shifts the vector's components right:  shiftR( x,y,z ) = ( z,x,y )]]></Description>
+  </Function>
+
+  <Function Name="rotate">
+    <Arguments>v:a</Arguments>
+    <Description><![CDATA[Gets the rotated vector]]></Description>
+  </Function>
+
+  <Function Name="rotate">
+    <Arguments>v:nnn</Arguments>
+    <Description><![CDATA[Gets the rotated vector]]></Description>
+  </Function>
+
+  <Function Name="toAngle">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the angles of the vector]]></Description>
+  </Function>
+
+  <Function Name="dehomogenized">
+    <Arguments>v4:</Arguments>
+    <Description><![CDATA[Converts a 3D homogeneous vector (x,y,z,w) into a 3D cartesian vector]]></Description>
+  </Function>
+
+  <Function Name="isInWorld">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Returns 1 if the position vector is within the world, 0 if not]]></Description>
+  </Function>
+
+  <Function Name="vec4">
+    <Arguments>nnnn</Arguments>
+    <Description><![CDATA[Makes a 4D vector]]></Description>
+  </Function>
+
+  <Function Name="vec4">
+    <Arguments></Arguments>
+    <Description><![CDATA[Same as vec4(0,0,0,0)]]></Description>
+  </Function>
+
+  <Function Name="vec4">
+    <Arguments>v2</Arguments>
+    <Description><![CDATA[Converts a 2D vector into a 4D vector (the z and w components are set to 0)]]></Description>
+  </Function>
+
+  <Function Name="vec4">
+    <Arguments>v2nn</Arguments>
+    <Description><![CDATA[Converts a 2D vector into a 4D vector (the z and w components are set to the second and third arguments)]]></Description>
+  </Function>
+
+  <Function Name="vec4">
+    <Arguments>v2v2</Arguments>
+    <Description><![CDATA[Creates a 4D vector from two 2D vectors]]></Description>
+  </Function>
+
+  <Function Name="vec4">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Converts a 3D vector into a 4D vector (the w component is set to 0)]]></Description>
+  </Function>
+
+  <Function Name="vec4">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Converts a 3D vector into a 4D vector (the w component is set to the second argument)]]></Description>
+  </Function>
+
+  <Function Name="shiftL">
+    <Arguments>v4</Arguments>
+    <Description><![CDATA[Shifts the vector's components left:  shiftL( x,y,z,w ) = ( y,z,w,x )]]></Description>
+  </Function>
+
+  <Function Name="shiftR">
+    <Arguments>v4</Arguments>
+    <Description><![CDATA[Shifts the vector's components right:  shiftR( x,y,z,w ) = ( w,x,y,z )]]></Description>
+  </Function>
+
+  <Function Name="ceil">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Rounds XYZ up to the nearest integer]]></Description>
+  </Function>
+
+  <Function Name="ceil">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Rounds XYZ up to argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="floor">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Rounds XYZ down to the nearest integer]]></Description>
+  </Function>
+
+  <Function Name="floor">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Rounds XYZ down to argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="round">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Rounds XYZ to the nearest integer]]></Description>
+  </Function>
+
+  <Function Name="round">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Rounds XYZ to argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="mod">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Returns the remainder after XYZ have been divided by argument 2]]></Description>
+  </Function>
+
+  <Function Name="mod">
+    <Arguments>vv</Arguments>
+    <Description><![CDATA[Returns the remainder after the components of vector 1 have been divided by the components of vector 2]]></Description>
+  </Function>
+
+  <Function Name="clamp">
+    <Arguments>vvv</Arguments>
+    <Description><![CDATA[Clamps vector 1's XYZ between the XYZ of vector 2(min) and vector 3(max)]]></Description>
+  </Function>
+
+  <Function Name="clamp">
+    <Arguments>vnn</Arguments>
+    <Description><![CDATA[Returns a vector in the same direction as vector 1, with length clamped between argument 2(min) and argument 3(max)]]></Description>
+  </Function>
+
+  <Function Name="min">
+    <Arguments>vv</Arguments>
+    <Description><![CDATA[Returns the vector with the smallest length]]></Description>
+  </Function>
+
+  <Function Name="max">
+    <Arguments>vv</Arguments>
+    <Description><![CDATA[Returns the vector with the greatest length]]></Description>
+  </Function>
+
+  <Function Name="minVec">
+    <Arguments>vv</Arguments>
+    <Description><![CDATA[Returns a vector combining the lowest value components of V1 and V2]]></Description>
+  </Function>
+
+  <Function Name="maxVec">
+    <Arguments>vv</Arguments>
+    <Description><![CDATA[Returns the vector combining the highest value components of V1 and V2]]></Description>
+  </Function>
+
+  <Function Name="mix">
+    <Arguments>vvn</Arguments>
+    <Description><![CDATA[Combines vector 1's XYZ with vector 2's XYZ by a proportion given by argument 3 (between 0 and 1)]]></Description>
+  </Function>
+
+  <Function Name="positive">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Returns a vector containing the positive value of each vector component, equivalent to abs(N)]]></Description>
+  </Function>
+
+  <Function Name="inrange">
+    <Arguments>vvminvmax</Arguments>
+    <Description><![CDATA[Returns 1 if each component of V is between (or is equal to) the components of Vmin and Vmax]]></Description>
+  </Function>
+
+  <Function Name="length">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the length of the vector]]></Description>
+  </Function>
+
+  <Function Name="length2">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the squared length of the vector]]></Description>
+  </Function>
+
+  <Function Name="distance">
+    <Arguments>v:v</Arguments>
+    <Description><![CDATA[Gets the distance between vectors]]></Description>
+  </Function>
+
+  <Function Name="distance2">
+    <Arguments>v:v</Arguments>
+    <Description><![CDATA[Gets the squared distance between vectors]]></Description>
+  </Function>
+
+  <Function Name="normalized">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the normalized vector]]></Description>
+  </Function>
+
+  <Function Name="dot">
+    <Arguments>v:v</Arguments>
+    <Description><![CDATA[Gets the vector dot (scalar) product]]></Description>
+  </Function>
+
+  <Function Name="x">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the x component of the vector]]></Description>
+  </Function>
+
+  <Function Name="y">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the y component of the vector]]></Description>
+  </Function>
+
+  <Function Name="z">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the z component of the vector]]></Description>
+  </Function>
+
+  <Function Name="w">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the w component of the vector]]></Description>
+  </Function>
+
+  <Function Name="setX">
+    <Arguments>v:n</Arguments>
+    <Description><![CDATA[Returns a copy of the vector with X replaced (use as Vec = Vec:setX(...))]]></Description>
+  </Function>
+
+  <Function Name="setY">
+    <Arguments>v:n</Arguments>
+    <Description><![CDATA[Returns a copy of the vector with Y replaced (use as Vec = Vec:setY(...))]]></Description>
+  </Function>
+
+  <Function Name="setZ">
+    <Arguments>v:n</Arguments>
+    <Description><![CDATA[Returns a copy of the vector with Z replaced (use as Vec = Vec:setZ(...))]]></Description>
+  </Function>
+
+  <Function Name="setW">
+    <Arguments>v:n</Arguments>
+    <Description><![CDATA[Returns a copy of the vector with W replaced (use as Vec = Vec:setW(...))]]></Description>
+  </Function>
+
+  <Function Name="toString">
+    <Arguments>v:</Arguments>
+    <Description><![CDATA[Gets the vector nicely formatted as a string "[X,Y,Z]"]]></Description>
+  </Function>
+
+  <Function Name="identity2">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 2x2 identity matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 2x2 zero matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>nnnn</Arguments>
+    <Description><![CDATA[Creates a matrix with values in order (i.j) of: (1,1), (1,2), (2,1), (2,2)]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>v2v2</Arguments>
+    <Description><![CDATA[Creates a matrix with vectors by columns]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Converts a 3x3 matrix into a 2x2 matrix - all (i,3) and (3,j) are omitted]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>m4</Arguments>
+    <Description><![CDATA[Converts a 4x4 matrix into a 2x2 matrix - all (i,3), (i,4), (3,j) and (4,j) are omitted]]></Description>
+  </Function>
+
+  <Function Name="swapRows">
+    <Arguments>m2:</Arguments>
+    <Description><![CDATA[Swaps rows]]></Description>
+  </Function>
+
+  <Function Name="swapColumns">
+    <Arguments>m2:</Arguments>
+    <Description><![CDATA[Swaps columns]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m2:nnn</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m2:nv2</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m2:nnn</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m2:nv2</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="identity2">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 2x2 identity matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 2x2 zero matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>nnnn</Arguments>
+    <Description><![CDATA[Creates a matrix with values in order (i.j) of: (1,1), (1,2), (2,1), (2,2)]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>v2v2</Arguments>
+    <Description><![CDATA[Creates a matrix with vectors by columns]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Converts a 3x3 matrix into a 2x2 matrix - all (i,3) and (3,j) are omitted]]></Description>
+  </Function>
+
+  <Function Name="matrix2">
+    <Arguments>m4</Arguments>
+    <Description><![CDATA[Converts a 4x4 matrix into a 2x2 matrix - all (i,3), (i,4), (3,j) and (4,j) are omitted]]></Description>
+  </Function>
+
+  <Function Name="swapRows">
+    <Arguments>m2:</Arguments>
+    <Description><![CDATA[Swaps rows]]></Description>
+  </Function>
+
+  <Function Name="swapColumns">
+    <Arguments>m2:</Arguments>
+    <Description><![CDATA[Swaps columns]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m2:nnn</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m2:nv2</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m2:nnn</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m2:nv2</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="identity">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 3x3 identity matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 3x3 zero matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments>n1n2... n9</Arguments>
+    <Description><![CDATA[Creates a matrix with 9 values in the following order (i.j): (1,1), (1,2), (1,3), (2,1) etc.]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments>vvv</Arguments>
+    <Description><![CDATA[Creates a matrix with vectors by columns]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments>m2</Arguments>
+    <Description><![CDATA[Converts a 2x2 matrix into a 3x3 matrix - all (i,3) and (3,j) are filled with 0's]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments>m4</Arguments>
+    <Description><![CDATA[Converts a 4x4 matrix into a 3x3 matrix - all (i,4) and (4,j) are omitted]]></Description>
+  </Function>
+
+  <Function Name="swapRows">
+    <Arguments>m:nn</Arguments>
+    <Description><![CDATA[Swaps the two rows specified]]></Description>
+  </Function>
+
+  <Function Name="swapColumns">
+    <Arguments>m:nn</Arguments>
+    <Description><![CDATA[Swaps the two columns specified]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m:nnnn</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j, 3j]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m:nv</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m:nnnn</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2, i3]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m:nv</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="setDiagonal">
+    <Arguments>m:nnn</Arguments>
+    <Description><![CDATA[Sets the elements of the leading diagonal]]></Description>
+  </Function>
+
+  <Function Name="setDiagonal">
+    <Arguments>m:v</Arguments>
+    <Description><![CDATA[Sets the elements of the leading diagonal from the components of a vector]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments>e</Arguments>
+    <Description><![CDATA[Creates a reference frame matrix from an entity's local direction vectors by columns in the order ( x, y, z )]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Returns a 3x3 reference frame matrix as described by the angle A. Multiplying by this matrix will be the same as rotating by the given angle.]]></Description>
+  </Function>
+
+  <Function Name="x">
+    <Arguments>m:</Arguments>
+    <Description><![CDATA[Returns the local x direction vector from a 3x3 coordinate reference frame matrix ( same as M:column(1) )]]></Description>
+  </Function>
+
+  <Function Name="y">
+    <Arguments>m:</Arguments>
+    <Description><![CDATA[Returns the local y direction vector from a 3x3 coordinate reference frame matrix ( same as M:column(2) )]]></Description>
+  </Function>
+
+  <Function Name="z">
+    <Arguments>m:</Arguments>
+    <Description><![CDATA[Returns the local z direction vector from a 3x3 coordinate reference frame matrix ( same as M:column(3) )]]></Description>
+  </Function>
+
+  <Function Name="mRotation">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Creates a 3x3 rotation matrix, where the vector is the axis of rotation, and the number is the angle (anti-clockwise) in degrees. Example*: to rotate a vector (7,8,9) by 50 degrees about the axis (1,1,0), you would write V = mRotation(vec(1,1,0), 50) * vec(7,8,9)]]></Description>
+  </Function>
+
+  <Function Name="identity4">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 4x4 identity matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a 4x4 zero matrix]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>n1n2... n16</Arguments>
+    <Description><![CDATA[Creates a matrix with 16 values in the following order (i.j): (1,1), (1,2), (1,3), (1,4), (2,1) etc.]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>v4v4v4v4</Arguments>
+    <Description><![CDATA[Creates a matrix with vectors by columns]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>m2</Arguments>
+    <Description><![CDATA[Converts a 2x2 matrix into a 4x4 matrix - all (i,3), (i,4), (3,j) and (4,j) are filled with 0's]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>m2m2m2m2</Arguments>
+    <Description><![CDATA[Constructs a 4x4 matrix from four 2x2 matrices]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Converts a 3x3 matrix into a 4x4 matrix - all (i,4) and (4,j) are filled with 0's]]></Description>
+  </Function>
+
+  <Function Name="swapRows">
+    <Arguments>m4:nn</Arguments>
+    <Description><![CDATA[Swaps the two rows specified]]></Description>
+  </Function>
+
+  <Function Name="swapColumns">
+    <Arguments>m4:nn</Arguments>
+    <Description><![CDATA[Swaps the two columns specified]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m4:nnnnn</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j, 3j, 4j]]></Description>
+  </Function>
+
+  <Function Name="setRow">
+    <Arguments>m4:nv4</Arguments>
+    <Description><![CDATA[Sets the values of a row. The first argument given specifies the row, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m4:nnnnn</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2, i3, i4]]></Description>
+  </Function>
+
+  <Function Name="setColumn">
+    <Arguments>m4:nv4</Arguments>
+    <Description><![CDATA[Sets the values of a column. The first argument given specifies the column, the vector contains the values to set]]></Description>
+  </Function>
+
+  <Function Name="setDiagonal">
+    <Arguments>m4:nnnn</Arguments>
+    <Description><![CDATA[Sets the elements of the leading diagonal]]></Description>
+  </Function>
+
+  <Function Name="setDiagonal">
+    <Arguments>m4:v4</Arguments>
+    <Description><![CDATA[Sets the elements of the leading diagonal from the components of a vector]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>e</Arguments>
+    <Description><![CDATA[Creates a 4x4 reference frame matrix from an entity's local direction vectors by columns in the order (x, y, z, pos), with the bottom row (0,0,0,1)]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Returns a 4x4 reference frame matrix as described by the angle A. Multiplying by this matrix will be the same as rotating by the given angle.]]></Description>
+  </Function>
+
+  <Function Name="matrix4">
+    <Arguments>av</Arguments>
+    <Description><![CDATA[Returns a 4x4 reference frame matrix as described by the angle A and the position V. Multiplying by this matrix will be the same as rotating by the given angle and offsetting by the given vector.]]></Description>
+  </Function>
+
+  <Function Name="x">
+    <Arguments>m4:</Arguments>
+    <Description><![CDATA[Returns the local x direction vector from a 4x4 coordinate reference frame matrix]]></Description>
+  </Function>
+
+  <Function Name="y">
+    <Arguments>m4:</Arguments>
+    <Description><![CDATA[Returns the local y direction vector from a 4x4 coordinate reference frame matrix]]></Description>
+  </Function>
+
+  <Function Name="z">
+    <Arguments>m4:</Arguments>
+    <Description><![CDATA[Returns the local z direction vector from a 4x4 coordinate reference frame matrix]]></Description>
+  </Function>
+
+  <Function Name="pos">
+    <Arguments>m4:</Arguments>
+    <Description><![CDATA[Returns the position vector from a 4x4 coordinate reference frame matrix]]></Description>
+  </Function>
+
+  <Function Name="inverseA">
+    <Arguments>m4</Arguments>
+    <Description><![CDATA[Finds the matrix inverse of a standard 4x4 affine transformation matrix ( the type created by matrix4(E) ). This should only be used on matrices with a particular format, where the top left 3x3 specifies rotation, the rightmost 3-column specifies translation, and the bottom row is (0,0,0,1)]]></Description>
+  </Function>
+
+  <Function Name="row">
+    <Arguments>m:n</Arguments>
+    <Description><![CDATA[Returns the row as a vector]]></Description>
+  </Function>
+
+  <Function Name="column">
+    <Arguments>m:n</Arguments>
+    <Description><![CDATA[Returns the column as a vector]]></Description>
+  </Function>
+
+  <Function Name="element">
+    <Arguments>m:nn</Arguments>
+    <Description><![CDATA[Returns the element with indices (i,j)]]></Description>
+  </Function>
+
+  <Function Name="setElement">
+    <Arguments>m:nnn</Arguments>
+    <Description><![CDATA[Sets an element's value. The first two arguments specify the indices (i,j), the third argument is the value to set it to]]></Description>
+  </Function>
+
+  <Function Name="swapElements">
+    <Arguments>m:nnnn</Arguments>
+    <Description><![CDATA[Swaps two elements, specified by indices ( i1, j1, i2, j2 )]]></Description>
+  </Function>
+
+  <Function Name="diagonal">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Returns a vector comprising the elements along the leading diagonal]]></Description>
+  </Function>
+
+  <Function Name="trace">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Returns the trace of a matrix]]></Description>
+  </Function>
+
+  <Function Name="det">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Returns the determinant of a matrix (Does not work for 4x4 matrices)]]></Description>
+  </Function>
+
+  <Function Name="transpose">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Returns the transpose of a matrix]]></Description>
+  </Function>
+
+  <Function Name="adj">
+    <Arguments>m</Arguments>
+    <Description><![CDATA[Returns the adjugate of a matrix (Does not work for 4x4 matrices)]]></Description>
+  </Function>
+
+  <Function Name="ang">
+    <Arguments>nnn</Arguments>
+    <Description><![CDATA[Makes an angle]]></Description>
+  </Function>
+
+  <Function Name="ang">
+    <Arguments></Arguments>
+    <Description><![CDATA[Same as ang(0,0,0)]]></Description>
+  </Function>
+
+  <Function Name="ang">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Changes a vector variable into an angle variable]]></Description>
+  </Function>
+
+  <Function Name="ceil">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Rounds PYR up to the nearest integer]]></Description>
+  </Function>
+
+  <Function Name="ceil">
+    <Arguments>an</Arguments>
+    <Description><![CDATA[Rounds PYR up to argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="floor">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Rounds PYR down to the nearest integer]]></Description>
+  </Function>
+
+  <Function Name="floor">
+    <Arguments>an</Arguments>
+    <Description><![CDATA[Rounds PYR down to argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="round">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Rounds PYR to the nearest integer]]></Description>
+  </Function>
+
+  <Function Name="round">
+    <Arguments>an</Arguments>
+    <Description><![CDATA[Rounds PYR to argument 2's decimal precision]]></Description>
+  </Function>
+
+  <Function Name="mod">
+    <Arguments>an</Arguments>
+    <Description><![CDATA[Returns the remainder after PYR have been divided by argument 2]]></Description>
+  </Function>
+
+  <Function Name="mod">
+    <Arguments>aa</Arguments>
+    <Description><![CDATA[Returns the remainder after the components of angle 1 have been divided by the components of angle 2]]></Description>
+  </Function>
+
+  <Function Name="clamp">
+    <Arguments>aaa</Arguments>
+    <Description><![CDATA[Clamps angle 1's PYR between the PYR of angle 2(min) and angle 3(max)]]></Description>
+  </Function>
+
+  <Function Name="clamp">
+    <Arguments>ann</Arguments>
+    <Description><![CDATA[Clamps angle 1's PYR between argument 2(min) and argument 3(max)]]></Description>
+  </Function>
+
+  <Function Name="mix">
+    <Arguments>aan</Arguments>
+    <Description><![CDATA[Combines angle 1's PYR with angle 2's PYR by a proportion given by argument 3 (between 0 and 1)]]></Description>
+  </Function>
+
+  <Function Name="shiftL">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Shifts the angle's components left:  shiftL( p,y,r ) = ( y,r,p )]]></Description>
+  </Function>
+
+  <Function Name="shiftR">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Shifts the angle's components right:  shiftR( p,y,r ) = ( r,p,y )]]></Description>
+  </Function>
+
+  <Function Name="inrange">
+    <Arguments>aaminamax</Arguments>
+    <Description><![CDATA[Returns 1 if each component of A is between (or is equal to) the components of Amin and Amax]]></Description>
+  </Function>
+
+  <Function Name="angnorm">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Gets the normalized angle of an angle]]></Description>
+  </Function>
+
+  <Function Name="angnorm">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Gets the normalized angle of a number]]></Description>
+  </Function>
+
+  <Function Name="pitch">
+    <Arguments>a:</Arguments>
+    <Description><![CDATA[Gets the pitch of the angle]]></Description>
+  </Function>
+
+  <Function Name="yaw">
+    <Arguments>a:</Arguments>
+    <Description><![CDATA[Gets the yaw of the angle]]></Description>
+  </Function>
+
+  <Function Name="roll">
+    <Arguments>a:</Arguments>
+    <Description><![CDATA[Gets the roll of the angle]]></Description>
+  </Function>
+
+  <Function Name="setPitch">
+    <Arguments>a:n</Arguments>
+    <Description><![CDATA[Returns a copy of the angle with Pitch replaced (use as Ang = Ang:setPitch(...)) ]]></Description>
+  </Function>
+
+  <Function Name="setYaw">
+    <Arguments>a:n</Arguments>
+    <Description><![CDATA[Returns a copy of the angle with Yaw replaced (use as Ang = Ang:setYaw(...)) ]]></Description>
+  </Function>
+
+  <Function Name="setRoll">
+    <Arguments>a:n</Arguments>
+    <Description><![CDATA[Returns a copy of the angle with Roll replaced (use as Ang = Ang:setRoll(...)) ]]></Description>
+  </Function>
+
+  <Function Name="toString">
+    <Arguments>a:</Arguments>
+    <Description><![CDATA[Gets the angle nicely formatted as a string "[P,Y,R]"]]></Description>
+  </Function>
+
+  <Function Name="forward">
+    <Arguments>a:</Arguments>
+    <Description><![CDATA[Gets the forward vector of the angle.]]></Description>
+  </Function>
+
+  <Function Name="right">
+    <Arguments>a:</Arguments>
+    <Description><![CDATA[Gets the right vector of the angle.]]></Description>
+  </Function>
+
+  <Function Name="up">
+    <Arguments>a:</Arguments>
+    <Description><![CDATA[Gets the up vector of the angle.]]></Description>
+  </Function>
+
+  <Function Name="rotateAroundAxis">
+    <Arguments>a:vn</Arguments>
+    <Description><![CDATA[Returns the angle A rotated around vector V by N degrees.]]></Description>
+  </Function>
+
+  <Function Name="bone">
+    <Arguments>e:n</Arguments>
+    <Description><![CDATA[Returns Es Nth bone]]></Description>
+  </Function>
+
+  <Function Name="bones">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns an array containing all of Es bones. This array's first element has the index 0!]]></Description>
+  </Function>
+
+  <Function Name="boneCount">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns Es number of bones]]></Description>
+  </Function>
+
+  <Function Name="nobone">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns an invalid bone]]></Description>
+  </Function>
+
+  <Function Name="aimBone">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the bone the player is currently aiming at]]></Description>
+  </Function>
+
+  <Function Name="entity">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns the entity B belongs to]]></Description>
+  </Function>
+
+  <Function Name="index">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs index in the entity it belongs to. Returns -1 if the bone is invalid or an error occured]]></Description>
+  </Function>
+
+  <Function Name="pos">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs position]]></Description>
+  </Function>
+
+  <Function Name="forward">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns a vector describing Bs forward direction]]></Description>
+  </Function>
+
+  <Function Name="right">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns a vector describing Bs right direction]]></Description>
+  </Function>
+
+  <Function Name="up">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns a vector describing Bs up direction]]></Description>
+  </Function>
+
+  <Function Name="vel">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs velocity]]></Description>
+  </Function>
+
+  <Function Name="velL">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs velocity in local coordinates]]></Description>
+  </Function>
+
+  <Function Name="toWorld">
+    <Arguments>b:v</Arguments>
+    <Description><![CDATA[Transforms V from local coordinates (as seen from B) to world coordinates]]></Description>
+  </Function>
+
+  <Function Name="toLocal">
+    <Arguments>b:v</Arguments>
+    <Description><![CDATA[Transforms V from world coordinates to local coordinates (as seen from B)]]></Description>
+  </Function>
+
+  <Function Name="angVel">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs angular velocity]]></Description>
+  </Function>
+
+  <Function Name="angles">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs pitch, yaw and roll angles]]></Description>
+  </Function>
+
+  <Function Name="bearing">
+    <Arguments>b:v</Arguments>
+    <Description><![CDATA[Returns the bearing (yaw) from B to V]]></Description>
+  </Function>
+
+  <Function Name="elevation">
+    <Arguments>b:v</Arguments>
+    <Description><![CDATA[Returns the elevation (pitch) from B to V]]></Description>
+  </Function>
+
+  <Function Name="mass">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs mass]]></Description>
+  </Function>
+
+  <Function Name="massCenter">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs Center of Mass]]></Description>
+  </Function>
+
+  <Function Name="massCenterL">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns Bs Center of Mass in local coordinates]]></Description>
+  </Function>
+
+  <Function Name="inertia">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Gets the principal components of Bs inertia tensor in the form vec(Ixx, Iyy, Izz)]]></Description>
+  </Function>
+
+  <Function Name="isFrozen">
+    <Arguments>b:</Arguments>
+    <Description><![CDATA[Returns 1 if B is frozen, 0 otherwise]]></Description>
+  </Function>
+
+  <Function Name="isHiSpeed">
+    <Arguments>xwl:</Arguments>
+    <Description><![CDATA[Returns true if the linked component is high-speed capable.]]></Description>
+  </Function>
+
+  <Function Name="entity">
+    <Arguments>xwl:</Arguments>
+    <Description><![CDATA[Returns the entity of the linked component.]]></Description>
+  </Function>
+
+  <Function Name="hasInput">
+    <Arguments>xwl:s</Arguments>
+    <Description><![CDATA[Returns true if the linked component has an input of the specified name.]]></Description>
+  </Function>
+
+  <Function Name="hasOutput">
+    <Arguments>xwl:s</Arguments>
+    <Description><![CDATA[Returns true if the linked component has an output of the specified name.]]></Description>
+  </Function>
+
+  <Function Name="xyz">
+    <Arguments>xwl:</Arguments>
+    <Description><![CDATA[Retrieves the X/Y/Z as the corresponding values in the vector.]]></Description>
+  </Function>
+
+  <Function Name="writeString">
+    <Arguments>xwl:ns</Arguments>
+    <Description><![CDATA[Writes a null-terminated string to the given address. Returns the next free address or 0 on failure.]]></Description>
+  </Function>
+
+  <Function Name="readString">
+    <Arguments>xwl:n</Arguments>
+    <Description><![CDATA[Reads a null-terminated string from the given address. Returns an empty string on failure.]]></Description>
+  </Function>
+
+  <Function Name="writeArray">
+    <Arguments>xwl:nr</Arguments>
+    <Description><![CDATA[Writes an array's elements into a piece of memory. Strings and sub-tables (angles, vectors, matrices) are written as pointers to the actual data. Strings are written null-terminated.]]></Description>
+  </Function>
+
+  <Function Name="inputs">
+    <Arguments>xwl:</Arguments>
+    <Description><![CDATA[Returns an array of all the inputs that XWL has without their types. Returns an empty array if it has none]]></Description>
+  </Function>
+
+  <Function Name="outputs">
+    <Arguments>xwl:</Arguments>
+    <Description><![CDATA[Returns an array of all the outputs that XWL has without their types. Returns an empty array if it has none]]></Description>
+  </Function>
+
+  <Function Name="inputType">
+    <Arguments>xwl:s</Arguments>
+    <Description><![CDATA[Returns the type of input that S is in lowercase. ( "NORMAL"  is changed to "number" )]]></Description>
+  </Function>
+
+  <Function Name="outputType">
+    <Arguments>xwl:s</Arguments>
+    <Description><![CDATA[Returns the type of output that S is in lowercase. ( "NORMAL"  is changed to "number" )]]></Description>
+  </Function>
+
+  <Function Name="comp">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns complex zero]]></Description>
+  </Function>
+
+  <Function Name="comp">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Converts a real number to complex (returns complex number with real part N and imaginary part 0)]]></Description>
+  </Function>
+
+  <Function Name="comp">
+    <Arguments>nn2</Arguments>
+    <Description><![CDATA[Returns N+N2*i]]></Description>
+  </Function>
+
+  <Function Name="i">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the imaginary unit i]]></Description>
+  </Function>
+
+  <Function Name="i">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns N*i]]></Description>
+  </Function>
+
+  <Function Name="abs">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Returns the absolute value of C]]></Description>
+  </Function>
+
+  <Function Name="arg">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Returns the argument of C]]></Description>
+  </Function>
+
+  <Function Name="conj">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Returns the conjugate of C]]></Description>
+  </Function>
+
+  <Function Name="real">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Returns the real part of C]]></Description>
+  </Function>
+
+  <Function Name="imag">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Returns the imaginary part of C]]></Description>
+  </Function>
+
+  <Function Name="exp">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Raises Euler's constant e to the power of C]]></Description>
+  </Function>
+
+  <Function Name="log">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the natural logarithm of C]]></Description>
+  </Function>
+
+  <Function Name="log">
+    <Arguments>cc2</Arguments>
+    <Description><![CDATA[Calculates the logarithm of C2 to a complex base C]]></Description>
+  </Function>
+
+  <Function Name="log">
+    <Arguments>nc</Arguments>
+    <Description><![CDATA[Calculates the logarithm of C to a real base N]]></Description>
+  </Function>
+
+  <Function Name="log2">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the logarithm of C to base 2]]></Description>
+  </Function>
+
+  <Function Name="log10">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the logarithm of C to base 10]]></Description>
+  </Function>
+
+  <Function Name="sqrt">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the square root of C]]></Description>
+  </Function>
+
+  <Function Name="csqrt">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Calculates the complex square root of the real number N]]></Description>
+  </Function>
+
+  <Function Name="sin">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the sine of C]]></Description>
+  </Function>
+
+  <Function Name="cos">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the cosine of C]]></Description>
+  </Function>
+
+  <Function Name="tan">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the tangent of C]]></Description>
+  </Function>
+
+  <Function Name="cot">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the cotangent of C]]></Description>
+  </Function>
+
+  <Function Name="sec">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the secant of C]]></Description>
+  </Function>
+
+  <Function Name="csc">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the cosecant of C]]></Description>
+  </Function>
+
+  <Function Name="asin">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the inverse sine of C]]></Description>
+  </Function>
+
+  <Function Name="acos">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the inverse cosine of C]]></Description>
+  </Function>
+
+  <Function Name="atan">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the inverse tangent of C]]></Description>
+  </Function>
+
+  <Function Name="sinh">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the hyperbolic sine of C]]></Description>
+  </Function>
+
+  <Function Name="cosh">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the hyperbolic cosine of C]]></Description>
+  </Function>
+
+  <Function Name="tanh">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the hyperbolic tangent of C]]></Description>
+  </Function>
+
+  <Function Name="coth">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the hyperbolic cotangent of C]]></Description>
+  </Function>
+
+  <Function Name="sech">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the hyperbolic secant of C]]></Description>
+  </Function>
+
+  <Function Name="csch">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Calculates the hyperbolic cosecant of C]]></Description>
+  </Function>
+
+  <Function Name="toString">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Formats C as a string.]]></Description>
+  </Function>
+
+  <Function Name="toString">
+    <Arguments>c:</Arguments>
+    <Description><![CDATA[The same as toString(C).]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments></Arguments>
+    <Description><![CDATA[Creates a zero quaternion]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Creates a quaternion with real part equal to N]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments>c</Arguments>
+    <Description><![CDATA[Creates a quaternion with real and "i" parts equal to C]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Converts a vector to a quaternion (returns V.x*i + V.y*j + V.z*k)]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments>nn2n3n4</Arguments>
+    <Description><![CDATA[Returns N+N2i+N3j+N4k]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments>a</Arguments>
+    <Description><![CDATA[Converts A to a quaternion]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments>vv2</Arguments>
+    <Description><![CDATA[Creates a quaternion given forward (V) and up (V2) vectors]]></Description>
+  </Function>
+
+  <Function Name="quat">
+    <Arguments>e</Arguments>
+    <Description><![CDATA[Converts angle of E to a quaternion]]></Description>
+  </Function>
+
+  <Function Name="qi">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns quaternion i]]></Description>
+  </Function>
+
+  <Function Name="qi">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns quaternion N*i]]></Description>
+  </Function>
+
+  <Function Name="qj">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns j]]></Description>
+  </Function>
+
+  <Function Name="qj">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns N*j]]></Description>
+  </Function>
+
+  <Function Name="qk">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns k]]></Description>
+  </Function>
+
+  <Function Name="qk">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns N*k]]></Description>
+  </Function>
+
+  <Function Name="abs">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Returns absolute value of Q]]></Description>
+  </Function>
+
+  <Function Name="conj">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Returns the conjugate of Q]]></Description>
+  </Function>
+
+  <Function Name="inv">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Returns the inverse of Q]]></Description>
+  </Function>
+
+  <Function Name="real">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns the real component of the quaternion]]></Description>
+  </Function>
+
+  <Function Name="i">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns the i component of the quaternion]]></Description>
+  </Function>
+
+  <Function Name="j">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns the j component of the quaternion]]></Description>
+  </Function>
+
+  <Function Name="k">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns the k component of the quaternion]]></Description>
+  </Function>
+
+  <Function Name="exp">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Raises Euler's constant e to the power Q]]></Description>
+  </Function>
+
+  <Function Name="log">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Calculates natural logarithm of Q]]></Description>
+  </Function>
+
+  <Function Name="qMod">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Changes quaternion Q so that the represented rotation is by an angle between 0 and 180 degrees (by coder0xff)]]></Description>
+  </Function>
+
+  <Function Name="slerp">
+    <Arguments>qq2n</Arguments>
+    <Description><![CDATA[Performs spherical linear interpolation between Q and Q2. Returns Q for N=0, Q2 for N=1]]></Description>
+  </Function>
+
+  <Function Name="forward">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns vector pointing forward for Q]]></Description>
+  </Function>
+
+  <Function Name="right">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns vector pointing right for Q]]></Description>
+  </Function>
+
+  <Function Name="up">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns vector pointing up for Q]]></Description>
+  </Function>
+
+  <Function Name="qRotation">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Returns quaternion for rotation about axis V by angle N]]></Description>
+  </Function>
+
+  <Function Name="qRotation">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Construct a quaternion from the rotation vector V. Vector direction is axis of rotation, magnitude is angle in degress (by coder0xff)]]></Description>
+  </Function>
+
+  <Function Name="rotationAngle">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Returns the angle of rotation in degrees (by coder0xff)]]></Description>
+  </Function>
+
+  <Function Name="rotationAxis">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Returns the axis of rotation (by coder0xff)]]></Description>
+  </Function>
+
+  <Function Name="rotationVector">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Returns the rotation vector - rotation axis where magnitude is the angle of rotation in degress (by coder0xff)]]></Description>
+  </Function>
+
+  <Function Name="vec">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Converts Q to a vector by dropping the real component]]></Description>
+  </Function>
+
+  <Function Name="matrix">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Converts Q to a transformation matrix]]></Description>
+  </Function>
+
+  <Function Name="toAngle">
+    <Arguments>q:</Arguments>
+    <Description><![CDATA[Returns angle represented by Q]]></Description>
+  </Function>
+
+  <Function Name="toString">
+    <Arguments>q</Arguments>
+    <Description><![CDATA[Formats Q as a string.]]></Description>
+  </Function>
+
+  <Function Name="first">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if the expression was spawned or reset]]></Description>
+  </Function>
+
+  <Function Name="duped">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if the expression was duplicated]]></Description>
+  </Function>
+
+  <Function Name="dupefinished">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 when the contraption has finished duping. (Only triggers on Adv Duplicator, not the normal duplicator)]]></Description>
+  </Function>
+
+  <Function Name="inputClk">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if the expression was triggered by an input]]></Description>
+  </Function>
+
+  <Function Name="last">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if it is being called on the last execution of the expression gate before it is removed or reset. This execution must be requested with the runOnLast(1) command.]]></Description>
+  </Function>
+
+  <Function Name="removing">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if this is the last() execution and caused by the entity being removed.]]></Description>
+  </Function>
+
+  <Function Name="ops">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns how many ops are used every execution on average]]></Description>
+  </Function>
+
+  <Function Name="opcounter">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns how many ops have been used so far in this execution plus the amount of hard quota used]]></Description>
+  </Function>
+
+  <Function Name="minquota">
+    <Arguments></Arguments>
+    <Description><![CDATA[The ops left before soft quota is used up]]></Description>
+  </Function>
+
+  <Function Name="maxquota">
+    <Arguments></Arguments>
+    <Description><![CDATA[The ops left before hard quota is exceeded and the expression shuts down]]></Description>
+  </Function>
+
+  <Function Name="perf">
+    <Arguments></Arguments>
+    <Description><![CDATA[If used as a while loop condition, stabilizes the expression around  hardquota used.]]></Description>
+  </Function>
+
+  <Function Name="entity">
+    <Arguments></Arguments>
+    <Description><![CDATA[Gets the entity of the expression]]></Description>
+  </Function>
+
+  <Function Name="concmd">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Takes a string and executes it in console. Returns 1 if it succeeded and 0 if it failed.The client must enable this in the console with "wire_expression2_concmd 1". "wire_expression2_concmd_whitelist" allows you to choose which commands can be used.[http://www.wiremod.com/forum/151800-post12.html]]]></Description>
+  </Function>
+
+  <Function Name="select">
+    <Arguments>n*...</Arguments>
+    <Description><![CDATA[Returns the Nth value given after the index, *'s zero element otherwise. If you mix types, the behaviour is undefined.]]></Description>
+  </Function>
+
+  <Function Name="printDriver">
+    <Arguments>e:s</Arguments>
+    <Description><![CDATA[Posts a string to the chat of Es driver. Returns 1 if the text was printed, 0 if not.]]></Description>
+  </Function>
+
+  <Function Name="hintDriver">
+    <Arguments>e:sn</Arguments>
+    <Description><![CDATA[Displays a hint popup to the driver of vehicle E, with message S for N seconds (N being clamped between 0.7 and 7). Same return value as printDriver.]]></Description>
+  </Function>
+
+  <Function Name="printDriver">
+    <Arguments>e:ns</Arguments>
+    <Description><![CDATA[Same as EE:printDriver(S), but can make the text show up in different places. N can be one of the following: _HUD_PRINTCENTER, _HUD_PRINTCONSOLE, _HUD_PRINTNOTIFY, _HUD_PRINTTALK.]]></Description>
+  </Function>
+
+  <Function Name="tickClk">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if the current execution was caused by "runOnTick"]]></Description>
+  </Function>
+
+  <Function Name="curtime">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the current game time since server-start in seconds*]]></Description>
+  </Function>
+
+  <Function Name="realtime">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the current real time since server-start in seconds*]]></Description>
+  </Function>
+
+  <Function Name="clk">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns 1 if the current execution was caused by the inserted name]]></Description>
+  </Function>
+
+  <Function Name="toUnit">
+    <Arguments>sn</Arguments>
+    <Description><![CDATA[Converts default garrysmod units to specified units]]></Description>
+  </Function>
+
+  <Function Name="fromUnit">
+    <Arguments>sn</Arguments>
+    <Description><![CDATA[Converts specified units to default garrysmod units]]></Description>
+  </Function>
+
+  <Function Name="convertUnit">
+    <Arguments>ssn</Arguments>
+    <Description><![CDATA[Converts between two units]]></Description>
+  </Function>
+
+  <Function Name="map">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the current map name]]></Description>
+  </Function>
+
+  <Function Name="hostname">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the Name of the server]]></Description>
+  </Function>
+
+  <Function Name="isLan">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if lan mode is enabled]]></Description>
+  </Function>
+
+  <Function Name="gamemode">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the name of the current gamemode]]></Description>
+  </Function>
+
+  <Function Name="gravity">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns gravity]]></Description>
+  </Function>
+
+  <Function Name="ping">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the latency for player E]]></Description>
+  </Function>
+
+  <Function Name="isSinglePlayer">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if singleplayer, 0 if multiplayer]]></Description>
+  </Function>
+
+  <Function Name="isDedicated">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if server is dedicated, 0 if listen]]></Description>
+  </Function>
+
+  <Function Name="numPlayers">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the number of players currently in the server]]></Description>
+  </Function>
+
+  <Function Name="maxPlayers">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the max number of players allowed in the server]]></Description>
+  </Function>
+
+  <Function Name="maxOfType">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns the maximum allowed of a certain type of entity, i.e. maxOfType("wire_thrusters").  Returns 0 if you enter an invalid parameter.]]></Description>
+  </Function>
+
+  <Function Name="playerDamage">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if player vs player damage is enabled on the server]]></Description>
+  </Function>
+
+  <Function Name="convar">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Give a console command such as "name" and it returns the set value]]></Description>
+  </Function>
+
+  <Function Name="convarnum">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Give a console command such as "sbox_godmode" and it returns the set value]]></Description>
+  </Function>
+
+  <Function Name="time">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns numerical time/date info from the server. Possible arguments: "year", "month", "day", "hour", "min", "sec", "wday" (weekday, Sunday is 1), "yday" (day of the year), and "isdst" (daylight saving flag 0/1)]]></Description>
+  </Function>
+
+  <Function Name="getConstraints">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns an array with all entities directly or indirectly constrained to E, except E itself.]]></Description>
+  </Function>
+
+  <Function Name="hasConstraints">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the number of the constraints E has]]></Description>
+  </Function>
+
+  <Function Name="hasConstraints">
+    <Arguments>e:s</Arguments>
+    <Description><![CDATA[Returns the number of the constraints E has with the given constraint type (see the types list below)]]></Description>
+  </Function>
+
+  <Function Name="isConstrained">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns 1 if E has constraints, 0 if not]]></Description>
+  </Function>
+
+  <Function Name="isWeldedTo">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the first entity E was welded to]]></Description>
+  </Function>
+
+  <Function Name="isWeldedTo">
+    <Arguments>e:n</Arguments>
+    <Description><![CDATA[Returns the Nth entity E was welded to]]></Description>
+  </Function>
+
+  <Function Name="isConstrainedTo">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the first entity E was constrained to]]></Description>
+  </Function>
+
+  <Function Name="isConstrainedTo">
+    <Arguments>e:n</Arguments>
+    <Description><![CDATA[Returns the Nth entity E was constrained to]]></Description>
+  </Function>
+
+  <Function Name="isConstrainedTo">
+    <Arguments>e:s</Arguments>
+    <Description><![CDATA[Returns the first entity E was constrained to with the given constraint type (see the types list below)]]></Description>
+  </Function>
+
+  <Function Name="isConstrainedTo">
+    <Arguments>e:s n</Arguments>
+    <Description><![CDATA[Returns the Nth entity E was constrained to with the given constraint type (see the types list below)]]></Description>
+  </Function>
+
+  <Function Name="parent">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the entity E is parented to.]]></Description>
+  </Function>
+
+  <Function Name="parentBone">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the bone E is parented to.]]></Description>
+  </Function>
+
+  <Function Name="chatClk">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if the chip is being executed because of a chat event. Returns 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="chatClk">
+    <Arguments>e</Arguments>
+    <Description><![CDATA[Returns 1 if the chip is being executed because of a chat event by player E. Returns 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="lastSpoke">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the last player to speak.]]></Description>
+  </Function>
+
+  <Function Name="lastSaid">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the last message in the chat log.]]></Description>
+  </Function>
+
+  <Function Name="lastSaidWhen">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the time the last message was sent.]]></Description>
+  </Function>
+
+  <Function Name="lastSaidTeam">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if the last message was sent in the team chat, 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="lastSaid">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns what the player E last said.]]></Description>
+  </Function>
+
+  <Function Name="lastSaidWhen">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns when the given player last said something.]]></Description>
+  </Function>
+
+  <Function Name="lastSaidTeam">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns 1 if the last message was sent in the team chat, 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="getColor">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the color of an entity as a vector (R,G,B)]]></Description>
+  </Function>
+
+  <Function Name="getColor4">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the color of an entity as a 4D vector (R,G,B,A)]]></Description>
+  </Function>
+
+  <Function Name="getAlpha">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the alpha of an entity]]></Description>
+  </Function>
+
+  <Function Name="getMaterial">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns the material of an entity]]></Description>
+  </Function>
+
+  <Function Name="getSkin">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets Es current skin number.]]></Description>
+  </Function>
+
+  <Function Name="getSkinCount">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Gets Es number of skins.]]></Description>
+  </Function>
+
+  <Function Name="hsv2rgb">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Converts V from the [http://en.wikipedia.org/wiki/HSV_color_space HSV color space] to the [http://en.wikipedia.org/wiki/RGB_color_space RGB color space]]]></Description>
+  </Function>
+
+  <Function Name="rgb2hsv">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Converts V from the [http://en.wikipedia.org/wiki/RGB_color_space RGB color space] to the [http://en.wikipedia.org/wiki/HSV_color_space HSV color space]]]></Description>
+  </Function>
+
+  <Function Name="rgb2digi">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Converts an RGB vector V to a number in digital screen format. N Specifies a mode, either 0, 2 or 3, corresponding to Digital Screen color modes.]]></Description>
+  </Function>
+
+  <Function Name="rgb2digi">
+    <Arguments>nn2n3n4</Arguments>
+    <Description><![CDATA[Converts the RGB color (N,N2,N3) to a number in digital screen format. N4 Specifies a mode, either 0, 2 or 3, corresponding to Digital Screen color modes.]]></Description>
+  </Function>
+
+  <Function Name="findUpdateRate">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the minimum delay between entity find events on a chip]]></Description>
+  </Function>
+
+  <Function Name="findPlayerUpdateRate">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the minimum delay between entity find events per player]]></Description>
+  </Function>
+
+  <Function Name="findCanQuery">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if find functions can be used, 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="findInSphere">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Finds entities in a sphere around V with a radius of N, returns the number found after filtering]]></Description>
+  </Function>
+
+  <Function Name="findInCone">
+    <Arguments>vvnn</Arguments>
+    <Description><![CDATA[Like findInSphere but with a http://mathworld.wolfram.com/SphericalCone.html Spherical cone, arguments are for position, direction, length, and degrees (works now)]]></Description>
+  </Function>
+
+  <Function Name="findInBox">
+    <Arguments>vv</Arguments>
+    <Description><![CDATA[Like findInSphere but with a globally aligned box, the arguments are the diagonal corners of the box]]></Description>
+  </Function>
+
+  <Function Name="findByName">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Find all entities with the given name]]></Description>
+  </Function>
+
+  <Function Name="findByModel">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Find all entities with the given model]]></Description>
+  </Function>
+
+  <Function Name="findByClass">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Find all entities with the given class]]></Description>
+  </Function>
+
+  <Function Name="findPlayerByName">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns the player with the given name, this is an exception to the rule]]></Description>
+  </Function>
+
+  <Function Name="findResult">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the indexed entity from the previous find event (valid parameters are 1 to the number of entities found)]]></Description>
+  </Function>
+
+  <Function Name="findClosest">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Returns the closest entity to the given point from the previous find event]]></Description>
+  </Function>
+
+  <Function Name="findToArray">
+    <Arguments></Arguments>
+    <Description><![CDATA[Formats the query as an array, R[Index,entity] to get an entity.]]></Description>
+  </Function>
+
+  <Function Name="find">
+    <Arguments></Arguments>
+    <Description><![CDATA[Equivalent to findResult(1)]]></Description>
+  </Function>
+
+  <Function Name="findSortByDistance">
+    <Arguments>v</Arguments>
+    <Description><![CDATA[Sorts the entities from the last find event, index 1 is the closest to point V, returns the number of entities in the list]]></Description>
+  </Function>
+
+  <Function Name="findClipToClass">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities that are NOT of this class]]></Description>
+  </Function>
+
+  <Function Name="findClipFromClass">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities that are of this class]]></Description>
+  </Function>
+
+  <Function Name="findClipToModel">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities that do NOT have this model]]></Description>
+  </Function>
+
+  <Function Name="findClipFromModel">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities that do have this model]]></Description>
+  </Function>
+
+  <Function Name="findClipToName">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities that do NOT have this name]]></Description>
+  </Function>
+
+  <Function Name="findClipFromName">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities that do have this name]]></Description>
+  </Function>
+
+  <Function Name="findClipToSphere">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities NOT within the specified sphere (center, radius)]]></Description>
+  </Function>
+
+  <Function Name="findClipFromSphere">
+    <Arguments>vn</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities within the specified sphere (center, radius)]]></Description>
+  </Function>
+
+  <Function Name="findClipToRegion">
+    <Arguments>vv2</Arguments>
+    <Description><![CDATA[Filters the list of entities by removing all entities NOT on the positive side of the defined plane. (Plane origin, vector perpendicular to the plane) You can define any convex hull using this.]]></Description>
+  </Function>
+
+  <Function Name="gGetGroup">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the name of the current group for the chip]]></Description>
+  </Function>
+
+  <Function Name="rangerFlags">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the ranger flags as a string.]]></Description>
+  </Function>
+
+  <Function Name="ranger">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[You input max range, it returns ranger data]]></Description>
+  </Function>
+
+  <Function Name="ranger">
+    <Arguments>nnn</Arguments>
+    <Description><![CDATA[Same as above with added inputs for X and Y skew]]></Description>
+  </Function>
+
+  <Function Name="rangerAngle">
+    <Arguments>nnn</Arguments>
+    <Description><![CDATA[You input the distance, x-angle and y-angle (both in degrees) it returns ranger data]]></Description>
+  </Function>
+
+  <Function Name="rangerOffset">
+    <Arguments>vv</Arguments>
+    <Description><![CDATA[You input two vector points, it returns ranger data]]></Description>
+  </Function>
+
+  <Function Name="rangerOffset">
+    <Arguments>nvv</Arguments>
+    <Description><![CDATA[You input the range, a position vector, and a direction vector and it returns ranger data]]></Description>
+  </Function>
+
+  <Function Name="rangerHull">
+    <Arguments>nv</Arguments>
+    <Description><![CDATA[Inputs: Distance, Hull BoxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerHull">
+    <Arguments>nvv</Arguments>
+    <Description><![CDATA[Input: Distance, Hull MinSize, Hull MaxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerHull">
+    <Arguments>nnnv</Arguments>
+    <Description><![CDATA[Inputs: Distance, X Skew, Y Skew, Hull BoxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerHull">
+    <Arguments>nnnvv</Arguments>
+    <Description><![CDATA[Inputs: Distance, X Skew, Y Skew, Hull MinSize, Hull MaxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerHullAngle">
+    <Arguments>nnnv</Arguments>
+    <Description><![CDATA[Inputs: Distance, X Angle, Y Angle, Hull BoxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerHullAngle">
+    <Arguments>nnnvv</Arguments>
+    <Description><![CDATA[Inputs: Distance, X Angle, Y Angle, Hull MinSize, Hull MaxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerOffsetHull">
+    <Arguments>vvv</Arguments>
+    <Description><![CDATA[Inputs: StartPos, EndPos, Hull BoxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerOffsetHull">
+    <Arguments>vvvv</Arguments>
+    <Description><![CDATA[Inputs: StartPos, EndPos, Hull MinSize, Hull MaxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerOffsetHull">
+    <Arguments>nvvv</Arguments>
+    <Description><![CDATA[Inputs: Distance, StartPos, Direction, Hull BoxSize]]></Description>
+  </Function>
+
+  <Function Name="rangerOffsetHull">
+    <Arguments>nvvvv</Arguments>
+    <Description><![CDATA[Inputs: Distance, StartPos, Direction, Hull MinSize, Hull MaxSize]]></Description>
+  </Function>
+
+  <Function Name="distance">
+    <Arguments>rd:</Arguments>
+    <Description><![CDATA[Outputs the distance from the rangerdata input, else depends on rangerDefault]]></Description>
+  </Function>
+
+  <Function Name="position">
+    <Arguments>rd:</Arguments>
+    <Description><![CDATA[Outputs the position of the input ranger data trace IF it hit anything, else returns (0,0,0)]]></Description>
+  </Function>
+
+  <Function Name="entity">
+    <Arguments>rd:</Arguments>
+    <Description><![CDATA[Returns the entity of the input ranger data trace IF it hit an entity, else returns nil]]></Description>
+  </Function>
+
+  <Function Name="hit">
+    <Arguments>rd:</Arguments>
+    <Description><![CDATA[Returns 1 if the input ranger data hit anything and 0 if it didn't]]></Description>
+  </Function>
+
+  <Function Name="hitNormal">
+    <Arguments>rd:</Arguments>
+    <Description><![CDATA[Outputs a normalized vector perpendicular to the surface the ranger is pointed at.]]></Description>
+  </Function>
+
+  <Function Name="soundDuration">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[soundDuration(string Path to File) Returns the duration of the sound. Note: If the server hasn't the file it returns 60]]></Description>
+  </Function>
+
+  <Function Name="npcGetTarget">
+    <Arguments>e:</Arguments>
+    <Description><![CDATA[Returns what the npc is currently targeting.]]></Description>
+  </Function>
+
+  <Function Name="npcRelationshipByOwner">
+    <Arguments>e:esn</Arguments>
+    <Description><![CDATA[ Sets the NPC's relationship to all currently existing NPCs owned by player E. Returns number of entities added to relationships.]]></Description>
+  </Function>
+
+  <Function Name="npcDisp">
+    <Arguments>e:e</Arguments>
+    <Description><![CDATA[ Returns the NPC's relationship to entity E.]]></Description>
+  </Function>
+
+  <Function Name="signalGetGroup">
+    <Arguments></Arguments>
+    <Description><![CDATA[Gets the E-2's current signal group]]></Description>
+  </Function>
+
+  <Function Name="signalClk">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns 1 if the chip was executed because of any signal, regardless of name, group or scope. Returns 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="signalClk">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns 1 if the chip was executed because the signal S was sent, regardless of group or scope. Returns 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="signalClk">
+    <Arguments>sn</Arguments>
+    <Description><![CDATA[Returns 1 if the chip was executed because the signal S was sent to the scope N, regardless of group. Returns 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="signalClk">
+    <Arguments>ss2</Arguments>
+    <Description><![CDATA[Returns 1 if the chip was executed because the signal S2 was sent in the group S, regardless of scope. Returns 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="signalClk">
+    <Arguments>ss2n</Arguments>
+    <Description><![CDATA[Returns 1 if the chip was executed because the signal S2 was sent in the group S to the scope N. Returns 0 otherwise.]]></Description>
+  </Function>
+
+  <Function Name="signalName">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the name of the received signal.]]></Description>
+  </Function>
+
+  <Function Name="signalGroup">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the group name of the received signal.]]></Description>
+  </Function>
+
+  <Function Name="signalSender">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the entity of the chip that sent the signal.]]></Description>
+  </Function>
+
+  <Function Name="signalSenderId">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns the entity ID of the chip that sent the signal. Useful if the entity doesn't exist anymore.]]></Description>
+  </Function>
+
+  <Function Name="glonEncode">
+    <Arguments>r</Arguments>
+    <Description><![CDATA[Encodes R into a string, using GLON.]]></Description>
+  </Function>
+
+  <Function Name="glonEncode">
+    <Arguments>t</Arguments>
+    <Description><![CDATA[Encodes T into a string, using GLON.]]></Description>
+  </Function>
+
+  <Function Name="glonDecode">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Decodes S into an array, using GLON.]]></Description>
+  </Function>
+
+  <Function Name="glonDecodeTable">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Decodes S into a table, using GLON.]]></Description>
+  </Function>
+
+  <Function Name="holoEntity">
+    <Arguments>n</Arguments>
+    <Description><![CDATA[Returns the entity corresponding to the hologram given by the specified index.]]></Description>
+  </Function>
+
+  <Function Name="holoIndex">
+    <Arguments>e</Arguments>
+    <Description><![CDATA[Returns the index of the given hologram entity.]]></Description>
+  </Function>
+
+  <Function Name="holoCanCreate">
+    <Arguments></Arguments>
+    <Description>
+      <![CDATA[Returns 1 when holoCreate() will successfully create a new hologram until the Max limit is reached
+Replaces holoRemainingSpawns()]]>
+    </Description>
+  </Function>
+
+  <Function Name="holoCreate">
+    <Arguments>nvvav</Arguments>
+    <Description>
+      <![CDATA[Index, Position, Scale, Angle, Color (RGB)
+Creates a new hologram entity]]>
+    </Description>
+  </Function>
+
+  <Function Name="holoCreate">
+    <Arguments>nvva</Arguments>
+    <Description>
+      <![CDATA[Index, Position, Scale, Angle
+Creates a new hologram entity]]>
+    </Description>
+  </Function>
+
+  <Function Name="holoCreate">
+    <Arguments>nvv</Arguments>
+    <Description>
+      <![CDATA[Index, Position, Scale
+Creates a new hologram entity]]>
+    </Description>
+  </Function>
+
+  <Function Name="holoCreate">
+    <Arguments>nv</Arguments>
+    <Description>
+      <![CDATA[Index, Position
+Creates a new hologram entity]]>
+    </Description>
+  </Function>
+
+  <Function Name="holoCreate">
+    <Arguments>n</Arguments>
+    <Description>
+      <![CDATA[Index
+Creates a new hologram entity]]>
+    </Description>
+  </Function>
+
+  <Function Name="holoScale">
+    <Arguments>n</Arguments>
+    <Description>
+      <![CDATA[Index
+Returns the scale of the given hologram]]>
+    </Description>
+  </Function>
+
+  <Function Name="holoScaleUnits">
+    <Arguments>n</Arguments>
+    <Description>
+      <![CDATA[Index
+Returns the scale of the given hologram]]>
+    </Description>
+  </Function>
+
+  <Function Name="fileLoaded">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns whether or not the file has been loaded onto the server.]]></Description>
+  </Function>
+
+  <Function Name="fileRead">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns the string data from a given file (has to be loaded onto server).]]></Description>
+  </Function>
+
+  <Function Name="fileClk">
+    <Arguments>s</Arguments>
+    <Description><![CDATA[Returns whether the execution was run because a file finished uploading and was that file of a specific file name.]]></Description>
+  </Function>
+
+  <Function Name="fileClk">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns whether the execution was run because a file finished uploading.]]></Description>
+  </Function>
+
+  <Function Name="fileListLoaded">
+    <Arguments></Arguments>
+    <Description><![CDATA[If the list has been loaded and it is called, it will return 1. Any time after that until a new list is loaded it will return 0.]]></Description>
+  </Function>
+
+  <Function Name="fileList">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns an array of file names that have been loaded.]]></Description>
+  </Function>
+
+  <Function Name="fileListTable">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns a table of file names that have been loaded. (Tbl["filename"] = "filename")]]></Description>
+  </Function>
+
+  <Function Name="fileListClk">
+    <Arguments></Arguments>
+    <Description><![CDATA[Returns whether the execution was run because a list was uploaded to the server.]]></Description>
+  </Function>
+</FunctionList>

@@ -9,9 +9,9 @@ namespace E2Edit
 {
     internal class E2Colorizer : DocumentColorizingTransformer
     {
-        private readonly IEnumerable<E2FunctionData> _data;
+        private readonly IEnumerable<Function> _data;
 
-        public E2Colorizer(IEnumerable<E2FunctionData> data)
+        public E2Colorizer(IEnumerable<Function> data)
         {
             _data = data;
         }
@@ -36,11 +36,23 @@ namespace E2Edit
                                 element =>
                                     {
                                         if ((element.TextRunProperties.ForegroundBrush is SolidColorBrush &&
-                                              (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color == Color.FromRgb(224, 224, 224)))
+                                             (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color ==
+                                             Color.FromRgb(224, 224, 224)))
                                             element.TextRunProperties.SetForegroundBrush(
                                                 new SolidColorBrush(Color.FromRgb(160, 160, 240)));
                                     });
-                        buff.Clear();
+                        else
+                            ChangeLinePart(
+                                lineStartOffset + start, // startOffset
+                                lineStartOffset + start + buff.Length, // endOffset
+                                element =>
+                                    {
+                                        if ((element.TextRunProperties.ForegroundBrush is SolidColorBrush &&
+                                             (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color ==
+                                             Color.FromRgb(224, 224, 224)))
+                                            element.TextRunProperties.SetForegroundBrush(Brushes.Red);
+                                    });
+                        buff.Remove(0, buff.Length);
                         start = -1;
                     }
                 }

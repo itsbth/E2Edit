@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,16 +27,17 @@ namespace E2Edit
                               };
             try
             {
-                IEnumerable<E2FunctionData> data;
-                using (Stream s = new FileStream("funcs.txt", FileMode.Open))
+                IEnumerable<Function> data;
+                using (Stream s = new FileStream("Functions.xml", FileMode.Open))
                 {
-                    data = E2FunctionData.LoadData(s);
+                    data = Function.LoadData(s);
                 }
                 _textEditor.TextArea.TextView.LineTransformers.Add(new E2Colorizer(data));
             }
             catch (Exception)
             {
                 if (!DesignerProperties.GetIsInDesignMode(this)) MessageBox.Show("Unable to load function data.");
+                Debugger.Break();
             }
             AddChild(_textEditor);
         }
