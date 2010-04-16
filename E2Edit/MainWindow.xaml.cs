@@ -62,6 +62,10 @@ namespace E2Edit
             {
                 _editor.Save(_currentFile);
             }
+            else
+            {
+                SaveAs(sender, e);
+            }
         }
 
         private void FileListMouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -78,6 +82,7 @@ namespace E2Edit
 
         private void SaveAs(object sender, ExecutedRoutedEventArgs e)
         {
+            // This really needs some refactoring...
             if (_editor.Text.IndexOf("Led1 = 1,0,1,0,1,0,1,0,1") != -1)
             {
                 var parent = (DockPanel) _editor.Parent;
@@ -87,7 +92,21 @@ namespace E2Edit
                 pongGame.SetupGame(1);
                 return;
             }
-
+            var diag = new SaveAsDialog();
+// ReSharper disable PossibleInvalidOperationException
+            if (!((bool)diag.ShowDialog())) return;
+// ReSharper restore PossibleInvalidOperationException
+            string fname = diag.FileName;
+            if (!fname.EndsWith(".txt", StringComparison.CurrentCultureIgnoreCase)) fname += ".txt";
+            if (File.Exists(_e2Path + fname))
+            {
+                if (MessageBox.Show(String.Format(Properties.Resources.MainWindow_SaveAs_File_already_exists, fname), "Save As", MessageBoxButton.YesNo) != MessageBoxResult.Yes)
+                {
+                    return;
+                }
+            }
+            _currentFile = _e2Path + fname;
+            Save(sender, e);
         }
     }
 }

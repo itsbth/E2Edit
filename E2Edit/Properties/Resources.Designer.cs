@@ -68,5 +68,14 @@ namespace E2Edit.Properties {
                 return ResourceManager.GetString("MainWindow_MainWindow_Select_the_E2_Data_folder", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File {0} already exists. Overwrite?.
+        /// </summary>
+        internal static string MainWindow_SaveAs_File_already_exists {
+            get {
+                return ResourceManager.GetString("MainWindow_SaveAs_File_already_exists", resourceCulture);
+            }
+        }
     }
 }

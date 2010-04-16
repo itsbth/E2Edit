@@ -3,6 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ScrollBars.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Button">
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border Margin="2" Background="#3f69e2" BorderBrush="#3f69e2" BorderThickness="3" CornerRadius="2">
+                                <ContentPresenter />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <LinearGradientBrush x:Key="BorderBrush" StartPoint="0,0" EndPoint="1,0">
+                <GradientStop Color="#3f69e2" Offset="0" />
+                <GradientStop Color="#121271" Offset="1" />
+            </LinearGradientBrush>
+            <Style x:Key="TopButtonStyle" TargetType="Button">
+                <Setter Property="Control.Background" Value="Transparent" />
+                <Setter Property="Control.Foreground" Value="Wheat" />
+                <Setter Property="Control.Margin" Value="5" />
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Name="content" VerticalAlignment="Center" />
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
