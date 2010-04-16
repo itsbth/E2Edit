@@ -2,7 +2,6 @@
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Xml;
 using ICSharpCode.AvalonEdit.Highlighting;
@@ -22,14 +21,16 @@ namespace E2Edit
         public MainWindow()
         {
             IHighlightingDefinition definition = HighlightingLoader.Load(XmlReader.Create("Expression2.xshd"),
-                                                 HighlightingManager.Instance);
-            HighlightingManager.Instance.RegisterHighlighting("Expression2", new[] { ".txt" }, definition);
+                                                                         HighlightingManager.Instance);
+            HighlightingManager.Instance.RegisterHighlighting("Expression2", new[] {".txt"}, definition);
 
             InitializeComponent();
 
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Close, (s, e) => Close()));
-            CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save, (s, e) => e.CanExecute = _currentFile != null));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save,
+                                                   (s, e) => e.CanExecute = _currentFile != null));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.SaveAs, SaveAs));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New));
 
             if (File.Exists("SteamPath.txt"))
             {
@@ -37,7 +38,8 @@ namespace E2Edit
             }
             else
             {
-                var dlg = new VistaFolderBrowserDialog {Description = Properties.Resources.MainWindow_MainWindow_Select_the_E2_Data_folder};
+                var dlg = new VistaFolderBrowserDialog
+                              {Description = Properties.Resources.MainWindow_MainWindow_Select_the_E2_Data_folder};
                 if (dlg.ShowDialog() == true)
                 {
                     _e2Path = dlg.SelectedPath;
@@ -50,21 +52,14 @@ namespace E2Edit
             }
             if (!_e2Path.EndsWith(@"\")) _e2Path += @"\";
 
+            UpdateFileList();
+        }
+
+        private void UpdateFileList()
+        {
             foreach (string file in Directory.GetFiles(_e2Path))
             {
                 _fileList.Items.Add(Path.GetFileName(file));
-            }
-        }
-
-        private void Save(object sender, ExecutedRoutedEventArgs e)
-        {
-            if (_currentFile != null)
-            {
-                _editor.Save(_currentFile);
-            }
-            else
-            {
-                SaveAs(sender, e);
             }
         }
 
@@ -78,6 +73,24 @@ namespace E2Edit
         private void DoDragMove(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void New(object sender, ExecutedRoutedEventArgs e)
+        {
+            _currentFile = null;
+            _editor.Text = String.Empty;
+        }
+
+        private void Save(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (_currentFile != null)
+            {
+                _editor.Save(_currentFile);
+            }
+            else
+            {
+                SaveAs(sender, e);
+            }
         }
 
         private void SaveAs(object sender, ExecutedRoutedEventArgs e)
@@ -94,19 +107,22 @@ namespace E2Edit
             }
             var diag = new SaveAsDialog();
 // ReSharper disable PossibleInvalidOperationException
-            if (!((bool)diag.ShowDialog())) return;
+            if (!((bool) diag.ShowDialog())) return;
 // ReSharper restore PossibleInvalidOperationException
             string fname = diag.FileName;
             if (!fname.EndsWith(".txt", StringComparison.CurrentCultureIgnoreCase)) fname += ".txt";
             if (File.Exists(_e2Path + fname))
             {
-                if (MessageBox.Show(String.Format(Properties.Resources.MainWindow_SaveAs_File_already_exists, fname), "Save As", MessageBoxButton.YesNo) != MessageBoxResult.Yes)
+                if (
+                    MessageBox.Show(String.Format(Properties.Resources.MainWindow_SaveAs_File_already_exists, fname),
+                                    "Save As", MessageBoxButton.YesNo) != MessageBoxResult.Yes)
                 {
                     return;
                 }
             }
             _currentFile = _e2Path + fname;
             Save(sender, e);
+            UpdateFileList();
         }
     }
 }

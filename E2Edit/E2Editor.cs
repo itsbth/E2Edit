@@ -11,11 +11,11 @@ using ICSharpCode.AvalonEdit.Highlighting;
 
 namespace E2Edit
 {
-    internal sealed class E2EditorDocument : UserControl
+    internal sealed class E2Editor : UserControl
     {
         private readonly TextEditor _textEditor;
 
-        public E2EditorDocument()
+        public E2Editor()
         {
             _textEditor = new TextEditor
                               {
@@ -45,6 +45,7 @@ namespace E2Edit
         public string Text
         {
             get { return _textEditor.Text; }
+            set { _textEditor.Text = value; }
         }
 
         public void Open(string fname)

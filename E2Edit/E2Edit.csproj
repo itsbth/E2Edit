@@ -75,7 +75,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="E2Colorizer.cs" />
-    <Compile Include="E2EditorDocument.cs" />
+    <Compile Include="E2Editor.cs" />
     <Compile Include="Function.cs" />
     <Compile Include="E2Parser.cs" />
     <Compile Include="MainWindow.xaml.cs">

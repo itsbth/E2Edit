@@ -71,9 +71,12 @@
                             <Image Height="16" Width="16" Source="{StaticResource Disk}" />
                         </Button>
                     </StackPanel>
-                    <Button Grid.Column="2" Command="SaveAs">Save As</Button>
+                    <StackPanel Orientation="Horizontal" Grid.Column="2">
+                        <Button Command="New">New</Button>
+                        <Button Command="SaveAs">Save As</Button>
+                    </StackPanel>
                 </Grid>
-                <E2Edit:E2EditorDocument x:Name="_editor" />
+                <E2Edit:E2Editor x:Name="_editor" />
             </DockPanel>
         </DockPanel>
     </Border>
