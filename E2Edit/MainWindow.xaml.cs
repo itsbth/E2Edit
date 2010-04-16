@@ -27,10 +27,10 @@ namespace E2Edit
             InitializeComponent();
 
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Close, (s, e) => Close()));
-            CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save,
-                                                   (s, e) => e.CanExecute = _currentFile != null));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.SaveAs, SaveAs));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New));
+            
 
             if (File.Exists("SteamPath.txt"))
             {

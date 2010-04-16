@@ -34,6 +34,10 @@
         </Style>
         <BitmapImage x:Key="Disk" UriSource="Icons/disk.png" />
     </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Gesture="Control+S" Command="Save" />
+        <KeyBinding Gesture="Control+Shift+S" Command="SaveAs" />
+    </Window.InputBindings>
     <Border BorderThickness="10,2,10,10" CornerRadius="5" BorderBrush="{StaticResource BorderBrush}" Background="{StaticResource BorderBrush}" MouseLeftButtonDown="DoDragMove">
         <DockPanel>
             <Grid DockPanel.Dock="Top">
