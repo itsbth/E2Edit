@@ -57,6 +57,7 @@ namespace E2Edit
 
         private void UpdateFileList()
         {
+            _fileList.Items.Clear();
             foreach (string file in Directory.GetFiles(_e2Path))
             {
                 _fileList.Items.Add(Path.GetFileName(file));
