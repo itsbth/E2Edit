@@ -70,6 +70,15 @@ namespace E2Edit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have to specify a folder..
+        /// </summary>
+        internal static string MainWindow_MainWindow_You_have_to_specify_a_folder {
+            get {
+                return ResourceManager.GetString("MainWindow_MainWindow_You_have_to_specify_a_folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File {0} already exists. Overwrite?.
         /// </summary>
         internal static string MainWindow_SaveAs_File_already_exists {

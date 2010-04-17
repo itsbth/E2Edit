@@ -48,6 +48,8 @@ namespace E2Edit
                 else
                 {
                     Close();
+                    MessageBox.Show("You have to specify a folder.");
+                    return;
                 }
             }
             if (!_e2Path.EndsWith(@"\")) _e2Path += @"\";
