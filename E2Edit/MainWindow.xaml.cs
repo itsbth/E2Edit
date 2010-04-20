@@ -48,7 +48,7 @@ namespace E2Edit
                 else
                 {
                     Close();
-                    MessageBox.Show("You have to specify a folder.");
+                    MessageBox.Show(Properties.Resources.MainWindow_MainWindow_You_have_to_specify_a_folder);
                     return;
                 }
             }

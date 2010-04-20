@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
+using System.Windows.Media;
 using System.Xml.Serialization;
+using ICSharpCode.AvalonEdit.CodeCompletion;
+using ICSharpCode.AvalonEdit.Document;
+using ICSharpCode.AvalonEdit.Editing;
 
 namespace E2Edit
 {
@@ -31,24 +33,59 @@ namespace E2Edit
     [XmlRoot("FunctionList")]
     public class FunctionList
     {
-        [XmlElement("Function")]
-        public Function[] Functions;
+        [XmlElement("Function")] public Function[] Functions;
     }
 
     [XmlRoot]
-    public class Function
+    public class Function : ICompletionData
     {
-        [XmlElement]
-        public string Arguments;
-        [XmlAttribute]
-        public string Name;
-        [XmlElement]
-        public string Description;
+        [XmlElement] public string Arguments;
+        [XmlElement] public string Description;
+        [XmlAttribute] public string Name;
+        [XmlElement] public string Return;
 
-        public static IEnumerable<Function> LoadData(Stream stream)
+        #region ICompletionData Members
+
+        public void Complete(TextArea textArea, ISegment completionSegment, EventArgs insertionRequestEventArgs)
         {
-            
-            return ((FunctionList) new XmlSerializer(typeof(FunctionList)).Deserialize(stream)).Functions;
+            textArea.Document.Replace(completionSegment, Name + "(");
+        }
+
+        public ImageSource Image
+        {
+            get { return null; }
+        }
+
+        public string Text
+        {
+            get { return Name; }
+        }
+
+        public object Content
+        {
+            get { return Name; }
+        }
+
+        object ICompletionData.Description
+        {
+            get
+            {
+                return String.Format("{0} {1}\n{2}",
+                                     String.IsNullOrEmpty(Return) ? "None" : GetE2Type(Return.ToUpper()).ToString(),
+                                     Name, Description);
+            }
+        }
+
+        public double Priority
+        {
+            get { return 1.0d; }
+        }
+
+        #endregion
+
+        public static IList<Function> LoadData(Stream stream)
+        {
+            return ((FunctionList) new XmlSerializer(typeof (FunctionList)).Deserialize(stream)).Functions;
         }
 
         private static IEnumerable<DataType> GetE2Types(IEnumerable<string> value)
