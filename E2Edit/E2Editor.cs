@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -48,10 +50,16 @@ namespace E2Edit
 
         private void IntelliSense_OnTextEntered(object sender, TextCompositionEventArgs e)
         {
+            if (_completionWindow != null && !Char.IsLetterOrDigit(e.Text[0]))
+            {
+                _completionWindow.Close();
+                _completionWindow = null;
+                return;
+            }
             if (e.Text != ":" || _completionWindow != null)
                 return;
             _completionWindow = new CompletionWindow(_textEditor.TextArea);
-            foreach (var function in _functionData)
+            foreach (var function in _functionData.OrderBy((f => f.Name)))
             {
                 _completionWindow.CompletionList.CompletionData.Add(function);
             }
