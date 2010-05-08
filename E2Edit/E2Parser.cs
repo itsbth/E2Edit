@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
 namespace E2Edit
 {
-    class E2Parser
+    internal class E2Parser
     {
-        private readonly string _text;
+        private static readonly char[] Whitespace = new[] {' ', '\t'};
         private readonly IList<string> _lines;
-        private int _pos;
+        private readonly string _text;
         private int _line;
-        private static readonly char[] Whitespace = new[]{' ', '\t'};
-        public IList<Variable> Variables{ get; private set; }
+        private int _pos;
 
         public E2Parser(string text)
         {
@@ -20,6 +20,8 @@ namespace E2Edit
             _lines = text.Split(new[] {'\r', '\n'});
             Variables = new List<Variable>();
         }
+
+        public IList<Variable> Variables { get; private set; }
 
         public void Parse()
         {
@@ -80,8 +82,54 @@ namespace E2Edit
         }
     }
 
+    internal class TokenReader
+    {
+        private readonly TextReader _reader;
+        private int _offset;
+
+        public TokenReader(TextReader reader)
+        {
+            _reader = reader;
+        }
+
+        public bool IgnoreWhitespace { get; set; }
+
+        public Token Read()
+        {
+            var buff = new StringBuilder();
+            char s;
+            if (IgnoreWhitespace)
+                do
+                {
+                    s = (char) _reader.Read();
+                    _offset += 1;
+                } while (Char.IsWhiteSpace(s));
+            int start = _offset;
+            do
+            {
+                s = (char) _reader.Read();
+                buff.Append(s);
+                _offset += 1;
+            } while (Char.IsLetterOrDigit(s));
+            return new Token {Value = buff.ToString(), Offset = start, Length = _offset - start};
+        }
+
+        #region Nested type: Token
+
+        internal struct Token
+        {
+            public int Length;
+            public int Offset;
+            public string Value;
+        }
+
+        #endregion
+    }
+
     internal class Variable
     {
+        #region Source enum
+
         public enum Source
         {
             Normal,
@@ -89,6 +137,8 @@ namespace E2Edit
             Output,
             Persist,
         }
+
+        #endregion
 
         public string Name;
         public string Type;

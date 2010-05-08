@@ -1,0 +1,40 @@
+﻿<Window x:Class="E2Edit.SettingsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:E2Edit="clr-namespace:E2Edit" Title="SettingsDialog" Height="Auto" Width="300"
+        SizeToContent="Height"
+        WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+    <Border BorderThickness="10,2,10,10" CornerRadius="5" BorderBrush="{StaticResource BorderBrush}" Background="{StaticResource BorderBrush}">
+        <DockPanel>
+            <Label DockPanel.Dock="Top" HorizontalAlignment="Center">Settings</Label>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">Font:</Label>
+                <ComboBox Name="FBox" Grid.Row="0" Grid.Column="1" SelectedValue="{Binding Font, Mode=TwoWay}" ItemsSource="{x:Static E2Edit:SettingsDialog.FontList}">
+                    <ComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel />
+                        </ItemsPanelTemplate>
+                    </ComboBox.ItemsPanel>
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}" FontFamily="{Binding}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <CheckBox Grid.Row="1" Grid.ColumnSpan="2" IsChecked="{Binding IntelliSenseEnabled, Mode=TwoWay}">Intellisense (Experimental)</CheckBox>
+                <CheckBox Grid.Row="2" Grid.ColumnSpan="2" IsChecked="{Binding AutoIndentEnabled, Mode=TwoWay}">AutoIndent</CheckBox>
+                <Button Grid.Row="3" Grid.Column="0" IsDefault="True" Click="Button_Click">Ok</Button>
+                <Button Grid.Row="3" Grid.Column="1" IsCancel="True">Cancel</Button>
+            </Grid>
+        </DockPanel>
+    </Border>
+</Window>

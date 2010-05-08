@@ -86,5 +86,14 @@ namespace E2Edit.Properties {
                 return ResourceManager.GetString("MainWindow_SaveAs_File_already_exists", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save changes to the current file?.
+        /// </summary>
+        internal static string MainWindow_ShouldSave_Save_changes_to_the_current_file {
+            get {
+                return ResourceManager.GetString("MainWindow_ShouldSave_Save_changes_to_the_current_file", resourceCulture);
+            }
+        }
     }
 }

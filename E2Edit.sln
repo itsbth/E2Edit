@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E2Edit", "E2Edit\E2Edit.csproj", "{EE9193E8-6415-4910-9434-7AC54AEB6759}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E2ParserTest", "E2ParserTest\E2ParserTest.csproj", "{131C1574-DF19-494A-8127-E5D43A4F27FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{EE9193E8-6415-4910-9434-7AC54AEB6759}.Debug|x86.Build.0 = Debug|x86
 		{EE9193E8-6415-4910-9434-7AC54AEB6759}.Release|x86.ActiveCfg = Release|x86
 		{EE9193E8-6415-4910-9434-7AC54AEB6759}.Release|x86.Build.0 = Release|x86
+		{131C1574-DF19-494A-8127-E5D43A4F27FA}.Debug|x86.ActiveCfg = Debug|x86
+		{131C1574-DF19-494A-8127-E5D43A4F27FA}.Debug|x86.Build.0 = Debug|x86
+		{131C1574-DF19-494A-8127-E5D43A4F27FA}.Release|x86.ActiveCfg = Release|x86
+		{131C1574-DF19-494A-8127-E5D43A4F27FA}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

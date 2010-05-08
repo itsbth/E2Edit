@@ -7,6 +7,7 @@
   <Color name="Directive" foreground="#F0F0A0" />
   <Color name="Number" foreground="#F0A0A0" />
   <Color name="Variable" foreground="#A0F0A0" />
+  <Color name="Type" foreground="#FF8C00" />
 
   <!-- This is the main ruleset. -->
   <RuleSet>
@@ -41,6 +42,10 @@
       <Word>for</Word>
       <Word>while</Word>
     </Keywords>
+
+    <Rule color="Type">
+      (?=\[.*,)(entity|angle|vector)(?&lt;=\])
+    </Rule>
 
     <!-- Digits -->
     <Rule color="Number">

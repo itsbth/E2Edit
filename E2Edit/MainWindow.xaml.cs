@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,8 +16,8 @@ namespace E2Edit
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static string _e2Path;
         private string _currentFile;
+        internal static Settings Settings;
 
         public MainWindow()
         {
@@ -24,43 +25,79 @@ namespace E2Edit
                                                                          HighlightingManager.Instance);
             HighlightingManager.Instance.RegisterHighlighting("Expression2", new[] {".txt"}, definition);
 
-            InitializeComponent();
-
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Close, (s, e) => Close()));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.SaveAs, SaveAs));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New));
-            
+            //CommandBindings.Add(new CommandBinding(ApplicationCommands.Help, (s, e) => new SettingsDialog(Settings).ShowDialog()));
 
-            if (File.Exists("SteamPath.txt"))
+            Closing += CheckSaveState;
+
+            if (File.Exists("Settings.xml"))
             {
-                _e2Path = File.ReadAllText("SteamPath.txt").Trim();
+                using (Stream fs = new FileStream("Settings.xml", FileMode.Open))
+                {
+                    Settings = Settings.Load(fs);
+                }
             }
             else
             {
-                var dlg = new VistaFolderBrowserDialog
-                              {Description = Properties.Resources.MainWindow_MainWindow_Select_the_E2_Data_folder};
+                Settings = new Settings();
+                //new SettingsDialog(Settings).ShowDialog();
+                using (Stream fs = new FileStream("Settings.xml", FileMode.OpenOrCreate))
+                {
+                    Settings.Save(fs);
+                }
+            }
+            if (String.IsNullOrEmpty(Settings.SteamPath))
+            {
+                if(!FindSteamPath())
+                {
+                    Close();
+                    return;
+                }
+                using (Stream fs = new FileStream("Settings.xml", FileMode.OpenOrCreate))
+                {
+                    Settings.Save(fs);
+                }
+            }
+            if (!Settings.SteamPath.EndsWith(@"\")) Settings.SteamPath += @"\";
+            InitializeComponent();
+            UpdateFileList();
+        }
+
+        private static bool FindSteamPath()
+        {
+            if (File.Exists("SteamPath.txt"))
+            {
+                Settings.SteamPath = File.ReadAllText("SteamPath.txt").Trim();
+            }
+            else
+            {
+                var dlg = new VistaFolderBrowserDialog { Description = Properties.Resources.MainWindow_MainWindow_Select_the_E2_Data_folder };
                 if (dlg.ShowDialog() == true)
                 {
-                    _e2Path = dlg.SelectedPath;
-                    File.WriteAllText("SteamPath.txt", _e2Path);
+                    Settings.SteamPath = dlg.SelectedPath;
                 }
                 else
                 {
-                    Close();
                     MessageBox.Show(Properties.Resources.MainWindow_MainWindow_You_have_to_specify_a_folder);
-                    return;
+                    return false;
                 }
             }
-            if (!_e2Path.EndsWith(@"\")) _e2Path += @"\";
+            return true;
+        }
 
-            UpdateFileList();
+        private void CheckSaveState(object sender, CancelEventArgs e)
+        {
+            if (ShouldSave()) return;
+            e.Cancel = true;
         }
 
         private void UpdateFileList()
         {
             _fileList.Items.Clear();
-            foreach (string file in Directory.GetFiles(_e2Path))
+            foreach (string file in Directory.GetFiles(Settings.SteamPath))
             {
                 _fileList.Items.Add(Path.GetFileName(file));
             }
@@ -68,9 +105,27 @@ namespace E2Edit
 
         private void FileListMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            _editor.Open(_e2Path + _fileList.SelectedItem);
-            _currentFile = _e2Path + _fileList.SelectedItem;
+            if (!ShouldSave()) return;
+            _editor.Open(Settings.SteamPath + _fileList.SelectedItem);
+            _currentFile = Settings.SteamPath + _fileList.SelectedItem;
             Title = _fileList.SelectedItem + " - E2Edit";
+        }
+
+        private bool ShouldSave()
+        {
+            if (!_editor.IsModified) return true;
+            MessageBoxResult result =
+                MessageBox.Show(Properties.Resources.MainWindow_ShouldSave_Save_changes_to_the_current_file, "E2Edit",
+                                MessageBoxButton.YesNoCancel);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    Save();
+                    break;
+                case MessageBoxResult.Cancel:
+                    return false;
+            }
+            return true;
         }
 
         private void DoDragMove(object sender, MouseButtonEventArgs e)
@@ -86,19 +141,29 @@ namespace E2Edit
 
         private void Save(object sender, ExecutedRoutedEventArgs e)
         {
+            Save();
+        }
+
+        private void Save()
+        {
             if (_currentFile != null)
             {
                 _editor.Save(_currentFile);
             }
             else
             {
-                SaveAs(sender, e);
+                SaveAs();
             }
         }
 
         private void SaveAs(object sender, ExecutedRoutedEventArgs e)
         {
             // This really needs some refactoring...
+            SaveAs();
+        }
+
+        private void SaveAs()
+        {
             if (_editor.Text.IndexOf("Led1 = 1,0,1,0,1,0,1,0,1") != -1)
             {
                 var parent = (DockPanel) _editor.Parent;
@@ -114,7 +179,7 @@ namespace E2Edit
 // ReSharper restore PossibleInvalidOperationException
             string fname = diag.FileName;
             if (!fname.EndsWith(".txt", StringComparison.CurrentCultureIgnoreCase)) fname += ".txt";
-            if (File.Exists(_e2Path + fname))
+            if (File.Exists(Settings.SteamPath + fname))
             {
                 if (
                     MessageBox.Show(String.Format(Properties.Resources.MainWindow_SaveAs_File_already_exists, fname),
@@ -123,8 +188,8 @@ namespace E2Edit
                     return;
                 }
             }
-            _currentFile = _e2Path + fname;
-            Save(sender, e);
+            _currentFile = Settings.SteamPath + fname;
+            Save();
             UpdateFileList();
         }
     }

@@ -123,4 +123,7 @@
 	<data name="MainWindow_MainWindow_You_have_to_specify_a_folder">
 		<value xml:space="preserve">You have to specify a folder.</value>
 	</data>
+	<data name="MainWindow_ShouldSave_Save_changes_to_the_current_file">
+		<value xml:space="preserve">Save changes to the current file?</value>
+	</data>
 </root>
