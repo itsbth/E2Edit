@@ -6,7 +6,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
 
-namespace E2Edit
+namespace E2Edit.Editor
 {
     // <TomyLobo> <ITSBTH_> HP: http://img130.imageshack.us/img130/8066/e2edit20100413173043.png
     // <TomyLobo> my forst thought was "pong?" 

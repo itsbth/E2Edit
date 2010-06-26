@@ -1,8 +1,8 @@
 ﻿<Window x:Class="E2Edit.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:E2Edit="clr-namespace:E2Edit"
-        Name="mainWindow"
+        xmlns:ui="clr-namespace:E2Edit"
+        xmlns:Editor="clr-namespace:E2Edit.Editor" Name="mainWindow"
         Title="E2Edit" Height="350" Width="525"
         WindowStyle="None" AllowsTransparency="True"
         Background="Transparent" ResizeMode="CanResizeWithGrip">
@@ -33,6 +33,7 @@
             </Setter>
         </Style>
         <BitmapImage x:Key="Disk" UriSource="Icons/disk.png" />
+        <ui:FileListIconConverter x:Key="ifConv" />
     </Window.Resources>
     <Window.InputBindings>
         <KeyBinding Gesture="Control+S" Command="Save" />
@@ -52,7 +53,16 @@
                     <Button Style="{StaticResource TopButtonStyle}" Command="Close">X</Button>
                 </StackPanel>
             </Grid>
-            <ListView DockPanel.Dock="Left" Name="_fileList" MouseDoubleClick="FileListMouseDoubleClick" Background="#DDD" />
+            <ListView DockPanel.Dock="Left" Name="_fileList" MouseDoubleClick="FileListMouseDoubleClick" Background="#DDD" Width="150" ItemsSource="{Binding}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="16" Height="16" Source="{Binding Path=IsFolder, Converter={StaticResource ResourceKey=ifConv}}" />
+                            <TextBlock Text="{Binding Path=Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <DockPanel>
                 <Grid DockPanel.Dock="Top" Background="#050C2E">
                     <Grid.ColumnDefinitions>
@@ -80,7 +90,7 @@
                         <Button Command="SaveAs">Save As</Button>
                     </StackPanel>
                 </Grid>
-                <E2Edit:E2Editor x:Name="_editor" />
+                <Editor:E2Editor x:Name="_editor" />
             </DockPanel>
         </DockPanel>
     </Border>

@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using E2Edit.Resources;
 using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.CodeCompletion;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Highlighting;
+using ICSharpCode.AvalonEdit.Snippets;
 
-namespace E2Edit
+namespace E2Edit.Editor
 {
     internal sealed class E2Editor : UserControl
     {
@@ -24,20 +25,26 @@ namespace E2Edit
 
         public E2Editor()
         {
-            _settings = MainWindow.Settings;
+            _settings = MainWindow.Settings ?? new Settings();
             _textEditor = new TextEditor
                               {
                                   SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("Expression2"),
-                                  FontFamily = _settings.Font,
+
                                   Background = new SolidColorBrush(Color.FromRgb(0x1A, 0x1A, 0x1A)),
-                                  Foreground = new SolidColorBrush(Color.FromRgb(224, 224, 224)),
+                                  Foreground = new SolidColorBrush(Color.FromRgb(0xE0, 0xE0, 0xE0)),
+
+                                  FontFamily = _settings.Font,
                                   ShowLineNumbers = true,
                                   Options = {ConvertTabsToSpaces = true},
                               };
-            if (_settings.AutoIndentEnabled) _textEditor.TextArea.IndentationStrategy = new E2IndentationStrategy(_textEditor.Options);
+            if (_settings.AutoIndentEnabled)
+            {
+                _textEditor.TextArea.IndentationStrategy = new E2IndentationStrategy(_textEditor.Options);
+                _textEditor.TextArea.TextEntered += AutoIndent_OnTextEntered;
+            }
             try
             {
-                using (Stream s = new FileStream("Functions.xml", FileMode.Open))
+                using (Stream s = Resource.GetResource("E2.Functions"))
                     _functionData = Function.LoadData(s);
                 _textEditor.TextArea.TextView.LineTransformers.Add(new E2Colorizer(_functionData));
                 _textEditor.TextArea.TextEntered += IntelliSense_OnTextEntered;
@@ -48,6 +55,16 @@ namespace E2Edit
                 //Debugger.Break();
             }
             AddChild(_textEditor);
+        }
+
+        private void AutoIndent_OnTextEntered(object sender, TextCompositionEventArgs e)
+        {
+            if (e.Text != "}" || !_settings.AutoIndentEnabled) return;
+            var document = _textEditor.Document;
+            var line = document.GetLineByOffset(_textEditor.TextArea.Caret.Offset);
+            string text = document.GetText(line);
+            if (text.StartsWith(_textEditor.Options.IndentationString) && text.EndsWith("}") && !text.Contains("{"))
+                document.Remove(line.Offset, _textEditor.Options.IndentationSize);
         }
 
         public string Text
@@ -68,20 +85,10 @@ namespace E2Edit
                 _completionWindow.Close();
                 _completionWindow = null;
             }
-            if (e.Text == "}" && _settings.AutoIndentEnabled)
-            {
-                var document = _textEditor.Document;
-                var line = document.GetLineByOffset(_textEditor.TextArea.Caret.Offset);
-                string text = document.GetText(line);
-                if (text.StartsWith(_textEditor.Options.IndentationString) && text.EndsWith("}") && !text.Contains("{"))
-                {
-                    document.Remove(line.Offset, _textEditor.Options.IndentationSize);
-                }
-            }
             if (e.Text != ":" || _completionWindow != null || !_settings.IntelliSenseEnabled)
                 return;
             _completionWindow = new CompletionWindow(_textEditor.TextArea);
-            foreach (Function function in _functionData.OrderBy((f => f.Name)))
+            foreach (Function function in _functionData.Where(f => f.ThisType != DataType.Void).OrderBy((f => f.Name)))
             {
                 _completionWindow.CompletionList.CompletionData.Add(function);
             }

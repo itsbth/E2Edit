@@ -11,15 +11,14 @@
 
   <!-- This is the main ruleset. -->
   <RuleSet>
-    <Span color="Comment" begin="#" />
+    <Span begin="#" color="Comment" />
 
-    <Span begin="@(inputs|outputs|name|model|trigger|persist)" color="Directive">
+    <Span begin="@(name|model)" color="Directive" />
+    <Span begin="@(inputs|outputs|trigger|persist)" color="Directive">
       <RuleSet>
-        <Keywords color="Comment">
-          <Word>entity</Word>
-          <Word>vector</Word>
-          <Word>angle</Word>
-        </Keywords>
+        <Rule color="Type">
+          (?!:)(vector|angle|entity|wirelink|normal|quaternion|array|table)
+        </Rule>
         <Rule color="Variable">
           \b[A-Z][A-Za-z0-9]*
         </Rule>
@@ -41,6 +40,8 @@
       <Word>elseif</Word>
       <Word>for</Word>
       <Word>while</Word>
+      <Word>break</Word>
+      <Word>continue</Word>
     </Keywords>
 
     <Rule color="Type">

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+  <ResourceNode ID="E2.Syntax">
+    <File>Expression2.xshd</File>
+    <Name>E2Edit.Resources.Expression2.xshd</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Functions">
+    <File>Functions.xml</File>
+    <Name>E2Edit.Resources.Functions.xml</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Folder">
+    <File>Icons/Folder.png</File>
+    <Name>E2Edit.Resources.Icons.Folder.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Script">
+    <File>Icons/Script.png</File>
+    <Name>E2Edit.Resources.Icons.Script.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Angle">
+    <File>Icons/Type-Angle.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Angle.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Array">
+    <File>Icons/Type-Array.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Array.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Bone">
+    <File>Icons/Type-Bone.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Bone.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.ComplexNumber">
+    <File>Icons/Type-ComplexNumber.png</File>
+    <Name>E2Edit.Resources.Icons.Type-ComplexNumber.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Entity">
+    <File>Icons/Type-Entity.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Entity.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Matrix">
+    <File>Icons/Type-Matrix.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Matrix.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Matrix2">
+    <File>Icons/Type-Matrix2.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Matrix2.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Matrix4">
+    <File>Icons/Type-Matrix4.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Matrix4.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Number">
+    <File>Icons/Type-Number.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Number.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Quaternion">
+    <File>Icons/Type-Quaternion.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Quaternion.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.RangerData">
+    <File>Icons/Type-RangerData.png</File>
+    <Name>E2Edit.Resources.Icons.Type-RangerData.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.String">
+    <File>Icons/Type-String.png</File>
+    <Name>E2Edit.Resources.Icons.Type-String.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Table">
+    <File>Icons/Type-Table.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Table.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Vector">
+    <File>Icons/Type-Vector.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Vector.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Vector2">
+    <File>Icons/Type-Vector2.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Vector2.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Vector4">
+    <File>Icons/Type-Vector4.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Vector4.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.WireLink">
+    <File>Icons/Type-WireLink.png</File>
+    <Name>E2Edit.Resources.Icons.Type-WireLink.png</Name>
+  </ResourceNode>
+  <ResourceNode ID="E2.Icons.Type.Void">
+    <File>Icons/Type-Void.png</File>
+    <Name>E2Edit.Resources.Icons.Type-Void.png</Name>
+  </ResourceNode>
+</Resources>

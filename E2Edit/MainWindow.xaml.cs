@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Xml;
+using E2Edit.Editor;
+using E2Edit.Resources;
 using ICSharpCode.AvalonEdit.Highlighting;
 using ICSharpCode.AvalonEdit.Highlighting.Xshd;
 using Ookii.Dialogs.Wpf;
@@ -16,20 +20,22 @@ namespace E2Edit
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string _currentFile;
         internal static Settings Settings;
+        private string _currentFile;
 
         public MainWindow()
         {
-            IHighlightingDefinition definition = HighlightingLoader.Load(XmlReader.Create("Expression2.xshd"),
-                                                                         HighlightingManager.Instance);
+            IHighlightingDefinition definition;
+            using (Stream stream = Resource.GetResource("E2.Syntax"))
+                definition = HighlightingLoader.Load(XmlReader.Create(stream),
+                                                     HighlightingManager.Instance);
             HighlightingManager.Instance.RegisterHighlighting("Expression2", new[] {".txt"}, definition);
 
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Close, (s, e) => Close()));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.Save, Save));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.SaveAs, SaveAs));
             CommandBindings.Add(new CommandBinding(ApplicationCommands.New, New));
-            //CommandBindings.Add(new CommandBinding(ApplicationCommands.Help, (s, e) => new SettingsDialog(Settings).ShowDialog()));
+            CommandBindings.Add(new CommandBinding(ApplicationCommands.Help, (s, e) => Resource.Export()));
 
             Closing += CheckSaveState;
 
@@ -51,7 +57,7 @@ namespace E2Edit
             }
             if (String.IsNullOrEmpty(Settings.SteamPath))
             {
-                if(!FindSteamPath())
+                if (!FindSteamPath())
                 {
                     Close();
                     return;
@@ -63,7 +69,7 @@ namespace E2Edit
             }
             if (!Settings.SteamPath.EndsWith(@"\")) Settings.SteamPath += @"\";
             InitializeComponent();
-            UpdateFileList();
+            UpdateFileList(Settings.SteamPath);
         }
 
         private static bool FindSteamPath()
@@ -74,7 +80,8 @@ namespace E2Edit
             }
             else
             {
-                var dlg = new VistaFolderBrowserDialog { Description = Properties.Resources.MainWindow_MainWindow_Select_the_E2_Data_folder };
+                var dlg = new VistaFolderBrowserDialog
+                              {Description = Properties.Resources.MainWindow_MainWindow_Select_the_E2_Data_folder};
                 if (dlg.ShowDialog() == true)
                 {
                     Settings.SteamPath = dlg.SelectedPath;
@@ -94,21 +101,37 @@ namespace E2Edit
             e.Cancel = true;
         }
 
-        private void UpdateFileList()
+        private void UpdateFileList(string path)
         {
-            _fileList.Items.Clear();
-            foreach (string file in Directory.GetFiles(Settings.SteamPath))
-            {
-                _fileList.Items.Add(Path.GetFileName(file));
-            }
+            if (!Directory.Exists(path)) return;
+            var fli = new List<FileListItem>
+// ReSharper disable PossibleNullReferenceException
+                          {new FileListItem {IsFolder = true, Name = "[ .. ]", Path = Directory.GetParent(path).FullName}};
+// ReSharper restore PossibleNullReferenceException
+            fli.AddRange(
+                Directory.GetDirectories(path).Select(
+                    folder => new FileListItem {IsFolder = true, Name = Path.GetFileName(folder), Path = folder}).ToList
+                    ());
+            fli.AddRange(
+                Directory.GetFiles(path).Select(
+                    file => new FileListItem {IsFolder = false, Name = Path.GetFileName(file), Path = file}));
+            _fileList.DataContext = fli;
         }
 
         private void FileListMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (!ShouldSave()) return;
-            _editor.Open(Settings.SteamPath + _fileList.SelectedItem);
-            _currentFile = Settings.SteamPath + _fileList.SelectedItem;
-            Title = _fileList.SelectedItem + " - E2Edit";
+            var item = (FileListItem) _fileList.SelectedItem;
+            if (item.IsFolder)
+            {
+                UpdateFileList(item.Path);
+            }
+            else
+            {
+                _editor.Open(item.Path);
+                _currentFile = item.Path;
+                Title = item.Name + " - E2Edit";
+            }
         }
 
         private bool ShouldSave()
@@ -190,7 +213,7 @@ namespace E2Edit
             }
             _currentFile = Settings.SteamPath + fname;
             Save();
-            UpdateFileList();
+            UpdateFileList(Settings.SteamPath);
         }
     }
 }

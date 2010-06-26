@@ -46,14 +46,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xaml">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -63,8 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="E2FoldingStrategy.cs" />
-    <Compile Include="E2IndentationStrategy.cs" />
+    <Compile Include="Editor\E2FoldingStrategy.cs" />
+    <Compile Include="Editor\E2IndentationStrategy.cs" />
+    <Compile Include="FileListIconConverter.cs" />
+    <Compile Include="Resources\Resource.cs" />
     <Compile Include="SaveAsDialog.xaml.cs">
       <DependentUpon>SaveAsDialog.xaml</DependentUpon>
     </Compile>
@@ -79,10 +78,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="E2Colorizer.cs" />
-    <Compile Include="E2Editor.cs" />
-    <Compile Include="Function.cs" />
-    <Compile Include="E2Parser.cs" />
+    <Compile Include="Editor\E2Colorizer.cs" />
+    <Compile Include="Editor\E2Editor.cs" />
+    <Compile Include="Editor\Function.cs" />
+    <Compile Include="Editor\E2Parser.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -101,7 +100,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PongGame.cs" />
+    <Compile Include="Editor\PongGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -121,10 +120,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Expression2.xshd">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <EmbeddedResource Include="Resources\Expression2.xshd">
       <SubType>Designer</SubType>
-    </None>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,9 +133,48 @@
     <Resource Include="Icons\disk.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Functions.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <EmbeddedResource Include="Resources\Functions.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resources.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\Type-Angle.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Array.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Bone.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-ComplexNumber.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Entity.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Matrix.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Matrix2.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Matrix4.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Number.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Quaternion.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-RangerData.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-String.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Table.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Vector.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Vector2.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-Vector4.png" />
+    <EmbeddedResource Include="Resources\Icons\Type-WireLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\Type-Void.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\Folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\Folder-Go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\Script.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

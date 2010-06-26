@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Folding;
 
-namespace E2Edit
+namespace E2Edit.Editor
 {
     class E2FoldingStrategy : AbstractFoldingStrategy
     {

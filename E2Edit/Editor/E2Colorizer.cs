@@ -5,7 +5,7 @@ using System.Windows.Media;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Rendering;
 
-namespace E2Edit
+namespace E2Edit.Editor
 {
     internal class E2Colorizer : DocumentColorizingTransformer
     {
@@ -20,6 +20,16 @@ namespace E2Edit
         {
             int lineStartOffset = line.Offset;
             string text = CurrentContext.Document.GetText(line);
+            if (text.StartsWith("@"))
+            {
+                
+            }
+            else
+                ColorFunctions(text, lineStartOffset);
+        }
+
+        private void ColorFunctions(string text, int lineStartOffset)
+        {
             int start = -1;
             var buff = new StringBuilder();
             for (int i = 0; i < text.Length; i++)
