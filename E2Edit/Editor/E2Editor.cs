@@ -12,16 +12,15 @@ using ICSharpCode.AvalonEdit;
 using ICSharpCode.AvalonEdit.CodeCompletion;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Highlighting;
-using ICSharpCode.AvalonEdit.Snippets;
 
 namespace E2Edit.Editor
 {
     internal sealed class E2Editor : UserControl
     {
         private readonly IList<Function> _functionData;
+        private readonly Settings _settings;
         private readonly TextEditor _textEditor;
         private CompletionWindow _completionWindow;
-        private readonly Settings _settings;
 
         public E2Editor()
         {
@@ -29,10 +28,8 @@ namespace E2Edit.Editor
             _textEditor = new TextEditor
                               {
                                   SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("Expression2"),
-
                                   Background = new SolidColorBrush(Color.FromRgb(0x1A, 0x1A, 0x1A)),
                                   Foreground = new SolidColorBrush(Color.FromRgb(0xE0, 0xE0, 0xE0)),
-
                                   FontFamily = _settings.Font,
                                   ShowLineNumbers = true,
                                   Options = {ConvertTabsToSpaces = true},
@@ -48,6 +45,7 @@ namespace E2Edit.Editor
                     _functionData = Function.LoadData(s);
                 _textEditor.TextArea.TextView.LineTransformers.Add(new E2Colorizer(_functionData));
                 _textEditor.TextArea.TextEntered += IntelliSense_OnTextEntered;
+                _textEditor.TextArea.TextEntered += Insight_OnTextEntered;
             }
             catch (Exception)
             {
@@ -55,16 +53,6 @@ namespace E2Edit.Editor
                 //Debugger.Break();
             }
             AddChild(_textEditor);
-        }
-
-        private void AutoIndent_OnTextEntered(object sender, TextCompositionEventArgs e)
-        {
-            if (e.Text != "}" || !_settings.AutoIndentEnabled) return;
-            var document = _textEditor.Document;
-            var line = document.GetLineByOffset(_textEditor.TextArea.Caret.Offset);
-            string text = document.GetText(line);
-            if (text.StartsWith(_textEditor.Options.IndentationString) && text.EndsWith("}") && !text.Contains("{"))
-                document.Remove(line.Offset, _textEditor.Options.IndentationSize);
         }
 
         public string Text
@@ -78,6 +66,16 @@ namespace E2Edit.Editor
             get { return _textEditor.CanUndo; }
         }
 
+        private void AutoIndent_OnTextEntered(object sender, TextCompositionEventArgs e)
+        {
+            if (e.Text != "}" || !_settings.AutoIndentEnabled) return;
+            TextDocument document = _textEditor.Document;
+            DocumentLine line = document.GetLineByOffset(_textEditor.TextArea.Caret.Offset);
+            string text = document.GetText(line);
+            if (text.StartsWith(_textEditor.Options.IndentationString) && text.EndsWith("}") && !text.Contains("{"))
+                document.Remove(line.Offset, _textEditor.Options.IndentationSize);
+        }
+
         private void IntelliSense_OnTextEntered(object sender, TextCompositionEventArgs e)
         {
             if (_completionWindow != null && !Char.IsLetterOrDigit(e.Text[0]))
@@ -85,7 +83,9 @@ namespace E2Edit.Editor
                 _completionWindow.Close();
                 _completionWindow = null;
             }
-            if (e.Text != ":" || _completionWindow != null || !_settings.IntelliSenseEnabled)
+            if (e.Text != ":" || _completionWindow != null || !_settings.IntelliSenseEnabled ||
+                _textEditor.Document.GetText(_textEditor.Document.GetLineByOffset(_textEditor.CaretOffset)).StartsWith(
+                    "@"))
                 return;
             _completionWindow = new CompletionWindow(_textEditor.TextArea);
             foreach (Function function in _functionData.Where(f => f.ThisType != DataType.Void).OrderBy((f => f.Name)))
@@ -94,6 +94,12 @@ namespace E2Edit.Editor
             }
             _completionWindow.Closed += (s, ex) => _completionWindow = null;
             _completionWindow.Show();
+        }
+
+        private void Insight_OnTextEntered(object sender, TextCompositionEventArgs e)
+        {
+            if (e.Text != "(") return;
+            var t = this;
         }
 
         public void Open(string fname)

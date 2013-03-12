@@ -22,10 +22,12 @@ namespace E2Edit.Editor
             string text = CurrentContext.Document.GetText(line);
             if (text.StartsWith("@"))
             {
-                
+                // TODO: Color directives
             }
             else
+            {
                 ColorFunctions(text, lineStartOffset);
+            }
         }
 
         private void ColorFunctions(string text, int lineStartOffset)
@@ -39,29 +41,7 @@ namespace E2Edit.Editor
                     if (buff.Length > 0)
                     {
                         string str = buff.ToString();
-                        if (_data.Any(func => func.Name == str))
-                            ChangeLinePart(
-                                lineStartOffset + start, // startOffset
-                                lineStartOffset + start + buff.Length, // endOffset
-                                element =>
-                                    {
-                                        if ((element.TextRunProperties.ForegroundBrush is SolidColorBrush &&
-                                             (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color ==
-                                             Color.FromRgb(224, 224, 224)))
-                                            element.TextRunProperties.SetForegroundBrush(
-                                                new SolidColorBrush(Color.FromRgb(160, 160, 240)));
-                                    });
-                        else
-                            ChangeLinePart(
-                                lineStartOffset + start, // startOffset
-                                lineStartOffset + start + buff.Length, // endOffset
-                                element =>
-                                    {
-                                        if ((element.TextRunProperties.ForegroundBrush is SolidColorBrush &&
-                                             (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color ==
-                                             Color.FromRgb(224, 224, 224)))
-                                            element.TextRunProperties.SetForegroundBrush(Brushes.Red);
-                                    });
+                        ColorFunction(str, lineStartOffset + start);
                         buff.Remove(0, buff.Length);
                         start = -1;
                     }
@@ -72,6 +52,29 @@ namespace E2Edit.Editor
                     buff.Append(text[i]);
                 }
             }
+            if (buff.Length != 0)
+            {
+                ColorFunction(buff.ToString(), lineStartOffset + start);
+            }
+        }
+
+        private void ColorFunction(string str, int start)
+        {
+            SolidColorBrush brush = _data.Any(func => func.Name == str)
+                                        ? new SolidColorBrush(Color.FromRgb(160, 160, 240))
+                                        : Brushes.Red;
+
+            ChangeLinePart(
+                start, // startOffset
+                start + str.Length, // endOffset
+                element =>
+                    {
+                        if ((element.TextRunProperties.ForegroundBrush is SolidColorBrush &&
+                             (element.TextRunProperties.ForegroundBrush as SolidColorBrush).Color ==
+                             Color.FromRgb(224, 224, 224)))
+                            element.TextRunProperties.SetForegroundBrush(
+                                brush);
+                    });
         }
     }
 }

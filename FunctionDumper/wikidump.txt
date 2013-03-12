@@ -1,0 +1,3105 @@
+﻿===Number===
+====Description====
+Numbers, lots of them...
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|N + N || [[File:Type-Number.png]] || Addition
+|-
+|N - N || [[File:Type-Number.png]] || Subtraction
+|-
+|N * N || [[File:Type-Number.png]] || Multiplication
+|-
+|N / N || [[File:Type-Number.png]] || Division
+|-
+|N ^ N || [[File:Type-Number.png]] || Exponentiation (N to the power of N)
+|-
+|N % N || [[File:Type-Number.png]] || Modulo, returns the Remainder after Argument 1 has been divided by Argument 2. Note "-1 % 3 = 2"
+|-
+|mod(N, N) || [[File:Type-Number.png]] || Modulo, returns the Remainder after Argument 1 has been divided by Argument 2. Note "mod(-1, 3) = -1"
+|-
+|sqrt(N) || [[File:Type-Number.png]] || Returns the Square Root of the Argument
+|-
+|cbrt(N) || [[File:Type-Number.png]] || Returns the Cube Root of the Argument
+|-
+|root(N, N) || [[File:Type-Number.png]] || Returns the Nth Root of the first Argument
+|-
+|e() || [[File:Type-Number.png]] || Returns Euler's Constant
+|-
+|exp(N) || [[File:Type-Number.png]] || Returns e to the power of the Argument (same as e()^N but shorter and faster this way)
+|-
+|ln(N) || [[File:Type-Number.png]] ||  Returns the logarithm to base e of the Argument
+|-
+|log2(N) || [[File:Type-Number.png]] || Returns the logarithm to base 2 of the Argument
+|-
+|log10(N) || [[File:Type-Number.png]] ||  Returns the logarithm to base 10 of the Argument
+|-
+|log(N,N) || [[File:Type-Number.png]] ||  Returns the logarithm to base Argument 2 of Argument 1
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|abs(N) || [[File:Type-Number.png]] || Returns the Magnitude of the Argument
+|-
+|ceil(N) || [[File:Type-Number.png]] || Rounds the Argument up to the nearest Integer
+|-
+|ceil(N,N) || [[File:Type-Number.png]] || Rounds Argument 1 up to Argument 2's decimal precision
+|-
+|floor(N) || [[File:Type-Number.png]] || Rounds the Argument down to the nearest Integer
+|-
+|floor(N,N) || [[File:Type-Number.png]] || Rounds Argument 1 down to Argument 2's decimal precision
+|-
+|round(N) || [[File:Type-Number.png]] || Rounds the Argument to the nearest Integer
+|-
+|round(N,N) || [[File:Type-Number.png]] ||  Rounds Argument 1 to Argument 2's decimal precision
+|-
+|int(N) || [[File:Type-Number.png]] || Returns the Integer part of the Argument (same as floor)
+|-
+|frac(N) || [[File:Type-Number.png]] || Returns the Fractional part of the Argument (same as floor)
+|-
+|clamp(N,N,N) || [[File:Type-Number.png]] || If Arg1 <= Arg2 (min) returns Arg2; If Arg1 >= Arg3 (max) returns Arg3; otherwise returns Arg1.
+|-
+|inrange(N,N<sub>2</sub>,N<sub>3</sub>) || [[File:Type-Number.png]] || Returns 1 if ''N'' is in the interval [''N<sub>2</sub>''; ''N<sub>3</sub>''], 0 otherwise. This means it is equivalent to ((''N<sub>2</sub>'' <= ''N'') & (''N'' <= ''N<sub>3</sub>''))
+|-
+|sign(N) || [[File:Type-Number.png]] || Returns the sign of argument (-1,0,1) [''sign(N) = N / abs(N)'' ]
+|-
+|min(N,N) || [[File:Type-Number.png]] || Returns the lowest value Argument
+|-
+|min(N,N,N) || [[File:Type-Number.png]] || Returns the lowest value Argument
+|-
+|min(N,N,N,N) || [[File:Type-Number.png]] || Returns the lowest value Argument
+|-
+|max(N,N) || [[File:Type-Number.png]] || Returns the highest value Argument
+|-
+|max(N,N,N) || [[File:Type-Number.png]] || Returns the highest value Argument
+|-
+|max(N,N,N,N) || [[File:Type-Number.png]] || Returns the highest value Argument
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|random() || [[File:Type-Number.png]] || Returns a random floating-point number between 0 and 1 [''0 <= x < 1 '']
+|-
+|random(N) || [[File:Type-Number.png]] || Returns a random floating-point number between 0 and the specified value [''0 <= x < a '']
+|-
+|random(N,N) || [[File:Type-Number.png]] || Returns a random floating-point number between the specified interval [''a <= x < b '']
+|-
+|randint(N) || [[File:Type-Number.png]] || Returns a random integer from 1 to the specified value [''1 <= x <= a'' ]
+|-
+|randint(N,N) || [[File:Type-Number.png]] || Returns a random integer in the specified interval [''a <= x <= b '']
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|pi() || [[File:Type-Number.png]] || Returns the constant PI
+|-
+|toRad(N) || [[File:Type-Number.png]] || Converts Degree angles to Radian angles
+|-
+|toDeg(N) || [[File:Type-Number.png]] || Converts Radian angles to Degree angles
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|sin(N) || [[File:Type-Number.png]] || Returns the sine of N degrees 
+|-
+|cos(N) || [[File:Type-Number.png]] || Returns the cosine of N degrees 
+|-
+|tan(N) || [[File:Type-Number.png]] || Returns the tangent of N degrees 
+|-
+|cot(N) || [[File:Type-Number.png]] || Returns the cotangent of N degrees 
+|-
+|sec(N) || [[File:Type-Number.png]] || Returns the secant of N degrees 
+|-
+|csc(N) || [[File:Type-Number.png]] || Returns the cosecant of N degrees 
+|-
+|asin(N) || [[File:Type-Number.png]] || Returns the inverse sine of the argument, in degrees
+|-
+|acos(N) || [[File:Type-Number.png]] || Returns the inverse cosine of the argument, in degrees
+|-
+|atan(N) || [[File:Type-Number.png]] || Returns the inverse tangent of the argument, in degrees
+|-
+|sinh(N) || [[File:Type-Number.png]] || Returns the hyperbolic sine of N
+|-
+|cosh(N) || [[File:Type-Number.png]] || Returns the hyperbolic cosine of N
+|-
+|tanh(N) || [[File:Type-Number.png]] || Returns the hyperbolic tangent of N
+|-
+|coth(N) || [[File:Type-Number.png]] || Returns the hyperbolic cotangent of N
+|-
+|sech(N) || [[File:Type-Number.png]] || Returns the hyperbolic secant of N 
+|-
+|csch(N) || [[File:Type-Number.png]] || Returns the hyperbolic cosecant of N 
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|sinr(N) || [[File:Type-Number.png]] || Returns the sine of N radians 
+|-
+|cosr(N) || [[File:Type-Number.png]] || Returns the cosine of N radians 
+|-
+|tanr(N) || [[File:Type-Number.png]] || Returns the tangent of N radians 
+|-
+|cotr(N) || [[File:Type-Number.png]] || Returns the cotangent of N radians
+|-
+|secr(N) || [[File:Type-Number.png]] || Returns the secant of N radians 
+|-
+|cscr(N) || [[File:Type-Number.png]] || Returns the cosecant of N radians
+|-
+|asinr(N) || [[File:Type-Number.png]] || Returns the inverse sine of the argument, in radians
+|-
+|acosr(N) || [[File:Type-Number.png]] || Returns the inverse cosine of the argument, in radians
+|-
+|atanr(N) || [[File:Type-Number.png]] || Returns the inverse tangent of the argument, in radians
+|-
+|atanr(N,N) || [[File:Type-Number.png]] || Returns the inverse tangent of the arguments (arg1 / arg2), in radians. This function accounts for positive/negative arguments, and arguments at or close to 0
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|A = B || [[File:Type-Number.png]] || Assignment (set A equal to B)
+|-
+|A++ || [[File:Type-Number.png]] || Assignment adding 1 (increases A by 1, same as "A += 1")
+|-
+|A--  || [[File:Type-Number.png]] || Assignment subtracting 1 (decreases A by 1, same as "A -= 1")
+|-
+|A += B || [[File:Type-Number.png]] || Assignment using addition (increases A by B, same as "A = (A + B)")
+|-
+|A -= B || [[File:Type-Number.png]] || Assignment using subtraction (decreases A by B, same as "A = (A - B)")
+|-
+|A /= B || [[File:Type-Number.png]] || Assignment using division 
+|-
+|A %= B || [[File:Type-Number.png]] || Assignment using modulo
+|-
+|A ^= B || [[File:Type-Number.png]] || Assignment using exponentiation  
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|A == B || [[File:Type-Number.png]] || Returns 1 if A is equal to B
+|-
+|A != B || [[File:Type-Number.png]] || Returns 1 if A is not equal to B
+|-
+|A > B || [[File:Type-Number.png]] || Returns 1 if A is greater than B
+|-
+|A < B || [[File:Type-Number.png]] || Returns 1 if A is less than B
+|-
+|A >= B || [[File:Type-Number.png]] || Returns 1 if A is greater or equal to B
+|-
+|A <= B || [[File:Type-Number.png]] || Returns 1 if A is less than or equal to B
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|}
+
+===String===
+
+====Description====
+String support allows you to manipulate text with E2. Text screens now have an input for strings.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#String_Example_by_Hitman271|String Example by Hitman271]]
+*[[Wire_Expression2:Examples#Using_findRe_.26_replaceRE_.28by_OmicroN.29|How to use findRE() & replaceRE()]]
+
+====Commands====
+Create a string by wrapping the text in quotation marks, for example; "text goes here". Equal (==) and Not equal (!=) operators are available, as is concatenation (+), for joining strings and numbers in any order. Concatenation returns a string. The first character of a string has the index 1. Negative indices are counted from the end of the string, with the last character being -1. Positive indices will be capped to the string's length.
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|S[N] || [[File:Type-String.png]] || Returns Nth letter of the string, formatted as a string. Read-only.
+|-
+|S:index(N) || [[File:Type-String.png]] || Returns Nth letter of the string, formatted as a string.
+|-
+|S:length() || [[File:Type-Number.png]] || Returns the length of the string.
+|-
+|S:upper() || [[File:Type-String.png]] || All characters are made uppercase
+|-
+|S:lower() || [[File:Type-String.png]] || All characters are made lowercase
+|-
+|S:sub(N) || [[File:Type-String.png]] || Returns a substring, starting at the number argument and ending at the end of the string
+|-
+|S:sub(N,N) || [[File:Type-String.png]] || Returns a substring, starting at the first number argument and ending at the second
+|-
+|S:left(N) || [[File:Type-String.png]] || Returns N amount of characters starting from the leftmost character
+|-
+|S:right(N) || [[File:Type-String.png]] || Returns N amount of characters starting from the rightmost character
+|-
+|S:find(S) || [[File:Type-Number.png]] || Returns the 1st occurrence of the string S, returns 0 if not found
+|-
+|S:find(S, N) || [[File:Type-Number.png]] || Returns the 1st occurrence of the string S starting at N and going to the end of the string, returns 0 if not found
+|-
+|S:findRE(S) || [[File:Type-Number.png]] || Returns the 1st occurrence of the string S using REGEX functions, returns 0 if not found
+|-
+|S:findRE(S, N) || [[File:Type-Number.png]] || Returns the 1st occurrence of the string S starting at N and going to the end of the string using REGEX functions, returns 0 if not found
+|-
+|S:explode(S) || [[File:Type-Array.png]] || Splits the string into an array, along the boundaries formed by the string S. See also [[String.Explode]]
+|-
+|S:repeat(N) || [[File:Type-String.png]] || Repeats the input string N times
+|-
+|S:trim() || [[File:Type-String.png]] || Trims away spaces at the beginning and end of a string
+|-
+|S:trimLeft() || [[File:Type-String.png]] || Trims away opening spaces on the string
+|-
+|S:trimRight() || [[File:Type-String.png]] || Trims away spaces at the end of a string
+|-
+|S:replace(S,S) || [[File:Type-String.png]] || Finds and replaces every occurrence of the first argument with the second argument
+|-
+|S:replaceRE(S,S) || [[File:Type-String.png]] || Finds and replaces every occurrence of the first argument using REGEX with the second argument
+|-
+|S:reverse() || [[File:Type-String.png]] || Returns a reversed version of ''S''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|S:toNumber() || [[File:Type-Number.png]] || Parses a number from a string.
+|-
+|S:toNumber(N) || [[File:Type-Number.png]] || Parses a number from a string. The argument given is the base. I.e. toNumber(16) will parse hex.
+|-
+|toString(N) || [[File:Type-String.png]] || Formats a number as a string. (Numbers may be concatenated into a string without using this function)
+|-
+|toString(N,N) || [[File:Type-String.png]] || Formats a number as a string, using argument 2 as the base. i.e. using 16 for base would convert the number to hex.
+|-
+|toChar(N) || [[File:Type-String.png]] || Returns a one-character string from its [http://en.wikipedia.org/wiki/ASCII ASCII code], where 32 ≤ argument 1 ≤ 255. An empty string is returned for numbers outside that range.
+|-
+|toByte(S) || [[File:Type-Number.png]] || Returns the ASCII code of the 1st character in the string
+|-
+|toByte(S,N) || [[File:Type-Number.png]] || Returns the ASCII code of the Nth character in the string
+|-
+|format(S,...) || [[File:Type-String.png]] || Formats a values exactly like Lua's [http://www.lua.org/manual/5.1/manual.html#pdf-string.format string.format]. Any number and type of parameter can be passed through the "...". Prints errors to the chat area.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|S:match(S2) || [[File:Type-Array.png]] || runs [[string.match]](''S'', ''S2'') and returns the sub-captures as an array.
+|-
+|S:match(S2,N) || [[File:Type-Array.png]] || runs [[string.match]](''S'', ''S2'', ''N'') and returns the sub-captures as an array.
+|-
+|S:matchFirst(S2) || [[File:Type-String.png]] || runs [[string.match]](''S'', ''S2'') and returns the first match or an empty string if the match failed.
+|-
+|S:matchFirst(S2,N) || [[File:Type-String.png]] || runs [[string.match]](''S'', ''S2'', ''N'') and returns the first match or an empty string if the match failed.
+|}
+
+===Entity===
+====Description====
+These entity functions allow you to get information from, and directly manipulate, entities in the game world (such as props). Entities can be found using many methods, from target finders, entity markers and even the expression itself with entity() from selfaware.
+
+Since the expression collects the data directly from the entity, it is much faster to handle calculations from within the E2 than having a beacon-sensor send its information to the gate.
+
+A valid entity will return true in an if-statement. This is helpful for preventing LUA errors resulting from using entity commands on entities which have been destroyed.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#RPM_Counter_by_Beer|RPM Counter by Beer]]
+*[[Wire_Expression2:Examples#Remote_Trail_Maker_(by_OmicroN)|Remote Trail Maker (by OmicroN)]]
+
+====Commands====
+The only operators available for entities are equal and not equal. In addition, if(Entity) will return true only if there is a valid entity.
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|entity(N) || [[File:Type-Entity.png]] || Gets the entity associated with the id
+|-
+|owner() || [[File:Type-Entity.png]] || Gets the owner of the expression ( same as entity():owner() )
+|-
+|E:id() || [[File:Type-Number.png]] || Gets the numeric id of an entity
+|-
+|noentity() || [[File:Type-Entity.png]] || Returns an invalid entity
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:type() || [[File:Type-String.png]] || Gets the class of an entity
+|-
+|E:model() || [[File:Type-String.png]] || Gets the model of an entity
+|-
+|E:owner() || [[File:Type-Entity.png]] || Gets the owner of an entity
+|-
+|E:name() || [[File:Type-String.png]] || Gets the name of a player 
+|-
+|E:steamID() || [[File:Type-String.png]] || Gets the steam ID of the player
+|-
+|E:isSteamFriend(E) || [[File:Type-Number.png]] || Returns if the given Entity is a steam friend of the first Entity
+|-
+|E:steamFriends() || [[File:Type-Array.png]] || Returns a Array with E's steam friends on the server E is playing on
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:pos() || [[File:Type-Vector.png]] || Gets the position of the entity
+|-
+|E:eye() || [[File:Type-Vector.png]] || Gets a players view direction else entity forward direction
+|-
+|E:eyeAngles() || [[File:Type-Angle.png]] || Gets a players view direction
+|-
+|E:eyeTrace() || [[File:Type-RangerData.png]] || Equivalent to rangerOffset(16384, E:shootPos(), E:eye()), but faster (causing less lag)
+|-
+|E:shootPos() || [[File:Type-Vector.png]] || Returns a players shoot position
+|-
+|E:aimEntity() || [[File:Type-Entity.png]] || Returns the entity that the entity is aiming at
+|-
+|E:aimBone() || [[File:Type-Bone.png]] || Returns the bone the player is currently aiming at
+|-
+|E:aimPos() || [[File:Type-Vector.png]] || Returns the point that the entity is looking at
+|-
+|E:aimNormal() || [[File:Type-Vector.png]] || Returns a normalized directional vector perpendicular to the surface pointed at
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:frags() || [[File:Type-Number.png]] || Returns the number of kills the player has made
+|-
+|E:deaths() || [[File:Type-Number.png]] || Returns the number of times the player died
+|-
+|E:team() || [[File:Type-Number.png]] || Returns the team number a player is on
+|-
+|N:teamName() || [[File:Type-String.png]] || Returns the name of the team associated with the team number
+|-
+|teamColor(N) || [[File:Type-Vector.png]] || Returns the color of the team associated with the team number
+|-
+|E:forward() || [[File:Type-Vector.png]] || Gets the forward direction of the entity <sup>2)</sup>
+|-
+|E:right() || [[File:Type-Vector.png]] || Gets the right direction of the entity
+|-
+|E:up() || [[File:Type-Vector.png]] || Gets the up direction of the entity
+|-
+|E:vel() || [[File:Type-Vector.png]] || Gets the velocity of the entity
+|-
+|E:velL() || [[File:Type-Vector.png]] || Gets the local velocity of the entity
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:boxCenter() || [[File:Type-Vector.png]] || Gets the center of the entity's bounding box, as a local position vector
+|-
+|E:boxMax() || [[File:Type-Vector.png]] || Gets the maximum local XYZ of the entity's bounding box (the "highest" corner), as a local position vector
+|-
+|E:boxMin() || [[File:Type-Vector.png]] || Gets the minimum local XYZ of the entity's bounding box (the "lowest" corner), as a local position vector
+|-
+|E:boxSize() || [[File:Type-Vector.png]] || Gets the dimensions of the entity's bounding box as a vector (length, width, height)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:toWorld(V) || [[File:Type-Vector.png]] || Transforms from a vector local to ''E'' to a world vector.
+|-
+|E:toLocal(V) || [[File:Type-Vector.png]] || Transforms from a world vector to a vector local to ''E''.
+|-
+|E:toWorld(A) || [[File:Type-Angle.png]] || Transforms from an angle local to ''E'' to a world angle.
+|-
+|E:toLocal(A) || [[File:Type-Angle.png]] || Transforms from a world angle to an angle local to ''E''.
+|-
+|E:toWorldAxis(V) || [[File:Type-Vector.png]] || Transforms an axis local to ''E'' to a global axis.
+|-
+|E:toLocalAxis(V) || [[File:Type-Vector.png]] || Transforms a world axis to an axis local to ''E''.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:angVel() || [[File:Type-Angle.png]] || Gets the angular velocity of the entity
+|-
+|E:angVelVector() || [[File:Type-Vector.png]] || Returns rotation axis, velocity and direction given as the vector's direction, magnitude and sense
+|-
+|E:angles() || [[File:Type-Angle.png]] || Gets the pitch, yaw and roll of the entity
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:radius() || [[File:Type-Number.png]] || Gets the size of the object (not precisely, but useful)
+|-
+|E:height() || [[File:Type-Number.png]] || Gets the height of a player or npc
+|-
+|E:bearing(V) || [[File:Type-Number.png]] || Gets the bearing from the entity to the vector
+|-
+|E:elevation(V) || [[File:Type-Number.png]] || Gets the elevation from the entity to the vector
+|-
+|E:heading(V) || [[File:Type-Angle.png]] || Gets the elevation and bearing from the entity to the vector
+|-
+|E:health() || [[File:Type-Number.png]] || Gets the health of the entity
+|-
+|E:armor() || [[File:Type-Number.png]] || Gets the armor of the player
+|-
+|E:volume() || [[File:Type-Number.png]] || Gets the volume of the entity
+|-
+|E:mass() || [[File:Type-Number.png]] || Gets the mass of the entity
+|-
+|E:timeConnected() || [[File:Type-Number.png]] || Returns a players time connected to a server
+|-
+|E:massCenter() || [[File:Type-Vector.png]] || Gets the Center of Mass of the entity
+|-
+|E:massCenterL() || [[File:Type-Vector.png]] || Gets the center of mass as a local vector
+|-
+|E:setMass(N) ||   || Sets the mass of the entity (between 0.001 and 50,000)
+|-
+|E:inertia() || [[File:Type-Vector.png]] || Gets the principal components of the entity's inertia tensor in the form ( I<sub>xx</sub>, I<sub>yy</sub>, I<sub>zz</sub> )
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:applyForce(V) ||   || Applies force to the entity according to the given vector's direction and magnitude
+|-
+|E:applyOffsetForce(V,V) ||   || Applies force to the entity according to the first vector from the location of the second
+|-
+|E:applyAngForce(A) ||   || Applies torque to the entity according to the given angle
+|-
+|E:applyTorque(V) ||   || Applies torque according to the given vector, representing the torque axis, magnitude and direction
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:isPlayer() || [[File:Type-Number.png]] || Is the entity a player?
+|-
+|E:isOnFire() || [[File:Type-Number.png]] || Is the entity on fire?
+|-
+|E:isWeapon() || [[File:Type-Number.png]] || Is the entity a weapon?
+|-
+|E:isNPC() || [[File:Type-Number.png]] || Is the entity a NPC?
+|-
+|E:isFrozen() || [[File:Type-Number.png]] || Is the entity frozen?
+|-
+|E:isVehicle() || [[File:Type-Number.png]] || Is the entity a vehicle?
+|-
+|E:inVehicle() || [[File:Type-Number.png]] || Is the player in a vehicle?
+|-
+|E:isWorld() || [[File:Type-Number.png]] || Is the entity the world?
+|-
+|E:isOnGround() || [[File:Type-Number.png]] || Is the player/NPC resting on something?
+|-
+|E:isUnderWater() || [[File:Type-Number.png]] || Is the entity under water?
+|-
+|E:isPlayerHolding() || [[File:Type-Number.png]] || Is the entity being held by a player?
+|-
+|E:isAdmin() || [[File:Type-Number.png]] || Is the player an admin?
+|-
+|E:isSuperAdmin() || [[File:Type-Number.png]] || Is the player a super admin?
+|-
+|E:isAlive() || [[File:Type-Number.png]] || Is the player or NPC alive?
+|-
+|E:isCrouch() || [[File:Type-Number.png]] || Is the player crouching?
+|-
+|E:inNoclip() || [[File:Type-Number.png]] || Is the player in noclip mode?
+|-
+|E:friends() || [[File:Type-Array.png]] || Returns an array of players on the prop protection friends list. 
+|-
+|E:trusts(E2) || [[File:Type-Number.png]] || Is E2 on the prop protection friends list of E?
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:keyAttack1() || [[File:Type-Number.png]] || Is the player pressing their primary fire key?
+|-
+|E:keyAttack2() || [[File:Type-Number.png]] || Is the player pressing their secondary fire key?
+|-
+|E:keyUse() || [[File:Type-Number.png]] || Is the player pressing their use key?
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:driver() || [[File:Type-Entity.png]] || Returns the driver of the vehicle if there is one, nil otherwise
+|-
+|E:passenger() || [[File:Type-Entity.png]] || Returns the passenger of the vehicle if there is one, in single seat pods this will return the driver.
+|-
+|E:vehicle() || [[File:Type-Entity.png]] || Returns the entity of the vehicle that the specified player is in
+|-
+|E:lockPod(N)  ||   || 1 locks and 0 unlocks vehicle
+|-
+|E:ejectPod() ||   || Ejects player in vehicle
+|-
+|E:killPod() ||   || Kills player in vehicle
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:weapon() || [[File:Type-Entity.png]] || Returns the weapon that player E is currently holding
+|-
+|E:clip1() || [[File:Type-Number.png]] || Returns the amount of ammo in the primary clip of weapon E, -1 if there is no primary clip
+|-
+|E:clip2() || [[File:Type-Number.png]] || Returns the amount of ammo in the secondary clip of weapon E, -1 if there is no secondary clip <sup>1)</sup>
+|-
+|E:primaryAmmoType() || [[File:Type-String.png]] || Returns the type of primary ammo of weapon E as a number in a string
+|-
+|E:secondaryAmmoType() || [[File:Type-String.png]] || Returns the type of secondary ammo of weapon E as number in a string
+|-
+|E:ammoCount(S) || [[File:Type-Number.png]] || Returns the amount of stored ammo of type S on player E, excluding current clip
+|-
+|E:tool() || [[File:Type-String.png]] || returns the name of the tool the player E is currently holding
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:removeTrails() ||  || Removes the trail from ''E''
+|-
+|E:setTrails(N,N,N,S,V,N) ||  || StartSize, EndSize, Length, Material, Color (RGB), Alpha<br />Adds a trail to ''E'' with the specified attributes.
+|-
+|E:setTrails(N,N,N,S,V,N,N,N) ||  || StartSize, EndSize, Length, Material, Color (RGB), Alpha, AttachmentID, Additive<br />Adds a trail to ''E'' with the specified attributes.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:lookupAttachment(string attachmentName) || [[File:Type-Number.png]] || Returns ''E'''s attachment ID associated with ''attachmentName''
+|-
+|E:attachmentPos(attachmentID) || [[File:Type-Vector.png]] || Returns ''E'''s attachment position associated with ''attachmentID''
+|-
+|E:attachmentAng(attachmentID) || [[File:Type-Angle.png]] || Returns ''E'''s attachment angle associated with ''attachmentID''
+|-
+|E:attachmentPos(string attachmentName) || [[File:Type-Vector.png]] || Same as ''E'':attachmentPos(''E'':lookupAttachment(''attachmentName''))
+|-
+|E:attachmentAng(string attachmentName) || [[File:Type-Angle.png]] || Same as ''E'':attachmentAng(''E'':lookupAttachment(''attachmentName''))
+|}
+:<sup>1)</sup> This is not the stored amount, no known weapon has a secondary clip, the AR2 and smg only have a storage, not a clip
+:<sup>2)</sup> For <b>most</b> valid entities, E:
+        E:toLocal(E:pos()+E:forward()) == vec(1, 0, 0)
+        E:toLocal(E:pos()+E:right())   == vec(0,-1, 0)
+        E:toLocal(E:pos()+E:up())      == vec(0, 0, 1)
+:Some entities (vehicles for instance) have differing axes.
+
+Attachment documentation at http://www.wiremod.com/forum/wiremod-tutorials/14813-e2-entity-attachment-documentation.html
+
+===Vector===
+====Description====
+Vectors are now properly implemented in the Expression 2, which means that they are as easy to work with as numbers. For those that know what vectors are, and how to use them, this is a great tool for creating many things.
+
+2D and 4D vectors are also supported by E2. These include all the standard functions of 3D vectors listed here. If you're doing 2D vector operations, you can now do things much more efficiently. 4D vectors work in conjunction with matrices, and can be used as homogeneous representations of 3D vectors.
+
+Operational functions can be used between numbers and vectors, e.g. N*V. Note that operations cannot be performed between two vectors of different size, for example multiplication between a 2D and a 3D vector.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Velocity_Stabilisation_by_fishface60|Velocity Stabilization by fishface60]]
+*[[Gunnanmons_Expressions|Simple XYZ Target Vector by Gunnanmon]]
+*[[Wire_Expression2:Examples#GPS_by_Fishface60|GPS by fishface60]]
+
+====2D Vector Commands====
+Functions specific to 2D vectors
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|vec2(N,N) || [[File:Type-Vector2.png]] || Makes a 2D vector
+|-
+|vec2() || [[File:Type-Vector2.png]] || Same as vec2(0,0)
+|-
+|vec2(V) || [[File:Type-Vector2.png]] || Converts a 3D vector into a 2D vector (the z component is dropped)
+|-
+|vec2(V4) || [[File:Type-Vector2.png]] || Converts a 4D vector into a 2D vector (the z and w components are dropped)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|V2:cross(V2)	 || [[File:Type-Number.png]] || Gets the 2D vector cross product/wedge product
+|-
+|shift(V2) || [[File:Type-Vector2.png]] || Swaps the vector's x,y components 
+|-
+|V2:rotate(N)	 || [[File:Type-Vector2.png]] || Rotates a vector by the argument (given in degrees)
+|-
+|V2:toAngle() || [[File:Type-Number.png]] || Returns the 2D angle of the vector (given in degrees, -180 to 180)
+|-
+|V:dehomogenized() || [[File:Type-Vector2.png]] || Converts a 2D homogeneous vector (x,y,w) into a 2D cartesian vector
+|-
+|}
+
+====3D Vector Commands====
+Functions specific to 3D vectors
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|vec(N,N,N) || [[File:Type-Vector.png]] || Makes a 3D vector
+|-
+|vec() || [[File:Type-Vector.png]] || Same as vec(0,0,0)
+|-
+|vec(V2) || [[File:Type-Vector.png]] || Converts a 2D vector into a 3D vector (the z component is set to 0)
+|-
+|vec(V2,N) || [[File:Type-Vector.png]] || Converts a 2D vector into a 3D vector (the z component is set to the second argument)
+|-
+|vec(V4) || [[File:Type-Vector.png]] || Converts a 4D vector into a 3D vector (the w component is dropped)
+|-
+|vec(A) || [[File:Type-Vector.png]] || Changes an angle variable into a vector variable
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|randvec() || [[File:Type-Vector.png]] || Returns a uniformly distributed, random, normalized direction vector.
+|-
+|randvec(N<sub>1</sub>,N<sub>2</sub>) || [[File:Type-Vector.png]] || Returns a random vector with its components between ''N<sub>1</sub>'' and ''N<sub>2</sub>''
+|-
+|randvec(V<sub>1</sub>,V<sub>2</sub>) || [[File:Type-Vector.png]] || Returns a random vector between ''V<sub>1</sub>'' and ''V<sub>2</sub>''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|V:cross(V)	 || [[File:Type-Vector.png]] || Gets the 3D vector cross product
+|-
+|shiftL(V) || [[File:Type-Vector.png]] || Shifts the vector's components left:  shiftL( x,y,z ) = ( y,z,x )
+|-
+|shiftR(V) || [[File:Type-Vector.png]] || Shifts the vector's components right:  shiftR( x,y,z ) = ( z,x,y )
+|-
+|V:rotate(A) || [[File:Type-Vector.png]] || Gets the rotated vector
+|-
+|V:rotate(N,N,N) || [[File:Type-Vector.png]] || Gets the rotated vector
+|-
+|V:toAngle() || [[File:Type-Angle.png]] || Gets the angles of the vector
+|-
+|V4:dehomogenized() || [[File:Type-Vector.png]] || Converts a 3D homogeneous vector (x,y,z,w) into a 3D cartesian vector
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|V:isInWorld() || [[File:Type-Number.png]] || Returns 1 if the position vector is within the world, 0 if not
+|-
+|}
+
+====4D Vector Commands====
+Functions specific to 4D vectors. From a mathematics standpoint these are treated as 4D Cartesian vectors, where the 4th component is referred to as "w".
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|vec4(N,N,N,N) || [[File:Type-Vector4.png]] || Makes a 4D vector
+|-
+|vec4() || [[File:Type-Vector4.png]] || Same as vec4(0,0,0,0)
+|-
+|vec4(V2) || [[File:Type-Vector4.png]] || Converts a 2D vector into a 4D vector (the z and w components are set to 0)
+|-
+|vec4(V2,N,N) || [[File:Type-Vector4.png]] || Converts a 2D vector into a 4D vector (the z and w components are set to the second and third arguments)
+|-
+|vec4(V2,V2) || [[File:Type-Vector4.png]] || Creates a 4D vector from two 2D vectors
+|-
+|vec4(V) || [[File:Type-Vector4.png]] || Converts a 3D vector into a 4D vector (the w component is set to 0)
+|-
+|vec4(V,N) || [[File:Type-Vector4.png]] || Converts a 3D vector into a 4D vector (the w component is set to the second argument)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|shiftL(V4) || [[File:Type-Vector4.png]] || Shifts the vector's components left:  shiftL( x,y,z,w ) = ( y,z,w,x )
+|-
+|shiftR(V4) || [[File:Type-Vector4.png]] || Shifts the vector's components right:  shiftR( x,y,z,w ) = ( w,x,y,z )
+|-
+|}
+
+====Common Vector Commands====
+Functions that apply to 2D and 3D vectors. They are written here in terms of 3D vectors, but apply to 2D and 4D vectors in the same way, also returning 2D or 4D vectors where applicable.
+
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|ceil(V) || [[File:Type-Vector.png]] || Rounds XYZ up to the nearest integer
+|-
+|ceil(V,N) || [[File:Type-Vector.png]] || Rounds XYZ up to argument 2's decimal precision
+|-
+|floor(V) || [[File:Type-Vector.png]] || Rounds XYZ down to the nearest integer
+|-
+|floor(V,N) || [[File:Type-Vector.png]] || Rounds XYZ down to argument 2's decimal precision
+|-
+|round(V) || [[File:Type-Vector.png]] || Rounds XYZ to the nearest integer
+|-
+|round(V,N) || [[File:Type-Vector.png]] || Rounds XYZ to argument 2's decimal precision
+|-
+|mod(V,N) || [[File:Type-Vector.png]] || Returns the remainder after XYZ have been divided by argument 2
+|-
+|mod(V,V) || [[File:Type-Vector.png]] || Returns the remainder after the components of vector 1 have been divided by the components of vector 2
+|-
+|clamp(V,V,V) || [[File:Type-Vector.png]] || Clamps vector 1's XYZ between the XYZ of vector 2(min) and vector 3(max)
+|-
+|clamp(V,N,N) || [[File:Type-Vector.png]] || Returns a vector in the same direction as vector 1, with length clamped between argument 2(min) and argument 3(max)
+|-
+|min(V,V) || [[File:Type-Vector.png]] || Returns the vector with the smallest length
+|-
+|max(V,V) || [[File:Type-Vector.png]] || Returns the vector with the greatest length
+|-
+|minVec(V,V) || [[File:Type-Vector.png]] || Returns a vector combining the lowest value components of V1 and V2
+|-
+|maxVec(V,V) || [[File:Type-Vector.png]] || Returns the vector combining the highest value components of V1 and V2
+|-
+|mix(V,V,N) || [[File:Type-Vector.png]] || Combines vector 1's XYZ with vector 2's XYZ by a proportion given by argument 3 (between 0 and 1)
+|-
+|positive(V) || [[File:Type-Vector.png]] || Returns a vector containing the positive value of each vector component, equivalent to abs(N)
+|-
+|inrange(V,V<sub>min</sub>,V<sub>max</sub>) || [[File:Type-Vector.png]] || Returns 1 if each component of V is between (or is equal to) the components of V<sub>min</sub> and V<sub>max</sub>
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|V:length() || [[File:Type-Number.png]] || Gets the length of the vector
+|-
+|V:length2() || [[File:Type-Number.png]] || Gets the squared length of the vector
+|-
+|V:distance(V) || [[File:Type-Number.png]] || Gets the distance between vectors
+|-
+|V:distance2(V) || [[File:Type-Number.png]] || Gets the squared distance between vectors
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|V:normalized() || [[File:Type-Vector.png]] || Gets the normalized vector
+|-
+|V:dot(V) || [[File:Type-Number.png]] || Gets the vector dot (scalar) product
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|V:x() || [[File:Type-Number.png]] || Gets the x component of the vector
+|-
+|V:y() || [[File:Type-Number.png]] || Gets the y component of the vector
+|-
+|V:z() || [[File:Type-Number.png]] || Gets the z component of the vector
+|-
+|V:w() || [[File:Type-Number.png]] || Gets the w component of the vector
+|-
+|V:setX(N) || [[File:Type-Vector.png]] || Returns a copy of the vector with X replaced (use as Vec = Vec:setX(...))
+|-
+|V:setY(N) || [[File:Type-Vector.png]] || Returns a copy of the vector with Y replaced (use as Vec = Vec:setY(...))
+|-
+|V:setZ(N) || [[File:Type-Vector.png]] || Returns a copy of the vector with Z replaced (use as Vec = Vec:setZ(...))
+|-
+|V:setW(N) || [[File:Type-Vector.png]] || Returns a copy of the vector with W replaced (use as Vec = Vec:setW(...))
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|V:toString() || [[File:Type-String.png]] || Gets the vector nicely formatted as a string "[X,Y,Z]"
+|-
+|}
+
+===Matrix===
+'''Developed by:''' Jimlad
+
+====Description====
+2x2, 3x3 and 4x4 matrices are now supported in Expression 2. These are for more advanced manipulations involving vectors and numbers. As with vectors, for those with the relevant knowledge these can be very useful tools.
+
+'''Basic operations supported:'''
+* Matrix addition and subtraction
+* Multiplication by scalars, vectors and matrices
+* Division by a scalar
+* Exponentiation (only integers between -1 and 2)
+* Delta of a matrix (returns a matrix)
+
+''NOTES:''
+
+Similarly to vectors, 3x3 matrix commands are referred to using '''"matrix"''', whereas 2x2 and 4x4 matrix commands use '''"matrix2"''' and '''"matrix4"'''
+
+The "set" and "swap" functions are like the 3D vector "set" functions; they ''do not'' affect the original matrix.
+
+Remember that operations will only work on vectors/matrices of a similar size. You cannot, for example, multiply a 3x3 matrix by a 2D vector. Also, all vectors are treated as column vectors for the purposes of matrices, so M*V will return a vector but V*M is undefined.
+
+====2x2 Matrix Commands====
+Functions specific to 2x2 matrices
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|identity2() || [[File:Type-Matrix2.png]] || Creates a 2x2 identity matrix
+|-
+|matrix2() || [[File:Type-Matrix2.png]] || Creates a 2x2 zero matrix
+|-
+|matrix2(N,N,N,N) || [[File:Type-Matrix2.png]] || Creates a matrix with values in order (i.j) of: (1,1), (1,2), (2,1), (2,2)
+|-
+|matrix2(V2,V2) || [[File:Type-Matrix2.png]] || Creates a matrix with vectors by columns
+|-
+|matrix2(M) || [[File:Type-Matrix2.png]] || Converts a 3x3 matrix into a 2x2 matrix - all (i,3) and (3,j) are omitted
+|-
+|matrix2(M4) || [[File:Type-Matrix2.png]] || Converts a 4x4 matrix into a 2x2 matrix - all (i,3), (i,4), (3,j) and (4,j) are omitted
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|M2:swapRows() || [[File:Type-Matrix2.png]] || Swaps rows
+|-
+|M2:swapColumns() || [[File:Type-Matrix2.png]] || Swaps columns
+|-
+|M2:setRow(N,N,N) || [[File:Type-Matrix2.png]] || Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j
+|-
+|M2:setRow(N,V2) || [[File:Type-Matrix2.png]] || Sets the values of a row. The first argument given specifies the row, the vector contains the values to set
+|-
+|M2:setColumn(N,N,N) || [[File:Type-Matrix2.png]] || Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2
+|-
+|M2:setColumn(N,V2) || [[File:Type-Matrix2.png]] || Sets the values of a column. The first argument given specifies the column, the vector contains the values to set
+|-
+
+====2x2 Matrix Commands====
+Functions specific to 2x2 matrices
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|identity2() || [[File:Type-Matrix2.png]] || Creates a 2x2 identity matrix
+|-
+|matrix2() || [[File:Type-Matrix2.png]] || Creates a 2x2 zero matrix
+|-
+|matrix2(N,N,N,N) || [[File:Type-Matrix2.png]] || Creates a matrix with values in order (i.j) of: (1,1), (1,2), (2,1), (2,2)
+|-
+|matrix2(V2,V2) || [[File:Type-Matrix2.png]] || Creates a matrix with vectors by columns
+|-
+|matrix2(M) || [[File:Type-Matrix2.png]] || Converts a 3x3 matrix into a 2x2 matrix - all (i,3) and (3,j) are omitted
+|-
+|matrix2(M4) || [[File:Type-Matrix2.png]] || Converts a 4x4 matrix into a 2x2 matrix - all (i,3), (i,4), (3,j) and (4,j) are omitted
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|M2:swapRows() || [[File:Type-Matrix2.png]] || Swaps rows
+|-
+|M2:swapColumns() || [[File:Type-Matrix2.png]] || Swaps columns
+|-
+|M2:setRow(N,N,N) || [[File:Type-Matrix2.png]] || Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j
+|-
+|M2:setRow(N,V2) || [[File:Type-Matrix2.png]] || Sets the values of a row. The first argument given specifies the row, the vector contains the values to set
+|-
+|M2:setColumn(N,N,N) || [[File:Type-Matrix2.png]] || Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2
+|-
+|M2:setColumn(N,V2) || [[File:Type-Matrix2.png]] || Sets the values of a column. The first argument given specifies the column, the vector contains the values to set
+|-
+|}
+
+====3x3 Matrix Commands====
+Functions specific to 3x3 matrices
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|identity() || [[File:Type-Matrix.png]] || Creates a 3x3 identity matrix
+|-
+|matrix() || [[File:Type-Matrix.png]] || Creates a 3x3 zero matrix
+|-
+|matrix(N<sub>1</sub>,N<sub>2</sub>... N<sub>9</sub>) || [[File:Type-Matrix.png]] || Creates a matrix with 9 values in the following order (i.j): (1,1), (1,2), (1,3), (2,1) etc.
+|-
+|matrix(V,V,V) || [[File:Type-Matrix.png]] || Creates a matrix with vectors by columns
+|-
+|matrix(M2) || [[File:Type-Matrix.png]] || Converts a 2x2 matrix into a 3x3 matrix - all (i,3) and (3,j) are filled with 0's
+|-
+|matrix(M4) || [[File:Type-Matrix.png]] || Converts a 4x4 matrix into a 3x3 matrix - all (i,4) and (4,j) are omitted
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|M:swapRows(N,N) || [[File:Type-Matrix.png]] || Swaps the two rows specified
+|-
+|M:swapColumns(N,N) || [[File:Type-Matrix.png]] || Swaps the two columns specified
+|-
+|M:setRow(N,N,N,N) || [[File:Type-Matrix.png]] || Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j, 3j
+|-
+|M:setRow(N,V) || [[File:Type-Matrix.png]] || Sets the values of a row. The first argument given specifies the row, the vector contains the values to set
+|-
+|M:setColumn(N,N,N,N) || [[File:Type-Matrix.png]] || Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2, i3
+|-
+|M:setColumn(N,V) || [[File:Type-Matrix.png]] || Sets the values of a column. The first argument given specifies the column, the vector contains the values to set
+|-
+|M:setDiagonal(N,N,N) || [[File:Type-Matrix.png]] || Sets the elements of the leading diagonal
+|-
+|M:setDiagonal(V) || [[File:Type-Matrix.png]] || Sets the elements of the leading diagonal from the components of a vector
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|matrix(E) || [[File:Type-Matrix.png]] || Creates a reference frame matrix from an entity's local direction vectors by columns in the order ( x, y, z )
+|-
+|matrix(A) || [[File:Type-Matrix.png]] || Returns a 3x3 reference frame matrix as described by the angle ''A''. Multiplying by this matrix will be the same as rotating by the given angle.
+|-
+|M:x() || [[File:Type-Vector.png]] || Returns the local x direction vector from a 3x3 coordinate reference frame matrix ( same as M:column(1) )
+|-
+|M:y() || [[File:Type-Vector.png]] || Returns the local y direction vector from a 3x3 coordinate reference frame matrix ( same as M:column(2) )
+|-
+|M:z() || [[File:Type-Vector.png]] || Returns the local z direction vector from a 3x3 coordinate reference frame matrix ( same as M:column(3) )
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|mRotation(V,N) || [[File:Type-Matrix.png]] || Creates a 3x3 rotation matrix, where the vector is the axis of rotation, and the number is the angle (anti-clockwise) in degrees. Example*: to rotate a vector (7,8,9) by 50 degrees about the axis (1,1,0), you would write V = mRotation(vec(1,1,0), 50) * vec(7,8,9)
+|-
+|}
+''*'' If you want to create a rotation matrix about the axes (1,0,0), (0,1,0) or (0,0,1), either use the V:rotate function, or construct a standard [http://en.wikipedia.org/wiki/Rotation_matrix#Dimension_three rotation matrix].
+
+====4x4 Matrix Commands====
+Functions specific to 4x4 matrices
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|identity4() || [[File:Type-Matrix4.png]] || Creates a 4x4 identity matrix
+|-
+|matrix4() || [[File:Type-Matrix4.png]] || Creates a 4x4 zero matrix
+|-
+|matrix4(N<sub>1</sub>,N<sub>2</sub>... N<sub>16</sub>) || [[File:Type-Matrix4.png]] || Creates a matrix with 16 values in the following order (i.j): (1,1), (1,2), (1,3), (1,4), (2,1) etc.
+|-
+|matrix4(V4,V4,V4,V4) || [[File:Type-Matrix4.png]] || Creates a matrix with vectors by columns
+|-
+|matrix4(M2) || [[File:Type-Matrix4.png]] || Converts a 2x2 matrix into a 4x4 matrix - all (i,3), (i,4), (3,j) and (4,j) are filled with 0's
+|-
+|matrix4(M2,M2,M2,M2) || [[File:Type-Matrix4.png]] || Constructs a 4x4 matrix from four 2x2 matrices
+|-
+|matrix4(M) || [[File:Type-Matrix4.png]] || Converts a 3x3 matrix into a 4x4 matrix - all (i,4) and (4,j) are filled with 0's
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|M4:swapRows(N,N) || [[File:Type-Matrix4.png]] || Swaps the two rows specified
+|-
+|M4:swapColumns(N,N) || [[File:Type-Matrix4.png]] || Swaps the two columns specified
+|-
+|M4:setRow(N,N,N,N,N) || [[File:Type-Matrix4.png]] || Sets the values of a row. The first argument given specifies the row(j), the following arguments are the values 1j, 2j, 3j, 4j
+|-
+|M4:setRow(N,V4) || [[File:Type-Matrix4.png]] || Sets the values of a row. The first argument given specifies the row, the vector contains the values to set
+|-
+|M4:setColumn(N,N,N,N,N) || [[File:Type-Matrix4.png]] || Sets the values of a column. The first argument given specifies the column(i), the following arguments are the values i1, i2, i3, i4
+|-
+|M4:setColumn(N,V4) || [[File:Type-Matrix4.png]] || Sets the values of a column. The first argument given specifies the column, the vector contains the values to set
+|-
+|M4:setDiagonal(N,N,N,N) || [[File:Type-Matrix4.png]] || Sets the elements of the leading diagonal
+|-
+|M4:setDiagonal(V4) || [[File:Type-Matrix4.png]] || Sets the elements of the leading diagonal from the components of a vector
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|matrix4(E) || [[File:Type-Matrix4.png]] || Creates a 4x4 reference frame matrix from an entity's local direction vectors by columns in the order (x, y, z, pos), with the bottom row (0,0,0,1)
+|-
+|matrix4(A) || [[File:Type-Matrix4.png]] || Returns a 4x4 reference frame matrix as described by the angle ''A''. Multiplying by this matrix will be the same as rotating by the given angle.
+|-
+|matrix4(A,V) || [[File:Type-Matrix4.png]] || Returns a 4x4 reference frame matrix as described by the angle ''A'' and the position ''V''. Multiplying by this matrix will be the same as rotating by the given angle and offsetting by the given vector.
+|-
+|M4:x() || [[File:Type-Vector.png]] || Returns the local x direction vector from a 4x4 coordinate reference frame matrix
+|-
+|M4:y() || [[File:Type-Vector.png]] || Returns the local y direction vector from a 4x4 coordinate reference frame matrix
+|-
+|M4:z() || [[File:Type-Vector.png]] || Returns the local z direction vector from a 4x4 coordinate reference frame matrix
+|-
+|M4:pos() || [[File:Type-Vector.png]] || Returns the position vector from a 4x4 coordinate reference frame matrix
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|inverseA(M4) || [[File:Type-Matrix4.png]] || Finds the matrix inverse of a standard 4x4 affine transformation matrix ( the type created by matrix4(E) ). This should only be used on matrices with a particular format, where the top left 3x3 specifies rotation, the rightmost 3-column specifies translation, and the bottom row is (0,0,0,1)
+|-
+|}
+
+====Common Matrix Commands====
+Functions that apply to 2x2, 3x3 and 4x4 matrices. They are written here in terms of 3x3 matrices, but apply to 2x2's and 4x4's in the same way.
+
+Operations will only return vectors/matrices of similar sizes. For example, the row() function on a 2x2 matrix will return a 2D vector
+
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|M:row(N) || [[File:Type-Vector.png]] || Returns the row as a vector
+|-
+|M:column(N) || [[File:Type-Vector.png]] || Returns the column as a vector
+|-
+|M:element(N,N) || [[File:Type-Number.png]] || Returns the element with indices (i,j)
+|-
+|M:setElement(N,N,N) || [[File:Type-Matrix.png]] || Sets an element's value. The first two arguments specify the indices (i,j), the third argument is the value to set it to
+|-
+|M:swapElements(N,N,N,N) || [[File:Type-Matrix.png]] || Swaps two elements, specified by indices ( i<sub>1</sub>, j<sub>1</sub>, i<sub>2</sub>, j<sub>2</sub> )
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|diagonal(M) || [[File:Type-Vector.png]] || Returns a vector comprising the elements along the leading diagonal
+|-
+|trace(M) || [[File:Type-Number.png]] || Returns the trace of a matrix
+|-
+|det(M) || [[File:Type-Number.png]] || Returns the determinant of a matrix (Does not work for 4x4 matrices)
+|-
+|transpose(M) || [[File:Type-Matrix.png]] || Returns the transpose of a matrix
+|-
+|adj(M) || [[File:Type-Matrix.png]] || Returns the adjugate of a matrix (Does not work for 4x4 matrices)
+|
+|}
+''NOTE:'' To get the inverse of a matrix, simply raise the matrix to the power of -1. Use this sparingly as it can be computationally [[expensive]]! Remember that if your matrix is orthogonal (e.g. rotation matrices), the inverse is equal to the transpose, so use the transpose instead if you can.
+Inverse is not available for 4x4 matrices. Instead, see usage of the inverseA(M4) function.
+
+===Angle===
+====Description====
+Like 3 different directions can be expressed as a Vector, the angles of Pitch, Yaw and Roll can be expressed as an angle Vector. This in the least has the advantage that when performing functions which use angles, such as vector rotation or creating vectors from angles, you don't have to write the Pitch, Yaw and Roll components, only the Angle.
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|ang(N,N,N) || [[File:Type-Angle.png]] || Makes an angle
+|-
+|ang() || [[File:Type-Angle.png]] || Same as ang(0,0,0)
+|-
+|ang(V) || [[File:Type-Angle.png]] || Changes a vector variable into an angle variable
+|-
+|ceil(A) || [[File:Type-Angle.png]] || Rounds PYR up to the nearest integer
+|-
+|ceil(A,N) || [[File:Type-Angle.png]] || Rounds PYR up to argument 2's decimal precision
+|-
+|floor(A) || [[File:Type-Angle.png]] || Rounds PYR down to the nearest integer
+|-
+|floor(A,N) || [[File:Type-Angle.png]] || Rounds PYR down to argument 2's decimal precision
+|-
+|round(A) || [[File:Type-Angle.png]] || Rounds PYR to the nearest integer
+|-
+|round(A,N) || [[File:Type-Angle.png]] || Rounds PYR to argument 2's decimal precision
+|-
+|mod(A,N) || [[File:Type-Angle.png]] || Returns the remainder after PYR have been divided by argument 2
+|-
+|mod(A,A) || [[File:Type-Angle.png]] || Returns the remainder after the components of angle 1 have been divided by the components of angle 2
+|-
+|clamp(A,A,A) || [[File:Type-Angle.png]] || Clamps angle 1's PYR between the PYR of angle 2(min) and angle 3(max)
+|-
+|clamp(A,N,N) || [[File:Type-Angle.png]] || Clamps angle 1's PYR between argument 2(min) and argument 3(max)
+|-
+|mix(A,A,N) || [[File:Type-Angle.png]] || Combines angle 1's PYR with angle 2's PYR by a proportion given by argument 3 (between 0 and 1)
+|-
+|shiftL(A) || [[File:Type-Angle.png]] || Shifts the angle's components left:  shiftL( p,y,r ) = ( y,r,p )
+|-
+|shiftR(A) || [[File:Type-Angle.png]] || Shifts the angle's components right:  shiftR( p,y,r ) = ( r,p,y )
+|-
+|inrange(A,A<sub>min</sub>,A<sub>max</sub>) || [[File:Type-Number.png]] || Returns 1 if each component of A is between (or is equal to) the components of A<sub>min</sub> and A<sub>max</sub>
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|angnorm(A) || [[File:Type-Angle.png]] || Gets the normalized angle of an angle
+|-
+|angnorm(N) || [[File:Type-Number.png]] || Gets the normalized angle of a number
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|A:pitch() || [[File:Type-Number.png]] || Gets the pitch of the angle
+|-
+|A:yaw() || [[File:Type-Number.png]] || Gets the yaw of the angle
+|-
+|A:roll() || [[File:Type-Number.png]] || Gets the roll of the angle
+|-
+|A:setPitch(N) || [[File:Type-Angle.png]] || Returns a copy of the angle with Pitch replaced (use as Ang = Ang:setPitch(...)) 
+|-
+|A:setYaw(N) || [[File:Type-Angle.png]] || Returns a copy of the angle with Yaw replaced (use as Ang = Ang:setYaw(...)) 
+|-
+|A:setRoll(N) || [[File:Type-Angle.png]] || Returns a copy of the angle with Roll replaced (use as Ang = Ang:setRoll(...)) 
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|A:toString() || [[File:Type-String.png]] || Gets the angle nicely formatted as a string "[P,Y,R]"
+|-
+|A:forward() || [[File:Type-Vector.png]] || Gets the forward vector of the '''angle''' (This can also be known as the direction vector).
+|-
+|A:right() || [[File:Type-Vector.png]] || Gets the right vector of the '''angle'''.
+|-
+|A:up() || [[File:Type-Vector.png]] || Gets the up vector of the '''angle'''.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|A:rotateAroundAxis(V,N) || [[File:Type-Angle.png]] || Returns the angle A rotated around vector V by N degrees.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|}
+
+===Table===
+====Description====
+Tables are a way to create dynamic variables, store large numbers of data points and so on. It may be thought of as a list of data, where each bit of data is addressed with an index string. This is a string which is unique to each element of a datatype (a number element and a vector element may have identical indices without problems, but two number elements cannot). Tables can contain any datatype except table and array.
+<br><br>
+Assigning one table variable to equal another will make them both refer to the same table. If you want to make a new copy of a table which will thereafter be set and retrieved from independently of the original table, you must use clone().<br>
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Table-RAM_by_Magos_Mechanicus|Table-RAM by Magos Mechanicus]]
+
+====Commands====
+In the interest of brevity, some commands which have many variants are shown as a pattern. <type> may be substituted with the capitalized name of any supported datatype, and * is the corresponding datatype symbol. For instance, R:push<type>(*) can mean R:pushNumber(N), or R:pushString(S).
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+| table() || [[File:Type-Table.png]] || Creates an empty table
+|-
+| T:clone() || [[File:Type-Table.png]] || Creates an independent copy of a table
+|-
+| T:count() || [[File:Type-Number.png]] || Returns the number of used indexes in the table
+|-
+| invert(R) || [[File:Type-Table.png]] || Returns a lookup table for ''R''. Usage: Index = T:number(toString(Value))<br />
+Don't overuse this function, as it can become expensive for very large arrays!
+|-
+| invert(T) || [[File:Type-Table.png]] || Returns a lookup table for ''T''. Usage: Key = T:string(toString(Value))<br />
+Don't overuse this function, as it can become expensive for very large tables!
+|-
+| T:keys() || [[File:Type-Array.png]] || Returns an array with all the keys used in the table. Usage: Array = T:keys()
+|-
+| T:values() || [[File:Type-Array.png]] || Returns an array with the table's contents. Usage: Array = T:values()
+|-
+| T:typeids() || [[File:Type-Array.png]] || Returns an array with the data-type ID corresponding to each table entry. Usage: Array = T:typeids()
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+| <s>T:<type>(S)</s>	 || [[File:Type-Number.png]] || Deprecated. Use T[S,<type>] instead.
+|-
+| <s>T:set<type>(S,*)</s> || || Deprecated. Use T[S,<type>]=X instead.
+|-
+| T[S,<type>]     || <type> || Retrieves the requested datatype element from the indexed string. Returns the default value for the datatype if the index is nil.
+|-
+| T[S,<type>]=X || || Saves the value as a table element with the specified index string
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|}
+
+===Array===
+''Thanks to'': Erkle
+
+====Description====
+Same as table, but with much less memory footprint and is numerically indexed instead. It is similar to E1's packet support.
+Arrays can contain any datatype except table and array.
+
+The index 0 and even negative and non-integer indices can be used, but to get the most out of the array functions it is advisable to start at index 1 and not to leave any gaps.
+
+If you don't follow these guidelines, push/pop/count might misbehave.
+
+An array automatically deletes elements that you fill with 0/""/noentity()/nobone()/noranger() or any other zero element.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Array-RAM_By_GUN|Array-RAM by GUN]]
+
+====Commands====
+In the interest of brevity, some commands which have many variants are shown as a pattern. <type> may be substituted with the capitalized name of any supported datatype, and * is the corresponding datatype symbol. For instance, R:push<type>(*) can mean R:pushNumber(N), or R:pushString(S).
+
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+| array() || [[File:Type-Array.png]] || Creates an empty array
+|-
+| array(...) || [[File:Type-Array.png]] || Constructs an array with the given values as elements. If you specify types that are not supported by the array data type, the behaviour is undefined.
+Example: R = array( 5, 8, 8, "string", vec( 85,47,10 ) )
+|-
+| R:clone() || [[File:Type-Array.png]] || Creates an independant copy of an array
+|-
+| R:count() || [[File:Type-Number.png]] || Returns the number of used indexes in the array
+|-
+| R:sum() || [[File:Type-Number.png]] || Adds all numbers in the array together and returns result
+|-
+| R:concat() || [[File:Type-String.png]] || Combines all strings and returns result
+|-
+| R:concat(S) || [[File:Type-String.png]] || Combines all strings with specified string in between and returns result
+|-
+| R:average() || [[File:Type-Number.png]] || Gives the average of all numbers in array
+|-
+| R:min() || [[File:Type-Number.png]] || Returns the smallest number in array
+|-
+| R:minIndex() || [[File:Type-Number.png]] || Returns the index of the smallest number in array
+|-
+| R:max() || [[File:Type-Number.png]] || Returns the largest number in array
+|-
+| R:maxIndex() || [[File:Type-Number.png]] || Returns the index of the largest number in array
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+| <s>R:<type>(N)</s>	 || * || Deprecated. Use R[N,<type>] instead.
+|-
+| <s>R:set<type>(N,*)</s> || || Deprecated. Use R[N,<type>]=X instead.
+|-
+| R[N,<type>]     || <type> || Retrieves the array element indexed with the number. Returns the default value for the datatype if the element is nil.
+|-
+| R[N,<type>]=* || || Saves Something into the N index of the array. Works exactly like a variable or persist.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+| R:push<type>(*) ||  || Saves the data at the end of the array
+|-
+| R:pop<type>() || * || Deletes and returns the last entry in the array. Be sure not to use popNumber() on a vector or similar, as the data may be lost
+|-
+| R:pop() ||  || Deletes the last entry in the array
+|-
+| R:unshift<type>(*) ||  || Adds the data to the beginning of the array. Will move all other entries up one address
+|-
+| R:shift<type>() || * || Deletes and returns the first element of the array, moving other entries down one address to compensate.
+|-
+| R:shift() ||  || Deletes the first element of the array; all other entries will move down one address
+|-
+| R:insert<type>(N,*) || * || Inserts the data into the specified index; all entries after this index will move up to compensate
+|-
+| R:remove<type>(N) || * || Deletes and returns the specified entry, moving subsequent entries down to compensate
+|-
+| R:remove(N) || || Deletes the specified entry, moving subsequent entries down to compensate
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|}
+
+===Bone===
+'''Developed by:''' TomyLobo
+====Description====
+This extension gives E2 support for '''bone''' entities. A '''bone''' can be any part of any ragdoll (head, left arm, right leg, etc).<br />
+You can get a bone's position, orientation, velocity, etc, much like with regular props (although some things are missing).
+
+Array and table functions for bones are also provided.
+
+====Related Examples====
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:bone(N) || [[File:Type-Bone.png]] || Returns ''E'''s ''N''th bone
+|-
+|E:bones() || [[File:Type-Array.png]] || Returns an array containing all of ''E'''s bones. This array's first element has the index 0!
+|-
+|E:boneCount() || [[File:Type-Number.png]] || Returns ''E'''s number of bones
+|-
+|nobone() || [[File:Type-Bone.png]] || Returns an invalid bone
+|-
+|E:aimBone() || [[File:Type-Bone.png]] || Returns the bone the player is currently aiming at
+|-
+|B:entity() || [[File:Type-Entity.png]] || Returns the entity ''B'' belongs to
+|-
+|B:index() || [[File:Type-Number.png]] || Returns ''B'''s index in the entity it belongs to. Returns -1 if the bone is invalid or an error occured
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|B:pos() || [[File:Type-Vector.png]] || Returns ''B'''s position
+|-
+|B:forward() || [[File:Type-Vector.png]] || Returns a vector describing ''B'''s forward direction
+|-
+|B:right() || [[File:Type-Vector.png]] || Returns a vector describing ''B'''s right direction
+|-
+|B:up() || [[File:Type-Vector.png]] || Returns a vector describing ''B'''s up direction
+|-
+|B:vel() || [[File:Type-Vector.png]] || Returns ''B'''s velocity
+|-
+|B:velL() || [[File:Type-Vector.png]] || Returns ''B'''s velocity in local coordinates
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|B:toWorld(V) || [[File:Type-Vector.png]] || Transforms ''V'' from local coordinates (as seen from ''B'') to world coordinates
+|-
+|B:toLocal(V) || [[File:Type-Vector.png]] || Transforms ''V'' from world coordinates to local coordinates (as seen from ''B'')
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|B:angVel() || [[File:Type-Angle.png]] || Returns ''B'''s angular velocity
+|-
+|B:angles() || [[File:Type-Angle.png]] || Returns ''B'''s pitch, yaw and roll angles
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|B:bearing(V) || [[File:Type-Number.png]] || Returns the bearing (yaw) from ''B'' to ''V''
+|-
+|B:elevation(V) || [[File:Type-Number.png]] || Returns the elevation (pitch) from ''B'' to ''V''
+|-
+|B:mass() || [[File:Type-Number.png]] || Returns ''B'''s mass
+|-
+|B:massCenter() || [[File:Type-Vector.png]] || Returns ''B'''s Center of Mass
+|-
+|B:massCenterL() || [[File:Type-Vector.png]] || Returns ''B'''s Center of Mass in local coordinates
+|-
+|B:setMass(N) ||  || Sets ''B'''s mass (between 0.001 and 50,000)
+|-
+|B:inertia() || [[File:Type-Vector.png]] || Gets the principal components of ''B'''s inertia tensor in the form vec(Ixx, Iyy, Izz)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|B:applyForce(V) ||  || Applies force to ''B'' according to ''V'''s direction and magnitude
+|-
+|B:applyOffsetForce(V,V2) ||  || Applies force to ''B'' according to ''V'' from the location of ''V2''
+|-
+|B:applyAngForce(A) ||  || Applies torque to ''B'' according to ''A''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|B:isFrozen() || [[File:Type-Number.png]] || Returns 1 if ''B'' is frozen, 0 otherwise
+|}
+
+===Wirelink===
+====Description====
+Wirelinks are an alternative to normal wires that offer a number of advantages. Any number of inputs or outputs on a component can be manipulated with one Wirelink, and you can also use it to retrieve the entity of a wirelinked component. 
+Since all Wirelinks are capable of two-way communication, wirelinks are not clear-cut inputs or outputs. As such, to avoid ambiguity wirelinks which the expression should be able to manipulate are always declared in the @inputs of the expression. To connect this input to another component, you must use the Wirelink tool on the component to create a new output on it of the type Wirelink, then wire the input to the output as normal.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#WireLink_Example_by_Hitman271|Wirelink Example by Hitman271]]
+*[[Wire_Expression2:Examples#Vector_and_Entity_wirelink_testing_by_fishface60|Vector and Entity Wirelink Testing by fishface60]]
+*[[Wire_Expression2:Examples#Radar_Chip_.28Ranger_and_Wirelink.29_By_Coder0xff|Radar by Coder0xff]]
+
+====Commands====
+Equal and Not Equal operators are available.
+XWL here means the Wirelink input.
+
+For [[Wired Graphics Processor]] Commands, see this wiki page.
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|XWL:isHiSpeed() || [[File:Type-Number.png]] || Returns true if the linked component is high-speed capable.
+|-
+|XWL:entity() || [[File:Type-Entity.png]] || Returns the entity of the linked component.
+|-
+|XWL:hasInput(S) || [[File:Type-Number.png]] || Returns true if the linked component has an input of the specified name.
+|-
+|XWL:hasOutput(S) || [[File:Type-Number.png]] || Returns true if the linked component has an output of the specified name.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+| XWL[S,<type>]     || <type> ||  Retrieves the component's output of the specified name.
+|-
+| XWL[S,<type>]=X || || Sets the component's input of the specified name equal to X.
+|-
+|<s>XWL:setNumber(S,N)</s> ||  || Deprecated. Use XWL[S,number]=X instead.
+|-
+|<s>XWL:number(S)</s> || [[File:Type-Number.png]] || Deprecated. Use XWL[S,number] instead.
+|-
+|<s>XWL:setVector(S,V)</s> ||  || Deprecated. Use XWL[S,vector]=X instead.
+|-
+|<s>XWL:vector(S)</s> || [[File:Type-Vector.png]] || Deprecated. Use XWL[S,vector] instead.
+|-
+|<s>XWL:setString(S,S)</s> ||  || Deprecated. Use XWL[S,string]=X instead.
+|-
+|<s>XWL:string(S)</s> || [[File:Type-String.png]] || Deprecated. Use XWL[S,string] instead.
+|-
+|XWL:setXyz(V) ||  || Sets the X/Y/Z to the corresponding values in the vector.
+|-
+|XWL:xyz() || [[File:Type-Vector.png]] || Retrieves the X/Y/Z as the corresponding values in the vector.
+|-
+|<s>XWL:setEntity(S,E)</s> ||  || Deprecated. Use XWL[S,entity]=X instead.
+|-
+|<s>XWL:entity(S)</s> || [[File:Type-Entity.png]] || Deprecated. Use XWL[S,entity] instead.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|<s>XWL:writeCell(N,N)</s> || [[File:Type-Number.png]] || Deprecated. Use XWL[N]=X instead.
+|-
+|<s>XWL:readCell(N)</s> || [[File:Type-Number.png]] || Deprecated. Use XWL[N] instead.
+|-
+| XWL[N]     || [[File:Type-Number.png]] ||  Returns contents of the specified memory cell.
+|-
+| XWL[N]=X || || Writes the value to the memory cell specified by the index.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|XWL:writeString(S,N,N) || || A helper function for using the [[Wired Console Screen]]. The string will be written to the screen in white text on black background. The number arguments specify the starting position - X/Horizontal (0-29 recommended) and Y/vertical (0-17).
+|-
+|XWL:writeString(S,N,N,N) || || As above, with an extra argument for the text colour. This is in the form of a 3-digit RGB code. 0 is black, while 999 is white, 900 is pure red and so on.
+|-
+|XWL:writeString(S,N,N,N,N) || || As above, with an extra argument for background colour. 3-digit RGB again.
+|-
+|XWL:writeString(S,N,N,N,N,N) || || As above, with an extra argument for flashing text. 0 or 1 is recommended.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|XWL:writeString(N,S) || [[File:Type-Number.png]] || Writes a null-terminated string to the given address. Returns the next free address or 0 on failure.
+|-
+|XWL:readString(N) || [[File:Type-String.png]] || Reads a null-terminated string from the given address. Returns an empty string on failure.
+|-
+|XWL:writeArray(N,R) || [[File:Type-Number.png]] || Writes an array's elements into a piece of memory. Strings and sub-tables (angles, vectors, matrices) are written as pointers to the actual data. Strings are written null-terminated.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|XWL:inputs() || [[File:Type-Array.png]] || Returns an array of all the inputs that ''XWL'' has without their types. Returns an empty array if it has none
+|-
+|XWL:outputs() || [[File:Type-Array.png]] || Returns an array of all the outputs that ''XWL'' has without their types. Returns an empty array if it has none
+|-
+|XWL:inputType(S) || [[File:Type-String.png]] || Returns the type of input that ''S'' is in lowercase. ( "NORMAL"  is changed to "number" )
+|-
+|XWL:outputType(S) || [[File:Type-String.png]] || Returns the type of output that ''S'' is in lowercase. ( "NORMAL"  is changed to "number" )
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|}
+
+===Complex===
+'''Developed by:''' Fizyk
+====Description====
+Complex numbers are an extension of real numbers to include roots of negative numbers as well.<br />
+They support all basic operations, like addition, subtraction, multiplication, division and raising to a power. Also operations with real numbers are supported, like N+C etc.<br />
+There are comparison operators == and !=, no < and > though, as those are undefined for complex numbers.
+
+====Related Examples====
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|comp() || [[File:Type-ComplexNumber.png]] || Returns complex zero
+|-
+|comp(N) || [[File:Type-ComplexNumber.png]] || Converts a real number to complex (returns complex number with real part ''N'' and imaginary part 0)
+|-
+|comp(N,N<sub>2</sub>) || [[File:Type-ComplexNumber.png]] || Returns ''N''+''N<sub>2</sub>''*i
+|-
+|i() || [[File:Type-ComplexNumber.png]] || Returns the imaginary unit i
+|-
+|i(N) || [[File:Type-ComplexNumber.png]] || Returns ''N''*i
+|-
+|abs(C) || [[File:Type-ComplexNumber.png]] || Returns the absolute value of ''C''
+|-
+|arg(C) || [[File:Type-ComplexNumber.png]] || Returns the argument of ''C''
+|-
+|conj(C) || [[File:Type-ComplexNumber.png]] || Returns the conjugate of ''C''
+|-
+|real(C) || [[File:Type-Number.png]] || Returns the real part of ''C''
+|-
+|imag(C) || [[File:Type-Number.png]] || Returns the imaginary part of ''C''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|exp(C) || [[File:Type-ComplexNumber.png]] || Raises Euler's constant e to the power of ''C''
+|-
+|log(C) || [[File:Type-ComplexNumber.png]] || Calculates the natural logarithm of ''C''
+|-
+|log(C,C<sub>2</sub>) || [[File:Type-ComplexNumber.png]] || Calculates the logarithm of ''C<sub>2</sub>'' to a complex base ''C''
+|-
+|log(N,C) || [[File:Type-ComplexNumber.png]] || Calculates the logarithm of ''C'' to a real base ''N''
+|-
+|log2(C) || [[File:Type-ComplexNumber.png]] || Calculates the logarithm of ''C'' to base 2
+|-
+|log10(C) || [[File:Type-ComplexNumber.png]] || Calculates the logarithm of ''C'' to base 10
+|-
+|sqrt(C) || [[File:Type-ComplexNumber.png]] || Calculates the square root of ''C''
+|-
+|csqrt(N) || [[File:Type-ComplexNumber.png]] || Calculates the complex square root of the real number ''N''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|sin(C) || [[File:Type-ComplexNumber.png]] || Calculates the sine of ''C''
+|-
+|cos(C) || [[File:Type-ComplexNumber.png]] || Calculates the cosine of ''C''
+|-
+|tan(C) || [[File:Type-ComplexNumber.png]] || Calculates the tangent of ''C''
+|-
+|cot(C) || [[File:Type-ComplexNumber.png]] || Calculates the cotangent of ''C''
+|-
+|sec(C) || [[File:Type-ComplexNumber.png]] || Calculates the secant of ''C''
+|-
+|csc(C) || [[File:Type-ComplexNumber.png]] || Calculates the cosecant of ''C''
+|-
+|asin(C) || [[File:Type-ComplexNumber.png]] || Calculates the inverse sine of ''C''
+|-
+|acos(C) || [[File:Type-ComplexNumber.png]] || Calculates the inverse cosine of ''C''
+|-
+|atan(C) || [[File:Type-ComplexNumber.png]] || Calculates the inverse tangent of ''C''
+|-
+|sinh(C) || [[File:Type-ComplexNumber.png]] || Calculates the hyperbolic sine of ''C''
+|-
+|cosh(C) || [[File:Type-ComplexNumber.png]] || Calculates the hyperbolic cosine of ''C''
+|-
+|tanh(C) || [[File:Type-ComplexNumber.png]] || Calculates the hyperbolic tangent of ''C''
+|-
+|coth(C) || [[File:Type-ComplexNumber.png]] || Calculates the hyperbolic cotangent of ''C''
+|-
+|sech(C) || [[File:Type-ComplexNumber.png]] || Calculates the hyperbolic secant of ''C''
+|-
+|csch(C) || [[File:Type-ComplexNumber.png]] || Calculates the hyperbolic cosecant of ''C''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|toString(C) || [[File:Type-String.png]] || Formats ''C'' as a string.
+|-
+|C:toString() || [[File:Type-String.png]] || The same as toString(C).
+|}
+
+===Quaternion===
+'''Developed by:''' Fizyk
+====Description====
+Quaternions are an extension of complex numbers. Instead of a+b'''i''', they are of form a+b'''i'''+c'''j'''+d'''k''', where a, b, c, d are real numbers, and '''i''', '''j''', '''k''' are imaginary units. The imaginary units can be used as a basis in a 3D space, allowing quaternions to represent rotations.<br />
+Like on real and complex numbers, on quaternions you can perform addition, subtraction, multiplication and division. Operations that take a quaternion and a real/complex number are also supported (N+Q, Q*C, etc.). Beware: quaternion multiplication isn't commutative!<br />
+'''Note:''' Because multiplication isn't commutative with quaternions, there are two ways of dividing them. Q1/Q2 is the same as Q1*inv(Q2), the second way is inv(Q2)*Q1.<br />
+The extension also supports multiplying quaternions by vectors for the purpose of rotations. If you want to rotate vector V using quaternion Q, use this code:<br />
+V2 = vec(Q*V*inv(Q))
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Angular_stabilization_using_applyTorque_and_quaternions_.28by_Fizyk.29|Quaternion/applyTorque stabilization example by Fizyk]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|quat() || [[File:Type-Quaternion.png]] || Creates a zero quaternion
+|-
+|quat(N) || [[File:Type-Quaternion.png]] || Creates a quaternion with real part equal to ''N''
+|-
+|quat(C) || [[File:Type-Quaternion.png]] || Creates a quaternion with real and "i" parts equal to ''C''
+|-
+|quat(V) || [[File:Type-Quaternion.png]] || Converts a vector to a quaternion (returns ''V''.x*i + ''V''.y*j + ''V''.z*k)
+|-
+|quat(N,N<sub>2</sub>,N<sub>3</sub>,N<sub>4</sub>) || [[File:Type-Quaternion.png]] || Returns ''N''+''N<sub>2</sub>''i+''N<sub>3</sub>''j+''N<sub>4</sub>''k
+|-
+|quat(A) || [[File:Type-Quaternion.png]] || Converts ''A'' to a quaternion
+|-
+|quat(V,V<sub>2</sub>) || [[File:Type-Quaternion.png]] || Creates a quaternion given forward (''V'') and up (''V<sub>2</sub>'') vectors
+|-
+|quat(E) || [[File:Type-Quaternion.png]] || Converts angle of ''E'' to a quaternion
+|-
+|qi() || [[File:Type-Quaternion.png]] || Returns quaternion i
+|-
+|qi(N) || [[File:Type-Quaternion.png]] || Returns quaternion ''N''*i
+|-
+|qj() || [[File:Type-Quaternion.png]] || Returns j
+|-
+|qj(N) || [[File:Type-Quaternion.png]] || Returns ''N''*j
+|-
+|qk() || [[File:Type-Quaternion.png]] || Returns k
+|-
+|qk(N) || [[File:Type-Quaternion.png]] || Returns ''N''*k
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|abs(Q) || [[File:Type-Number.png]] || Returns absolute value of ''Q''
+|-
+|conj(Q) || [[File:Type-Quaternion.png]] || Returns the conjugate of ''Q''
+|-
+|inv(Q) || [[File:Type-Quaternion.png]] || Returns the inverse of ''Q''
+|-
+|Q:real() || [[File:Type-Number.png]] || Returns the real component of the quaternion
+|-
+|Q:i() || [[File:Type-Number.png]] || Returns the i component of the quaternion
+|-
+|Q:j() || [[File:Type-Number.png]] || Returns the j component of the quaternion
+|-
+|Q:k() || [[File:Type-Number.png]] || Returns the k component of the quaternion
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|exp(Q) || [[File:Type-Quaternion.png]] || Raises Euler's constant e to the power ''Q''
+|-
+|log(Q) || [[File:Type-Quaternion.png]] || Calculates natural logarithm of ''Q''
+|-
+|qMod(Q) || [[File:Type-Quaternion.png]] || Changes quaternion ''Q'' so that the represented rotation is by an angle between 0 and 180 degrees (by coder0xff)
+|-
+|slerp(Q,Q<sub>2</sub>,N) || [[File:Type-Quaternion.png]] || Performs spherical linear interpolation between ''Q'' and ''Q<sub>2</sub>''. Returns ''Q'' for ''N''=0, ''Q<sub>2</sub>'' for ''N''=1
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|Q:forward() || [[File:Type-Vector.png]] || Returns vector pointing forward for ''Q''
+|-
+|Q:right() || [[File:Type-Vector.png]] || Returns vector pointing right for ''Q''
+|-
+|Q:up() || [[File:Type-Vector.png]] || Returns vector pointing up for ''Q''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|qRotation(V,N) || [[File:Type-Quaternion.png]] || Returns quaternion for rotation about axis ''V'' by angle ''N''
+|-
+|qRotation(V) || [[File:Type-Quaternion.png]] || Construct a quaternion from the rotation vector ''V''. Vector direction is axis of rotation, magnitude is angle in degress (by coder0xff)
+|-
+|rotationAngle(Q) || [[File:Type-Number.png]] || Returns the angle of rotation in degrees (by coder0xff)
+|-
+|rotationAxis(Q) || [[File:Type-Vector.png]] || Returns the axis of rotation (by coder0xff)
+|-
+|rotationVector(Q) || [[File:Type-Vector.png]] || Returns the rotation vector - rotation axis where magnitude is the angle of rotation in degress (by coder0xff)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|vec(Q) || [[File:Type-Vector.png]] || Converts ''Q'' to a vector by dropping the real component
+|-
+|matrix(Q) || [[File:Type-Matrix.png]] || Converts ''Q'' to a transformation matrix
+|-
+|Q:toAngle() || [[File:Type-Angle.png]] || Returns angle represented by ''Q''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|toString(Q) || [[File:Type-String.png]] || Formats ''Q'' as a string.
+|}
+
+==Basic extensions==
+
+===Core===
+====Description====
+This is where things directly related to E2 are kept
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|first() || [[File:Type-Number.png]] || Returns 1 if the expression was spawned or reset
+|-
+|duped() || [[File:Type-Number.png]] || Returns 1 if the expression was duplicated
+|-
+|dupefinished() || [[File:Type-Number.png]] || Returns 1 when the contraption has finished duping. (Only triggers on Adv Duplicator, not the normal duplicator)
+|-
+|inputClk() || [[File:Type-Number.png]] || Returns 1 if the expression was triggered by an input
+|-
+|reset() ||  || Reset the expression itself as if it was just spawned, stops execution
+|-
+|exit() ||  || Stops the execution of any code after it
+|-
+|runOnLast(N) ||  || If <activate> != 0, the chip will run once when it is removed, setting the last() flag when it does.
+|-
+|last() || [[File:Type-Number.png]] || Returns 1 if it is being called on the last execution of the expression gate before it is removed or reset. This execution must be requested with the runOnLast(1) command.
+|-
+|removing() || [[File:Type-Number.png]] || Returns 1 if this is the last() execution and caused by the entity being removed.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|ops() || [[File:Type-Number.png]] || Returns how many ops are used every execution on average
+|-
+|opcounter() || [[File:Type-Number.png]] || Returns how many ops have been used so far in this execution plus the amount of hard quota used
+|-
+|minquota() || [[File:Type-Number.png]] || The ops left before soft quota is used up
+|-
+|maxquota() || [[File:Type-Number.png]] || The ops left before hard quota is exceeded and the expression shuts down
+|-
+|perf() || [[File:Type-Number.png]] || If used as a while loop condition, stabilizes the expression around <maxexceed> hardquota used.
+|}
+
+===Self-Aware===
+====Description====
+With entity() you can use Entity-Support to get all the data from the expression-entity. With concmd() you can execute console commands.
+
+Also, the chip has the ability to force itself. Forces aren't dispersed over a certain amount of time, all forces applied to an object within a tick are added up and then applied to the object. Force commands are best used with runOnTick(N) because you won't end up applying more than 1 force per tick and it is easier to do things like defy gravity.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Beacon_Sensor_by_Hitman271|Beacon Sensor by Hitman271]]
+*[[Wire_Expression2:Examples#GPS_by_Fishface60|GPS by Fishface60]]
+*[[Wire_Expression2:Examples#Speedometer_by_integer|Speedometer by integer]]
+*[[Wire_Expression2:Examples#Gyroscope_by_GabbaGubbel|Gyroscope by GabbaGubbel]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|entity() || [[File:Type-Entity.png]] || Gets the entity of the expression
+|-
+|concmd(S) || [[File:Type-Number.png]] || Takes a string and executes it in console. Returns 1 if it succeeded and 0 if it failed.<br />The client must enable this in the console with "wire_expression2_concmd 1". "wire_expression2_concmd_whitelist" allows you to choose which commands can be used.[http://www.wiremod.com/forum/151800-post12.html]
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|applyForce(V) ||  || Applies force according to the vector given (Forces independently on each axis unlike a vector thruster)
+|-
+|applyOffsetForce(V,V) ||  || Applies force to the expression according to the first vector from the location of the second
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|selfDestruct() ||  || Removes the expression
+|-
+|selfDestructAll() ||  || Removes the expression and all constrained props
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|changed(*) ||  || Checks if the value or variable was changed. Accepts any type except '''table''' and '''array'''.<br />
+It detects changes by checking whether it was called with a different parameter at the same point in the last execution.<br />
+Multiple calls to changed() in the _same_ execution are independent of each other.
+|-
+|select(N,*,...) || * || Returns the Nth value given after the index, *'s zero element otherwise. If you mix types, the behaviour is undefined.
+|}
+
+===Debug===
+====Description====
+Contains various functions for displaying values to the user. print() and hint() allow you to display strings quickly on your screen.
+
+Keep in mind that chat messages can be faked using E:printColorDriver(...) and E:printColorDriver(R). The game will display a warning message when first used on someone by a specific chip.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Using_Hints|Using Hints]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|print(S) ||  || Posts ''S'' to the chat area.
+|-
+|print(...) || || Prints all arguments to the chat area, seperated by a tab. Automatically does toString for you (Can print arrays but not tables). Works just like lua's [[G.print|print)]].
+|-
+|E:printDriver(S) || [[File:Type-Number.png]] || Posts a string to the chat of ''E'''s driver. Returns 1 if the text was printed, 0 if not.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|hint(S,N) ||  || Displays a hint popup with message ''S'' for ''N'' seconds (''N'' being clamped between 0.7 and 7).
+|-
+|E:hintDriver(S,N) || [[File:Type-Number.png]] || Displays a hint popup to the driver of vehicle E, with message ''S'' for ''N'' seconds (''N'' being clamped between 0.7 and 7). Same return value as printDriver.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|print(N,S) ||  || Same as print(''S''), but can make the text show up in different places. ''N'' can be one of the following: _HUD_PRINTCENTER, _HUD_PRINTCONSOLE, _HUD_PRINTNOTIFY, _HUD_PRINTTALK.
+|-
+|E:printDriver(N,S) || [[File:Type-Number.png]] || Same as ''E''E:printDriver(''S''), but can make the text show up in different places. ''N'' can be one of the following: _HUD_PRINTCENTER, _HUD_PRINTCONSOLE, _HUD_PRINTNOTIFY, _HUD_PRINTTALK.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|printTable(T) ||  || Prints a table like the lua function [[G.PrintTable|PrintTable]] does, except to the chat area.
+|-
+|printTable(R) ||  || Prints an array like the lua function [[G.PrintTable|PrintTable]] does, except to the chat area.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|printColor(...) ||  || Works like [[chat.AddText]](...). Parameters can be any amount and combination of numbers, strings, player entities, color vectors (both 3D and 4D).
+|-
+|printColor(R) ||  || Like printColor(...), except taking an array containing all the parameters.
+|-
+|E:printColorDriver(...) ||  || Like printColor but prints to the driver of a specified vehicle.
+|-
+|E:printColorDriver(R) ||  || Like printColorDriver but takes an array containing all the parameters.
+|}
+
+===Timer===
+====Description====
+Timer functions are a way to trigger the expression to be run at a given time. Most interesting is the interval(N) function, that lets the expression be run continuously without needing triggering from inputs.
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|runOnTick(N) ||  || If set to 1, the expression will execute once every game tick. See [[Admin#Tick]] and [[http://whisper.ausgamers.com/wiki/index.php/Tickrate]] For more information on how often this is run.
+|-
+|tickClk() || [[File:Type-Number.png]] || Returns 1 if the current execution was caused by "runOnTick"
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|curtime() || [[File:Type-Number.png]] || Returns the current game time since server-start in seconds*
+|-
+|realtime() || [[File:Type-Number.png]] || Returns the current real time since server-start in seconds*
+|-
+|interval(N) ||  || Causes the expression to execute every N milliseconds (minimum delay is 10 milliseconds)
+|-
+|timer(S,N) ||  || Sets a one-time timer with entered name and delay in milliseconds
+|-
+|stoptimer(S) ||  || Stops a timer, can stop interval with stoptimer("interval")
+|-
+|clk()	 || [[File:Type-Number.png]] || Returns 1 if the current execution was caused by the interval
+|-
+|clk(S) || [[File:Type-Number.png]] || Returns 1 if the current execution was caused by the inserted name
+|-
+|}
+''*'' Both curtime() and realtime() are given to 3 decimal places. Server lag will cause curtime() to slow down, but not realtime().
+
+===Unit Conversion===
+====Description====
+All conversions are precise so it is recommended to round the result if it is going to be displayed (round()).
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Speedometer_by_integer|Speedometer by integer]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|toUnit(S,N) || [[File:Type-Number.png]] || Converts default garrysmod units to specified units
+|-
+|fromUnit(S,N) || [[File:Type-Number.png]] || Converts specified units to default garrysmod units
+|-
+|convertUnit(S,S,N) || [[File:Type-Number.png]] || Converts between two units
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|}
+
+====Units====
+:{|style="background:#E6E6FA"
+!align="left" width="50"| Length
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|mm || millimeters
+|-
+|cm || centimeters
+|-
+|dm || decimeters
+|-
+|m || meters
+|-
+|km || kilometers
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|'''in''' || '''inches (default)'''
+|-
+|ft || feet
+|-
+|yd || yards
+|-
+|mi || miles
+|-
+|nmi || nautical miles
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|}
+
+:{|style="background:#E6E6FA"
+!align="left" width="50"| Speed
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|m/s || meters per second
+|-
+|km/h || kilometers per hour
+|-
+|'''in/s''' || '''inches per second (default)'''
+|-
+|mi/h || miles per hour
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|mph || miles per hour (more commonly used than mi/h)
+|-
+|knots || knots (correct term for nautical miles per hour)
+|-
+|mach || mach (times speed of sound)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|mm/x || millimeters per time unit
+|-
+|cm/x || centimeters per time unit
+|-
+|dm/x || decimeters per time unit
+|-
+|m/x || meters per time unit
+|-
+|km/x || kilometers per time unit
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|in/x || inches per time unit
+|-
+|ft/x || feet per time unit
+|-
+|yd/x || yards per time unit
+|-
+|mi/x || miles per time unit
+|-
+|nmi/x || nautical miles per time unit
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+| || '''substitute x for s (per second), m (per minute) or h (per hour)'''
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|}
+
+:{|style="background:#E6E6FA"
+!align="left" width="50"| Weight
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|g || grams
+|-
+|'''kg''' || '''kilograms (default)'''
+|-
+|t || tons
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|oz || ounces
+|-
+|lb || pounds
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|}
+
+=== Server Information ===
+
+'''Developed by:''' Beer
+
+====Description====
+
+The following functions allow you to get various information about the server, such as the current map name, gamemode, etc.
+
+==== Commands ====
+
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|map() || [[File:Type-String.png]] || Returns the current map name
+|-
+|hostname() || [[File:Type-String.png]] || Returns the Name of the server
+|-
+|isLan() || [[File:Type-Number.png]] || Returns 1 if lan mode is enabled
+|-
+|gamemode() || [[File:Type-String.png]] || Returns the name of the current gamemode
+|- 
+|gravity() || [[File:Type-Number.png]] || Returns gravity
+|- 
+|E:ping() || [[File:Type-Number.png]] || Returns the latency for player ''E''
+|-
+|isSinglePlayer() || [[File:Type-Number.png]] || Returns 1 if singleplayer, 0 if multiplayer
+|- 
+|isDedicated() || [[File:Type-Number.png]] || Returns 1 if server is dedicated, 0 if listen
+|- 
+|numPlayers() || [[File:Type-Number.png]] || Returns the number of players currently in the server
+|- 
+|maxPlayers() || [[File:Type-Number.png]] || Returns the max number of players allowed in the server
+|- 
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|maxOfType(S) || [[File:Type-Number.png]] || Returns the maximum allowed of a certain type of entity, i.e. maxOfType("wire_thrusters").  Returns 0 if you enter an invalid parameter.
+|-
+|playerDamage() || [[File:Type-Number.png]] || Returns 1 if player vs player damage is enabled on the server
+|-
+|convar(S) || [[File:Type-String.png]] || Give a console command such as "<tt>name</tt>" and it returns the set value
+|-
+|convarnum(S) || [[File:Type-Number.png]] || Give a console command such as "<tt>sbox_godmode</tt>" and it returns the set value
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|time(S) || [[File:Type-Number.png]] || Returns numerical time/date info from the server. Possible arguments: '''"year"''', '''"month"''', '''"day"''', '''"hour"''', '''"min"''', '''"sec"''', '''"wday"''' (weekday, Sunday is 1), '''"yday"''' (day of the year), and '''"isdst"''' (daylight saving flag 0/1)
+|}
+
+: {{tip|To get a list of all possible parameters for maxOfType(), open the console and type "find sbox_max".  If you need "sbox_maxragdolls", you can simply pass "ragdolls" in the function.}} 
+[[Category:Wire Addon]]
+
+=== Constraint ===
+
+'''Developed by:''' ZeikJT
+
+====Description====
+
+The following functions get information about entities based on constraints
+
+==== Commands ====
+
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:getConstraints() || [[File:Type-Array.png]] || Returns an '''array''' with all entities directly or indirectly constrained to ''E'', except ''E'' itself.
+|-
+|E:hasConstraints() || [[File:Type-Number.png]] || Returns the number of the constraints ''E'' has
+|-
+|E:hasConstraints(S) || [[File:Type-Number.png]] || Returns the number of the constraints ''E'' has with the given constraint type (see the types list below)
+|-
+|E:isConstrained() || [[File:Type-Number.png]] || Returns 1 if ''E'' has constraints, 0 if not
+|-
+|E:isWeldedTo() || [[File:Type-Entity.png]] || Returns the first entity ''E'' was welded to
+|-
+|E:isWeldedTo(N) || [[File:Type-Entity.png]] || Returns the ''N''th entity ''E'' was welded to
+|-
+|E:isConstrainedTo() || [[File:Type-Entity.png]] || Returns the first entity ''E'' was constrained to
+|-
+|E:isConstrainedTo(N) || [[File:Type-Entity.png]] || Returns the ''N''th entity ''E'' was constrained to
+|-
+|E:isConstrainedTo(S) || [[File:Type-Entity.png]] || Returns the first entity ''E'' was constrained to with the given constraint type (see the types list below)
+|-
+|E:isConstrainedTo(S, N) || [[File:Type-Entity.png]] || Returns the ''N''th entity ''E'' was constrained to with the given constraint type (see the types list below)
+|-
+|E:parent() || [[File:Type-Entity.png]] || Returns the '''entity''' ''E'' is parented to.
+|-
+|E:parentBone() || [[File:Type-Bone.png]] || Returns the '''bone''' ''E'' is parented to.
+|-
+|}
+:{|style="background:#E6E6FA"
+!align="center" width="110"| Constraint Types
+|-
+| bgcolor="SteelBlue" |
+|-
+|AdvBallsocket
+|-
+|Axis
+|-
+|Ballsocket
+|-
+|Elastic
+|-
+|Hydraulic
+|-
+|Keepupright
+|-
+|Motor
+|-
+|Muscle
+|-
+|NoCollide
+|-
+|Pulley
+|-
+|Rope
+|-
+|Slider
+|-
+|Weld
+|-
+|Winch
+|}
+
+=== Chat ===
+
+'''Developed by:''' ZeikJT & Gwahir
+
+====Description====
+
+The following functions are for reading the chat log. This is similar to the text receiver.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Chat_example_by_Matte|Chat Example by Matte]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|runOnChat(N) ||  || If ''N'' == 0, the chip will no longer run on chat events, otherwise it makes this chip execute when someone chats. Only needs to be called once, not in every execution.
+|-
+|chatClk() || [[File:Type-Number.png]] || Returns 1 if the chip is being executed because of a chat event. Returns 0 otherwise.
+|-
+|chatClk(E) || [[File:Type-Number.png]] || Returns 1 if the chip is being executed because of a chat event by player ''E''. Returns 0 otherwise.
+|-
+|hideChat(N) ||  || If ''N'' != 0, hide the chat message that is currently being processed.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|lastSpoke() || [[File:Type-Entity.png]] || Returns the last player to speak.
+|-
+|lastSaid() || [[File:Type-String.png]] || Returns the last message in the chat log.
+|-
+|lastSaidWhen() || [[File:Type-Number.png]] || Returns the time the last message was sent.
+|-
+|lastSaidTeam() || [[File:Type-Number.png]] || Returns 1 if the last message was sent in the team chat, 0 otherwise.
+|-
+|E:lastSaid() || [[File:Type-String.png]] || Returns what the player ''E'' last said.
+|-
+|E:lastSaidWhen() || [[File:Type-Number.png]] || Returns when the given player last said something.
+|-
+|E:lastSaidTeam() || [[File:Type-Number.png]] || Returns 1 if the last message was sent in the team chat, 0 otherwise.
+|}
+
+===Color===
+'''Developed by:''' Jimlad
+
+====Description====
+These commands allow E2 to find the color of an entity and change it. Changing color only works on entities you own.
+
+Uses RGBA (Red, Green, Blue, Alpha) values, although when only RGB is specified, alpha will not be changed.
+
+Note that color values have a range of 0 - 255, where (0,0,0,255) is black, and (255,255,255,255) is white.
+
+Alpha is equivalent to opacity, where 0 is completely transparent and 255 is completely opaque.
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:getColor() || [[File:Type-Vector.png]] || Returns the color of an entity as a vector (R,G,B)
+|-
+|E:getColor4() || [[File:Type-Vector4.png]] || Returns the color of an entity as a 4D vector (R,G,B,A)
+|-
+|E:getAlpha() || [[File:Type-Number.png]] || Returns the alpha of an entity
+|-
+|E:getMaterial() || [[File:Type-String.png]] || Returns the material of an entity
+|-
+|E:getSkin() || [[File:Type-Number.png]] || Gets ''E'''s current skin number.
+|-
+|E:getSkinCount() || [[File:Type-Number.png]] || Gets ''E'''s number of skins.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:setColor(N,N,N) || || Changes the RGB color of an entity (leaves alpha alone)
+|-
+|E:setColor(N,N,N,N) || || Changes the RGBA color of an entity
+|-
+|E:setColor(V) || || Changes the RGB color of an entity (leaves alpha alone), using a vector with values (R,G,B)
+|-
+|E:setColor(V,N) || || Changes the RGBA color of an entity, using a vector with values (R,G,B). The additional argument sets alpha
+|-
+|E:setColor(V4) || || Changes the RGBA color of an entity, using a 4D vector with values (R,G,B,A)
+|-
+|E:setAlpha(N) || || Changes the alpha of an entity
+|-
+|E:setMaterial(S) || || Sets the material of an entity. E:setMaterial("") to reset material
+|-
+|E:setSkin(N) ||  || Sets ''E'''s skin number.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|hsv2rgb(V) || [[File:Type-Vector.png]] || Converts ''V'' from the [http://en.wikipedia.org/wiki/HSV_color_space HSV color space] to the [http://en.wikipedia.org/wiki/RGB_color_space RGB color space]
+|-
+|rgb2hsv(V) || [[File:Type-Vector.png]] || Converts ''V'' from the [http://en.wikipedia.org/wiki/RGB_color_space RGB color space] to the [http://en.wikipedia.org/wiki/HSV_color_space HSV color space]
+|-
+|rgb2digi(V,N) || [[File:Type-Number.png]] || Converts an RGB vector ''V'' to a number in digital screen format. ''N'' Specifies a mode, either 0, 2 or 3, corresponding to Digital Screen color modes.
+|-
+|rgb2digi(N,N<sub>2</sub>,N<sub>3</sub>,N<sub>4</sub>) || [[File:Type-Number.png]] || Converts the RGB color (''N'',''N<sub>2</sub>'',''N<sub>3</sub>'') to a number in digital screen format. ''N<sub>4</sub>'' Specifies a mode, either 0, 2 or 3, corresponding to Digital Screen color modes.
+|}
+
+[[Category:Wire Addon]]
+
+==Advanced extensions==
+
+===Entity Discovery===
+'''Developed by:''' Gwahir, TomyLobo
+
+====Description====
+Use these to find and filter entities.
+The basic find functions will return how many entities were found but the actual entities are stored on the chip until they are accessed using find(), findResult(N), or findClosest(V)
+
+There is a white list and a black list as well as functions for on the spot filtering and sorting
+White and black lists are always in effect and will be used automatically when you request a new list of entities.
+Control of the lists is achieved through the find[Exclude, Allow, Include, Disallow][Player, Prop, Model, Class] functions
+Exclude/Allow add/remove items from the black list while Include/Disallow do the same for the white list
+If the same object is covered by both the white list and the black list, the black list takes priority
+
+In the case of names, classes and models, partial strings are acceptable.
+
+Discovering entities is not cheap so suggested usage is to find what you're looking for an hold onto it in order to limit the number of queries you run.
+To prevent overuse of these features, two console variables have been included, wire_exp2_entFindRate and wire_exp2_playerFindRate.  These are delays that control how often you can perform find queries, the ent variable is per chip, the player variable is for all chip owned by a specific player
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Applying_Entity_Discovery:_Thermometer|Thermometer Example by Entoros]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="190"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findUpdateRate() || [[File:Type-Number.png]] || Returns the minimum delay between entity find events on a chip
+|-
+|findPlayerUpdateRate() || [[File:Type-Number.png]] || Returns the minimum delay between entity find events per player
+|-
+|findCanQuery() || [[File:Type-Number.png]] || Returns 1 if find functions can be used, 0 otherwise.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findInSphere(V,N) || [[File:Type-Number.png]] || Finds entities in a sphere around V with a radius of N, returns the number found after filtering
+|-
+|findInCone(V,V,N,N) || [[File:Type-Number.png]] || Like findInSphere but with a [[http://mathworld.wolfram.com/SphericalCone.html Spherical cone]], arguments are for position, direction, length, and degrees (works now)
+|-
+|findInBox(V,V) || [[File:Type-Number.png]] || Like findInSphere but with a globally aligned box, the arguments are the diagonal corners of the box
+|-
+|findByName(S) || [[File:Type-Number.png]] || Find all entities with the given name
+|-
+|findByModel(S) || [[File:Type-Number.png]] || Find all entities with the given model
+|-
+|findByClass(S) || [[File:Type-Number.png]] || Find all entities with the given class
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findPlayerByName(S) || [[File:Type-Entity.png]] || Returns the player with the given name, this is an exception to the rule
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findExcludeEntities(R) ||  || Exclude all entities from ''R'' from future finds
+|-
+|findExcludeEntity(E) ||  || Exclude ''E'' from future finds
+|-
+|findExcludePlayer(E) ||  || Exclude this player from future finds (put it on the entity blacklist)
+|-
+|findExcludePlayer(S) ||  || Exclude this player from future finds (put it on the entity blacklist)
+|-
+|findExcludePlayerProps(E) ||  || Exclude entities owned by this player from future finds
+|-
+|findExcludePlayerProps(S) ||  || Exclude entities owned by this player from future finds
+|-
+|findExcludeModel(S) ||  || Exclude entities with this model (or partial model name) from future finds
+|-
+|findExcludeClass(S) ||  || Exclude entities with this class (or partial class name) from future finds
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findAllowEntities(R) ||  || Remove all entities from ''R'' from the blacklist
+|-
+|findAllowEntity(E) ||  || Remove ''E'' from the blacklist
+|-
+|findAllowPlayer(E) ||  || Remove this player from the entity blacklist
+|-
+|findAllowPlayer(S) ||  || Remove this player from the entity blacklist
+|-
+|findAllowPlayerProps(E) ||  || Remove entities owned by this player from the blacklist
+|-
+|findAllowPlayerProps(S) ||  || Remove entities owned by this player from the blacklist
+|-
+|findAllowModel(S) ||  || Remove entities with this model (or partial model name) from the blacklist
+|-
+|findAllowClass(S) ||  || Remove entities with this class (or partial class name) from the blacklist
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findIncludeEntities(R) ||  || Include all entities from ''R'' in future finds, and remove others not in the whitelist
+|-
+|findIncludeEntity(E) ||  || Include ''E'' in future finds, and remove others not in the whitelist
+|-
+|findIncludePlayer(E) ||  || Include this player in future finds, and remove other entities not in the entity whitelist
+|-
+|findIncludePlayer(S) ||  || Include this player in future finds, and remove other entities not in the entity whitelist
+|-
+|findIncludePlayerProps(E) ||  || Include entities owned by this player from future finds, and remove others not in the whitelist
+|-
+|findIncludePlayerProps(S) ||  || Include entities owned by this player from future finds, and remove others not in the whitelist
+|-
+|findIncludeModel(S) ||  || Include entities with this model (or partial model name) in future finds, and remove others not in the whitelist
+|-
+|findIncludeClass(S) ||  || Include entities with this class (or partial class name) in future finds, and remove others not in the whitelist
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findDisallowEntities(R) ||  || Remove all entities from ''R'' from the whitelist
+|-
+|findDisallowEntity(E) ||  || Remove ''E'' from the whitelist
+|-
+|findDisallowPlayer(E) ||  || Remove this player from the entity whitelist
+|-
+|findDisallowPlayer(S) ||  || Remove this player from the entity whitelist
+|-
+|findDisallowPlayerProps(E) ||  || Remove entities owned by this player from the whitelist
+|-
+|findDisallowPlayerProps(S) ||  || Remove entities owned by this player from the whitelist
+|-
+|findDisallowModel(S) ||  || Remove entities with this model (or partial model name) from the whitelist
+|-
+|findDisallowClass(S) ||  || Remove entities with this class (or partial class name) from the whitelist
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findClearBlackList() ||  || Clear all entries from the entire blacklist
+|-
+|findClearBlackEntityList() ||  || Clear all entries from the entity blacklist
+|-
+|findClearBlackPlayerPropList() ||  || Clear all entries from the prop owner blacklist
+|-
+|findClearBlackModelList() ||  || Clear all entries from the model blacklist
+|-
+|findClearBlackClassList() ||  || Clear all entries from the class blacklist
+|-
+|findClearWhiteList() ||  || Clear all entries from the entire whitelist
+|-
+|findClearWhiteEntityList() ||  || Clear all entries from the player whitelist
+|-
+|findClearWhitePlayerPropList() ||  || Clear all entries from the prop owner whitelist
+|-
+|findClearWhiteModelList() ||  || Clear all entries from the model whitelist
+|-
+|findClearWhiteClassList() ||  || Clear all entries from the class whitelist
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findResult(N) || [[File:Type-Entity.png]] || Returns the indexed entity from the previous find event (valid parameters are 1 to the number of entities found)
+|-
+|findClosest(V) || [[File:Type-Entity.png]] || Returns the closest entity to the given point from the previous find event
+|-
+|findToArray() || [[File:Type-Array.png]] || Formats the query as an array, R[Index,entity] to get an entity.
+|-
+|find() || [[File:Type-Entity.png]] || Equivalent to findResult(1)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findSortByDistance(V) || [[File:Type-Number.png]] || Sorts the entities from the last find event, index 1 is the closest to point V, returns the number of entities in the list
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|findClipToClass(S) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities that are NOT of this class
+|-
+|findClipFromClass(S) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities that are of this class
+|-
+|findClipToModel(S) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities that do NOT have this model
+|-
+|findClipFromModel(S) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities that do have this model
+|-
+|findClipToName(S) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities that do NOT have this name
+|-
+|findClipFromName(S) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities that do have this name
+|-
+|findClipToSphere(V,N) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities NOT within the specified sphere (center, radius)
+|-
+|findClipFromSphere(V,N) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities within the specified sphere (center, radius)
+|-
+|findClipToRegion(V,V2) || [[File:Type-Number.png]] || Filters the list of entities by removing all entities NOT on the positive side of the defined plane. (Plane origin, vector perpendicular to the plane) You can define any convex hull using this.
+|}
+
+===Global Variables===
+'''Developed by:''' Divran
+(Original idea by ZeikJT)
+
+====Description====
+Global variables are a way to exchange data between two expression chips without the need for any wiring at all.
+
+All variables in a non-shared table will automatically be removed if you disconnect from the server. Remember that variables in a shared table will not automatically be removed, so don't spam too many of them.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Writing.2Freading_global_variables|Writing/Reading Global Variables]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|''''New' syntax''' || || The new syntax. Supports ''any'' type.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Getting the gtable''' || || Get the gtable with which you use the regular table get and set syntax: "G[index,type]"
+|-
+|gTable(S) || GT || Returns a non-shared gtable with the group ''S'' 
+|-
+|gTable(S,N) || GT || Returns a gtable with the group ''S''. ''N'' determines whether or not it is shared.  Remember that there are two tables: one which is shared and one which is not; values do not transition between the two.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Removing''' || || Remove variables & clear tables
+|-
+|GT:remove*(S) || * || Removes and returns the variable of the type ''*'' at the index ''S''
+|-
+|gRemoveAll*() || - || Removes all variables of the type ''*'' in your non-shared table.
+|-
+|gRemoveAll*(S) || - || Removes all variables of the type ''*'' in your non-shared table in group ''S''.
+|-
+|gRemoveAll() || - || Resets the entire non-shared table (ie ALL your variables in every group)
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|''''Old' syntax''' || || The old syntax. Only supports strings, numbers, vectors, angles and entities. Use the first three letters when specifying type. These functions are NOT recommended. Use the new syntax instead.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|''' Group control ''' || || Change group & share or stop sharing your variables
+|-
+|gSetGroup(S) || - || Sets the E2's current group. Does persist.
+|-
+|gGetGroup() || S || Gets the E2's current group.
+|-
+|gShare(N) || - || Sets wether or not you want to share the variables. (1/0) Remember that there are two tables for each group: one which is shared and one which is not; values do not transition between the two.
+|-
+|gGetShare() || N || Returns 1/0
+|-
+|gResetGroup() || - || Resets the group back to "default".
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|''' Getting and setting ''' || || Save & load variables
+|-
+|gSet*(S,*) || - || Sets a variable of the type ''*'' at index ''S'' in the current group.
+|-
+|gGet*(S) || * || Gets a variable of the type ''*'' from index ''S'' in the current group.
+|-
+|gSet*(N,*) || - || Exactly the same as "gSet*(N:toString(),*)"
+|-
+|gGet*(N) || - || Exactly the same as "gGet*(N:toString())"
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|''' Removing ''' || || Remove variables & clear tables
+|-
+|gDelete*(S) || * || Removes and returns the variable of the type ''*'' at the index ''S'' in the current group.
+|-
+|gDelete*(N) || * || Exactly the same as gDelete*(N:toString())
+|-
+|gDeleteAll*() || - || Exactly the same as gRemoveAll*(S) (Except it removes in the group set by gSetGroup instead of using the group as an argument) (Remember that this function is only for compatibility)
+|}
+
+===Built-In Ranger===
+'''Developed by:''' ZeikJT
+
+====Description====
+The built-in ranger is based on Erkle's original ranger. There are however some new functionalities that can be found in the commands below.
+Keep in mind that if you want to apply an option you must set it before getting the ranger data. To make ranger settings (like filters, "ignore world", "hit water") persist, run rangerPersist(1).
+
+This also introduces a new Variable type, the RD (defined as :ranger). It holds the data returned after a trace, you will need to use the trace data functions to retrieve useful data. These are to be used after you have done an actual trace.
+
+I will add a simple example to showcase the syntax and functionality.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#Using_Built-In_Ranger|Using Built-In Ranger by ZeikJT]]
+*[[Wire_Expression2:Examples#Radar_Chip_.28Ranger_and_Wirelink.29_By_Coder0xff|Radar by Coder0xff]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Ranger Options''' || || To be used before an actual ranger trace
+|-
+|rangerPersist(N) ||  || Passing 0 (the default) resets all ranger flags and filters every execution and after calling ranger/rangerOffset. Passing anything else will make the flags and filters persist until they're changed again.
+|-
+|rangerReset() ||  || Resets all ranger flags and filters.
+|-
+|rangerFlags() || [[File:Type-String.png]] || Returns the ranger flags as a string.
+|-
+|rangerFlags(S) ||  || Sets the ranger flags. S can be any combination of I=ignore world, W=hit water, E=hit entities and Z=default to zero.
+|-
+|rangerHitWater(N) ||  || Default is 0, if any other value is given it will hit water
+|-
+|rangerHitEntities(N) ||  || Default is 1, if value is given as 0 it will ignore entities
+|-
+|rangerIgnoreWorld(N) ||  || Default is 0, if any other value is given it will ignore world
+|-
+|rangerDefaultZero(N) ||  || If given any value other than 0 it will default the distance data to zero when nothing is hit
+|-
+|rangerFilter(E) ||  || Feed entities you don't want the trace to hit
+|-
+|rangerFilter(R) ||  || Feed an array of entities you don't want the trace to hit
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Ranger Tracing''' || || Gathers data, if options are declared prior to this they will be used
+|-
+|ranger(N) || [[File:Type-RangerData.png]] || You input max range, it returns ranger data
+|-
+|ranger(N,N,N) || [[File:Type-RangerData.png]] || Same as above with added inputs for X and Y skew
+|-
+|rangerAngle(N,N,N) || [[File:Type-RangerData.png]] || You input the distance, x-angle and y-angle (both in degrees) it returns ranger data
+|-
+|rangerOffset(V,V) || [[File:Type-RangerData.png]] || You input two vector points, it returns ranger data
+|-
+|rangerOffset(N,V,V) || [[File:Type-RangerData.png]] || You input the range, a position vector, and a direction vector and it returns ranger data
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Ranger Hull Tracing''' || || Same as above, except the traces have a size. Unfortunately, the hulls cannot be rotated. (Made by Divran)
+|-
+|rangerHull(N,V) || [[File:Type-RangerData.png]] || Inputs: Distance, Hull BoxSize
+|-
+|rangerHull(N,V,V) || [[File:Type-RangerData.png]] || Input: Distance, Hull MinSize, Hull MaxSize
+|-
+|rangerHull(N,N,N,V) || [[File:Type-RangerData.png]] || Inputs: Distance, X Skew, Y Skew, Hull BoxSize
+|-
+|rangerHull(N,N,N,V,V) || [[File:Type-RangerData.png]] || Inputs: Distance, X Skew, Y Skew, Hull MinSize, Hull MaxSize
+|-
+|rangerHullAngle(N,N,N,V) || [[File:Type-RangerData.png]] || Inputs: Distance, X Angle, Y Angle, Hull BoxSize
+|-
+|rangerHullAngle(N,N,N,V,V) || [[File:Type-RangerData.png]] || Inputs: Distance, X Angle, Y Angle, Hull MinSize, Hull MaxSize
+|-
+|rangerOffsetHull(V,V,V) || [[File:Type-RangerData.png]] || Inputs: StartPos, EndPos, Hull BoxSize
+|-
+|rangerOffsetHull(V,V,V,V) || [[File:Type-RangerData.png]] || Inputs: StartPos, EndPos, Hull MinSize, Hull MaxSize
+|-
+|rangerOffsetHull(N,V,V,V) || [[File:Type-RangerData.png]] || Inputs: Distance, StartPos, Direction, Hull BoxSize
+|-
+|rangerOffsetHull(N,V,V,V,V) || [[File:Type-RangerData.png]] || Inputs: Distance, StartPos, Direction, Hull MinSize, Hull MaxSize
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Ranger Data Retreval''' || || Accesses data stored in an RD container
+|-
+|RD:distance() || [[File:Type-Number.png]] || Outputs the distance from the rangerdata input, else depends on rangerDefault
+|-
+|RD:position() || [[File:Type-Vector.png]] || Outputs the position of the input ranger data trace IF it hit anything, else returns (0,0,0)
+|-
+|RD:entity() || [[File:Type-Entity.png]] || Returns the entity of the input ranger data trace IF it hit an entity, else returns nil
+|-
+|RD:hit() || [[File:Type-Number.png]] || Returns 1 if the input ranger data hit anything and 0 if it didn't
+|-
+|RD:hitNormal() || [[File:Type-Vector.png]] || Outputs a normalized vector perpendicular to the surface the ranger is pointed at.
+|-
+|}
+
+===Sound Playback===
+'''Developed by:''' ZeikJT
+
+====Description====
+Allows Expression 2 to play sounds.  You can find a list of Half-life 2 sounds [[Half-Life_2_Sound_List|here]] or use [[GCFScape]] to preview each sound.
+
+The Duration is in seconds. If the sound is meant to be looped, set the duration to zero. If a sound is not designed to be looped (i.e: actor talking), it won't loop. The path must contain slashes '/' and not backslashes '\'. The soundPlay functions can optionally play from an entity that you own.
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|(E:)soundPlay(N,N,S) || || soundPlay(int Index, int Duration, string Path to File)
+|-
+|(E:)soundPlay(S,N,S) || || soundPlay(string Index, int Duration, string Path to File)
+|-
+|(E:)soundPlay(N,N,S,N) || || soundPlay(int Index, int Duration, string Path to File, int FadeTime)
+|-
+|(E:)soundPlay(S,N,S,N) || || soundPlay(string Index, int Duration, string Path to File, int FadeTime)
+|-
+|soundStop(N) || || Stops the sound stored at the integer index and removes the entry
+|-
+|soundStop(N,N) || || Fades the sound stored at the first input's integer index in the second input's amount of seconds and removes the entry
+|-
+|soundStop(S) || || Stops the sound stored at the string index and removes the entry
+|-
+|soundStop(S,N) || || Fades the sound stored at the string index in the integer input's amount of seconds and removes the entry
+|-
+|soundPitch(N,N) || || soundPitch(integer Index, integer Pitch) (default Pitch is 100)
+|-
+|soundPitch(S,N) || || Same as above but takes a string index instead of an integer index
+|-
+|soundVolume(N,N) || || soundVolume(integer Index, integer Volume) (default Volume is 1)
+|-
+|soundVolume(S,N) || || Same as above but takes a string index instead of an integer index
+|-
+|soundPurge() || || Clears the sound table and stops all sounds
+|-
+|soundDuration(S) || [[File:Type-Number.png]] || soundDuration(string Path to File) Returns the duration of the sound. Note: If the server hasn't the file it returns 60
+|-
+|}
+
+===NPC control===
+'''Developed by:''' Bobsymalone
+====Description====
+These functions allow you to control NPCs.
+You can create secondary AI systems responding to wire by telling NPCs how to feel about certain things, where to go, etc. You can also equip them with weapons.
+
+====Related Examples====
+*[[Wire_Expression2:Examples#NPC_pet_by_Bobsymalone]]
+
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:npcStop() ||  || Stops any anything the NPC is doing, including things it decided to do by itself
+|-
+|E:npcGoWalk(V) ||  || Tells the NPC to walk to position V
+|-
+|E:npcGoRun(V) ||  || Tells the NPC to run to position V
+|-
+|E:npcFace(V) ||  || This will rotate the NPC to face position V. This is purely aesthetic and can't be used to aim their weapon.
+|-
+|E:npcAttack() ||  ||  Tells the NPC to use their melee attack.
+|-
+|E:npcShoot() ||  ||  Tells the NPC to shoot their gun
+|-
+|E:npcGiveWeapon() ||  ||  Gives the NPC an SMG
+|-
+|E:npcGiveWeapon(S) ||  ||  Gives the NPC a weapon. Example: E:npcGiveWeapon("pistol"). Other arguments include "ar2", "crowbar", "357", "shotgun", "crossbow", "rpg", "frag", etc. Other such as the bugbait or slam may be buggy.
+|-
+|E:npcSetTarget(E) || || Sets the npcs current target.
+|-
+|E:npcGetTarget() || [[File:Type-Entity.png]] || Returns what the npc is currently targeting.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|E:npcRelationship(E,S,N) ||  || Will set the NPC's relationship to the specified entity to the S input, priority N. Priority is any number between 0 and 999. The relationship string can be either "like" "neutral" "hate" or "fear". Same goes for all other relationship functions.
+|-
+|E:npcRelationship(S,S,N) ||  ||  Same as above, but sets relationship to an entire class specified by the first string. Example: "npc_manhack", "prop_physics".
+|-
+|E:npcRelationshipByOwner(E,S,N) || [[File:Type-Number.png]] ||  Sets the NPC's relationship to all currently existing NPCs owned by player E. Returns number of entities added to relationships.
+|-
+|E:npcDisp(E) || [[File:Type-String.png]] ||  Returns the NPC's relationship to entity E.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+
+|}
+
+===Signals===
+'''Developed by:''' Gwahir, TomyLobo
+====Description====
+These functions allow you to remotely execute exp2 chips, provided that chip is set to receive the given signal
+
+
+=====Scope=====
+
+Signals are restricted to certain scopes (only you, anyone, only others) (0,1,2)
+
+Simplified, true = anyone, false = only you.  
+
+Scopes are used to restrict both who can receive your signal and who's signal you can receive.
+
+Scopes are always relative to the owner of the chip.  So if player A sends to scope 1 and player B only receives from scope 0, he/she won't receive it, but player B will receive it with scopes 1 or 2
+
+
+=====Group=====
+
+Set the chip's group with signalSetGroup(S) before calling the related runOnSignal, sendSignal, or signalSetOnRemove function
+
+The chip's signal group is always "default" at the start of every execution.
+
+runOnSignal() will subscribe to the given signal within the current group, this applies to sent signals as well.
+
+Any signal the chip receives will run the chip regardless of its current group (so long as it subscribed to the signal and group of the sent signal)
+
+
+A chip will never run because of a signal it sent itself.
+
+Signals are issued 10ms after the first unissued signal was sent.<br />
+There can only ever be one unissued signal/group combination per receiver in each scope.
+
+====Related Examples====
+
+
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|signalSetGroup(S) ||  || Sets the E-2's current signal group to ''S'', this is applied during runOnSignal, signalSend, and signalSetOnRemove calls, so call it first.
+|-
+|signalGetGroup() || [[File:Type-String.png]] || Gets the E-2's current signal group
+|-
+|runOnSignal(S,N,N2) ||  || If ''N2'' == 0 the chip will no longer run on this signal, otherwise it makes this chip execute when signal ''S'' is sent by someone in scope ''N''.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|signalClk() || [[File:Type-Number.png]] || Returns 1 if the chip was executed because of any signal, regardless of name, group or scope. Returns 0 otherwise.
+|-
+|signalClk(S) || [[File:Type-Number.png]] || Returns 1 if the chip was executed because the signal ''S'' was sent, regardless of group or scope. Returns 0 otherwise.
+|-
+|signalClk(S,N) || [[File:Type-Number.png]] || Returns 1 if the chip was executed because the signal ''S'' was sent to the scope ''N'', regardless of group. Returns 0 otherwise.
+|-
+|signalClk(S,S2) || [[File:Type-Number.png]] || Returns 1 if the chip was executed because the signal ''S2'' was sent in the group ''S'', regardless of scope. Returns 0 otherwise.
+|-
+|signalClk(S,S2,N) || [[File:Type-Number.png]] || Returns 1 if the chip was executed because the signal ''S2'' was sent in the group ''S'' to the scope ''N''. Returns 0 otherwise.
+|-
+|signalName() || [[File:Type-String.png]] || Returns the name of the received signal.
+|-
+|signalGroup() || [[File:Type-String.png]] || Returns the group name of the received signal.
+|-
+|signalSender() || [[File:Type-Entity.png]] || Returns the entity of the chip that sent the signal.
+|-
+|signalSenderId() || [[File:Type-Number.png]] || Returns the entity ID of the chip that sent the signal. Useful if the entity doesn't exist anymore.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|signalSetOnRemove(S,N) ||  || Sets the signal that the chip sends when it is removed from the world.
+|-
+|signalClearOnRemove() ||  || Clears the signal that the chip sends when it is removed from the world.
+|-
+|signalSend(S,N) ||  || Sends signal ''S'' to scope ''N''. Additional calls to this function with the same signal will overwrite the old call until the signal is issued.
+|-
+|signalSendDirect(S,E) ||  || Sends signal S to the given chip. Multiple calls for different chips do not overwrite each other.
+|-
+|signalSendToPlayer(S,E) ||  || sends signal S to chips owned by the given player, multiple calls for different players do not overwrite each other
+|}
+
+===Data Signals===
+'''Developed by:''' Divran
+====Description====
+This extension allows you to transmit data and execute E2s remotely.
+
+Remember: When sending a table or array, it only sends the table reference. This means that if you then edit the table back on the first E2, the table will also be edited on the second E2. To fix this, if needed, use the clone() function before or after sending.
+
+=====Scope=====
+As mentioned above, you can set the scope of the E2 itself in order to choose which signals it should allow.
+If you set the scope of the E2 itself, the following will happen:
+* 0: Only allow signals from E2s you own.
+* 1: Allow signals from E2s you own and from people in your prop protection friends list.
+* 2: Allow signals from anyone.
+
+You can also choose which scope to send a signal to when you call the send functions.
+If you choose the scope while calling the function, the following will happen:
+* 0: Only send to your E2s.
+* 1: Send to your E2s and the people who have you in their prop protection friends list.
+* 2: Send to everyone.
+
+The default scope is 0.
+
+=====Group=====
+When I said "send to everyone" above, I didn't mean every single E2 on the map. It sends to everyone in a specific group.
+You can change the group of the E2 at any time, and you can specify which group to send a signal to.
+The E2 is not in a group by default, and you must join a group in order to receive any non-direct signals.
+
+=====Signal Names=====
+Signal names serve no other purpose than to identify the signal so that the recieving E2 can know what to do with the data.
+
+====Commands====
+Note that ''*'' can be replaced by any variable type.
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Sending''' || || Sending signals with data to other E2s.
+|-
+|dsSendDirect(S,E,*) || [[File:Type-Number.png]] || Sends the data ''*'' directly to the E2 ''E'', with the signal name ''S''. Returns 1 if successful.
+|-
+|dsSendDirect(S,R,*) || [[File:Type-Number.png]] || Sends the data ''*'' directly to all E2s in the array ''R'', with the signal name ''S''. Returns 0 if any one of the signals were unsuccessful.
+|-
+|dsSend(S1,S2,*) || [[File:Type-Number.png]] || Sends the data ''*'' to all E2s in the same scope as the E2 and group ''S2'', with the signal name ''S1''. Returns 0 if any one of the signals were unsuccessful.
+|-
+|dsSend(S1,S2,N,*) || [[File:Type-Number.png]] || Sends the data ''*'' to all E2s in the group ''S2'' and the scope ''N'', with the signal name ''S1''. Returns 0 if any one of the signals were unsuccessful.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Receiving''' || || Functions used to get data from the received signal.
+|-
+|dsClk() || [[File:Type-Number.png]] || Returns 1 if the current execution was caused by ANY datasignal. Returns 0 otherwise.
+|-
+|dsClk(S) || [[File:Type-Number.png]] || Returns 1 if the current execution was caused by a signal with the signal name ''S''. Returns 0 otherwise.
+|-
+|dsClkName() || [[File:Type-String.png]] || Returns the name of the datasignal which caused the current execution. Returns an empty string if no datasignal caused the current execution.
+|-
+|dsGet*() || * || Returns the recieved data. Example: dsGetNumber(), dsGetString(), dsGetVector()
+|-
+|dsGetType() || [[File:Type-String.png]] || Returns the type of the recieved data.
+|-
+|dsGetSender() || [[File:Type-Entity.png]] || Returns the E2 which sent the signal.
+|-
+|dsGetGroup() || [[File:Type-String.png]] || Returns the name of the group the signal was sent to.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Grouping''' || || Set/Get the Group/Scope of the E2
+|-
+|dsJoinGroup(S) || - || Joins the group ''S''. The E2 will now receive signals sent in this group, as well as any other groups the E2 is in.
+|-
+|dsLeaveGroup(S) || - || Leaves the group ''S''. The E2 will no longer receive signals sent in this group.
+|-
+|dsClearGroups() || - || Leave all groups. The E2 will no longer receive any signals at all, except dsSendDirect signals.
+|-
+|dsGetGroups() || [[File:Type-Array.png]] || Returns an array with the names of all groups the E2 is currently in.
+|-
+|dsSetScope(N) || - || Sets the scope of the E2 to ''N''. See above for what setting the scope does.
+|-
+|dsGetScope() || [[File:Type-Number.png]] || Returns the scope the E2 is currently in.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|'''Probing''' || || Check which E2s would have recieved this signal, if it had been sent.
+|-
+|dsProbe(S) || [[File:Type-Array.png]] || Returns an array of the E2s which would have recieved a signal if you had sent it to the group ''S'' and the E2s scope.
+|-
+|dsProbe(S,N) ||  [[File:Type-Array.png]] || Returns an array of the E2s which would have recieved a signal if you had sent it to the group ''S'' and the scope ''N''.
+|}
+
+
+===GLON===
+'''Developed by:''' TomyLobo
+====Description====
+This extension allows you to serialize (=turn into a string) an array or table of values. Unsupported element types are:
+* Bone
+* some entity types (Vehicle, NPC, Weapon)
+* ranger data if the ranger was pointed at one of the entity types mentioned previously.
+
+====Related Examples====
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|glonEncode(R) || [[File:Type-String.png]] || Encodes ''R'' into a string, using [[GLON]].
+|-
+|glonEncode(T) || [[File:Type-String.png]] || Encodes ''T'' into a string, using [[GLON]].
+|-
+|glonDecode(S) || [[File:Type-Array.png]] || Decodes ''S'' into an array, using [[GLON]].
+|-
+|glonDecodeTable(S) || [[File:Type-Table.png]] || Decodes ''S'' into a table, using [[GLON]].
+|}
+
+===3D Holograms===
+'''Developed by:''' IamMcLovin & ZeikJT
+
+====Description====
+Adds the ability to project 3D objects. These objects can't be interacted with like most props; the only way to manipulate them is to use these functions.
+
+When using the holoCreate function, bear in mind that there is a delay associated with spawning holograms to avoid lagging servers. Avoid using holoCreate every execution. In general you should only ever use the holoCreate function once for each hologram in your code, for example by using the first() condition. Use the other functions like holoPos to update them thereafter.
+
+Note that except for ''wire_holograms_display_owners'', ''wire_holograms_block_client'' and ''wire_holograms_unblock_client'' all other console commands are useable by '''admins only'''!
+
+====Console Variables====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|wire_holograms_display_owners || || Shows the owner of each hologram.
+|-
+|wire_holograms_block_client || || Hide all holograms spawned by the specified player from the display_owners list.
+|-
+|wire_holograms_unblock_client || || Un-hide/show all holograms spawned by the specified player on the display_owners list.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|wire_holograms_remove_all || || Removes all holograms on the map
+|-
+|wire_holograms_block || || Input a name (or part of a name) to prevent a player from spawning holograms
+|-
+|wire_holograms_unblock || || Input a name (or part of a name) to allow a player to spawn holograms again
+|-
+|wire_holograms_block_id || || Input a SteamID to prevent a player from spawning holograms
+|-
+|wire_holograms_unblock_id || || Input a SteamID to allow a player to spawn holograms again
+|-
+|wire_holograms_max || || Defines the maximum number of hologams a player can have at once
+|-
+|wire_holograms_size_max || || Defines the maximum size of holograms according to the holoScale function
+|}
+
+====Related Examples====
+[[Wire_Expression2:Examples#World_Orientation_.28by_coder0xff.29|World Orientation (by coder0xff)]]
+
+====Commands====
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |
+|-
+|holoEntity(N) || [[File:Type-Entity.png]] || Returns the entity corresponding to the hologram given by the specified index.
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoIndex(E) || [[File:Type-Number.png]] || Returns the index of the given hologram entity.
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoCanCreate() || [[File:Type-Number.png]] || Returns 1 when holoCreate() will successfully create a new hologram until the Max limit is reached<br>Replaces holoRemainingSpawns()
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoCreate(N,V,V,A,V) || [[File:Type-Entity.png]] || Index, Position, Scale, Angle, Color (RGB)<br>Creates a new hologram entity
+|-
+|holoCreate(N,V,V,A) || [[File:Type-Entity.png]] || Index, Position, Scale, Angle<br>Creates a new hologram entity
+|-
+|holoCreate(N,V,V) || [[File:Type-Entity.png]] || Index, Position, Scale<br>Creates a new hologram entity
+|-
+|holoCreate(N,V) || [[File:Type-Entity.png]] || Index, Position<br>Creates a new hologram entity
+|-
+|holoCreate(N) || [[File:Type-Entity.png]] || Index<br>Creates a new hologram entity
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoDelete(N) || || Index<br>Removes the hologram with the specified index
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoDeleteAll() || || Removes all holograms of the owner
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoScale(N,V) || || Index, Scale<br>Scales a hologram by a scale factor in each direction given by a vector
+|-
+|holoScale(N) || [[File:Type-Vector.png]] || Index<br>Returns the scale of the given hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoScaleUnits(N,V) || || Index, Scale<br>Scales a hologram in each direction according to Garry's Mod units, given by a vector
+|-
+|holoScaleUnits(N) || [[File:Type-Vector.png]] || Index<br>Returns the scale of the given hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoPos(N,V) || || Index, Position<br>Sets the position of a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoColor(N,V,N) || || Index, Color, Alpha<br>Changes the color and alpha of a hologram
+|-
+|holoColor(N,V) || || Index, Color<br>Changes the color of a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoAlpha(N,N) || || Index, Alpha<br>Changes the alpha of a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoShadow(N,N) || || Index, Shadow<br>Set to 0 to remove a hologram's shadow, 1 to display shadow
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoAng(N,A) || || Index, Angle<br>Sets the angles of a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoModel(N,S,N) || || Index, Model, Skin<br>Changes the model of a hologram (see the model list below) as well as the skin number
+|-
+|holoModel(N,S) || || Index, Model<br>Changes the model of a hologram (see the model list below)
+|-
+|holoModelAny(N,S) || || Index, Model<br>Changes the model of a hologram to any model such as a prop.
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoSkin(N,N) || || Index, Skin<br>Changes the skin of a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoMaterial(N,S) || || Index, Material<br>Changes the material of a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoRenderFX(N,N) || || Index, Render FX #<br>Changes the RenderFX for a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoParent(N,N) || || Index (current Holo), Index (Holo being parented to)<br>Attaches a hologram to another hologram
+|-
+|holoParent(N,E) || || Index, Entity<br>Attaches a hologram to an entity
+|-
+|holoParentAttachment(N,E,S) || || Index, Entity, AttachmentID<br>Attaches a hologram to an attachmentID on an entity
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoUnparent(N) || || Index<br>Removes any parenting associations from a hologram
+|-
+| bgcolor="LightBlue" |  || bgcolor="LightBlue" |  || bgcolor="LightBlue" |
+|-
+|holoClipEnabled(N,N) || || Index, Enabled.<br> Enables / disables clipping for a hologram
+|-
+|holoClip(N,V,V,N) || || Index, Position, Direction, isGlobal.<br>Defines where a hologram is clipped. isGlobal to choose between local and world vectors.
+|}
+
+<gallery caption="List of holo models">
+File:Holo_cone.jpg|cone
+File:Holo_cube.jpg|cube
+File:Holo_cylinder.jpg|cylinder
+File:Holo_prism.jpg|prism
+File:Holo_pyramid.jpg|pyramid
+File:Holo_icosphere.jpg|icosphere
+File:Holo_icosphere2.jpg|icosphere2
+File:Holo_icosphere3.jpg|icosphere3
+File:Holo_sphere.jpg|sphere
+File:Holo_sphere2.jpg|sphere2
+File:Holo_sphere3.jpg|sphere3
+File:Holo_torus.jpg|torus
+File:Holo_torus2.jpg|torus2
+File:Holo_torus3.jpg|torus3
+File:plane.JPG|plane
+File:tetra.JPG|tetra
+
+
+</gallery>
+
+
+<gallery caption="List of high quality holo models">
+File:holo_hqcone.JPG|hqcone
+File:holo_dome.JPG|dome
+File:holo_dome2.JPG|dome2 (hollow)
+File:holo_hqcylinder.JPG|hqcylinder
+File:holo_hqcylinder2.JPG|hqcylinder2
+File:holo_hqshpere.JPG|hqsphere
+File:holo_hqshpere2.JPG|hqsphere2
+File:holo_hqicosphere.JPG|hqicosphere
+File:holo_hqicosphere2.JPG|hqicosphere2
+File:holo_hqtorus.JPG|hqtorus
+File:holo_hqtorus2.JPG|hqtorus2
+</gallery>
+
+===File Functions===
+'''Developed by:''' IamMcLovin
+
+====Description====
+The file functions are used to write text to files, stream files from client to server, and edit files.
+
+'''Warning:''' Double quotation marks (") are replaced with single quotation marks (') in uploaded files. This is not intended behavior. Files saved within E2 do not exhibit this problem until they are removed with fileRemove() and re-uploaded with fileLoad().
+
+Files cannon contain a null byte (0x00). Binary files lacking a null byte can be loaded and parsed, but there are no functions to assist with that in E2.
+
+====Commands====
+'''Important:''' All the filenames must end in *.txt!<br />
+Files are loaded from the "garrysmod/data/e2files" folder.
+
+:{|style="background:#E6E6FA"
+!align="left" width="150"| Function
+!align="left" width="60"| Returns
+!align="left" width="1000"| Description
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|fileLoad(S) ||  || Loads the file from the client and sends it to server (You must wait at least 10 seconds before uploading to server and the file has to be under 100 kb).
+|-
+|fileLoaded(S) || [[File:Type-Number.png]] || Returns whether or not the file has been loaded onto the server.
+|-
+|fileRead(S) || [[File:Type-String.png]] || Returns the string data from a given file (has to be loaded onto server).
+|-
+|fileWrite(S,S) ||  || Writes a file to your data folder (automatically uploads to server). First argument is the file name, second argument is the data to be written.
+|-
+|fileAppend(S,S) ||  || Adds to the end of a file on your client, and if the file is on the server it adds to that file as well. First argument is the file name, second argument is the data to be written.
+|-
+|fileRemove(S) ||  || Removes a file from the server so you can upload another file.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|runOnFile(N) ||  || Makes the expression execute when the file has finished uploading to the server.
+|-
+|fileClk(S) || [[File:Type-Number.png]] || Returns whether the execution was run because a file finished uploading and was that file of a specific file name.
+|-
+|fileClk() || [[File:Type-Number.png]] || Returns whether the execution was run because a file finished uploading.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|fileLoadList() ||  || Loads a list of the file names contained in the client's data/e2files folder.
+|-
+|fileListLoaded() || [[File:Type-Number.png]] || If the list has been loaded and it is called, it will return 1. Any time after that until a new list is loaded it will return 0.
+|-
+|fileList() || [[File:Type-Array.png]] || Returns an array of file names that have been loaded.
+|-
+|fileListTable() || [[File:Type-Table.png]] || Returns a table of file names that have been loaded. (Tbl["filename"] = "filename")
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|runOnList(N) ||  || Makes the expression execute when the list has finished uploading to the server.
+|-
+|fileListClk() || [[File:Type-Number.png]] || Returns whether the execution was run because a list was uploaded to the server.
+|-
+| bgcolor="SteelBlue" |  || bgcolor="SteelBlue" |  || bgcolor="SteelBlue" | 
+|-
+|}
+
+==See Also==
+*[[Expression_2:_Formatting|Expression 2 Formatting]]
+*[[Wire_Expression2:Unofficial Addons|Expression 2 Unofficial Addons]]
+*[[Wire_Expression2:Bugs|Expression 2 Bugs]]
+*[[Wire_Expression2:Examples|Expression 2 Examples]]
+*[[Wire_Expression2:Wishlist|Expression 2 Wishlist]]
+*[[Wire_Expression2:Guide|Expression 2 Guide]]
+*[[Wire_Expression2_Extension_Tutorial|How to write custom extensions]]
+*[[Wire Expression2:Differences to Expression1]]
+*[http://www.wiremod.com/forum/e2-development/11698-e2-highlighting-npp.html Expression 2 syntax higlighting for Notepad++]
+*[[Wiremod]]
+
+==Credits==
+I would like to extend thanks to all of the following people who have made contributions to Expression 2 in one way or another, making it into what it is today.
+
+'''Shandolum, ZeikJT, Jimlad, Beer, Magos Mechanicus, Gwahir, chinoto, pl0x, Turck3, Ph3wl, Hunter234564, Fishface60, GUN, Bobsymalone, TomyLobo, Tolyzor, Jeremydeath, I am McLovin, Fizyk, Divran'''
+
+And of course all you others out there who use it, provide constructive feedback or help others become familiar with it!
+
+Thank you! // Syranide
+
+''P.S. I'm sorry if I forgot to mention someone!''
